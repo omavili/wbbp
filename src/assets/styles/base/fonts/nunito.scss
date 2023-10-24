@@ -1,0 +1,17 @@
+  @font-face {
+    font-family: 'Nunito';
+    src: local(Nunito Regular),
+    url('@fonts/Nunito/Nunito-ExtraBold.woff2') format('woff2'),
+    url('@fonts/Nunito/Nunito-ExtraBold.woff') format('woff');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'Nunito';
+    src: local(Nunito Bold),
+    url('@fonts/Nunito/Nunito-ExtraBold.woff2') format('woff2'),
+    url('@fonts/Nunito/Nunito-ExtraBold.woff') format('woff');
+    font-weight: 700;
+  }
+
+  

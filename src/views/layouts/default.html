@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>{{ title }}</title>
+
+  <!-- load source favicon via Webpack alias '@images' -->
+  <link href="@images/favicon.png" rel="icon" type="image/png">
+
+  <!-- load global source script via Webpack alias '@scripts' -->
+  <script src="@scripts/common.js" defer="defer"></script>
+
+  <!-- block for specific page styles -->
+  {% block styles %}{% endblock %}
+</head>
+<body>
+
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+
+  <p>Lorem <strong>dolor</strong> sit amet consectetur adipisicing elit. Quod voluptate, aliquid est cum laudantium illo culpa, modi illum odit odio sint vero necessitatibus id deserunt! Quasi doloremque corrupti quidem ea.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptate, aliquid est cum laudantium illo culpa, modi illum odit odio sint vero necessitatibus id deserunt! Quasi doloremque corrupti quidem ea.</p>
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button>
+
+<div class="row">
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+  </div>
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <img src="@images/app-logo.svg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Header -->
+  <!-- <div class="header-container">
+    <div class="header-content">
+      <a class="header-left" href="index.html">
+        <img class="app-logo" src="@images/app-logo.svg"><span>App demo</span>
+      </a>
+      {% include "src/views/partials/navigation.html" %}
+      <div class="header-right"></div>
+    </div>
+  </div> -->
+
+  <!-- Main content -->
+  <!-- <main class="main-container">
+    <div class="main-content"> -->
+
+      <!-- block for specific page content -->
+      {% block content %}{% endblock %}
+
+    <!-- </div>
+  </main> -->
+
+  <!-- Footer -->
+  <!-- <div class="footer-container">
+    {% include "src/views/partials/footer.html" %}
+  </div> -->
+
+  <!-- block for specific page scripts -->
+  {% block scripts %}{% endblock %}
+</body>
+</html>
