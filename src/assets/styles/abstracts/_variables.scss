@@ -36,16 +36,16 @@
 // // fusv-enable
 
 // // scss-docs-start color-variables
-// $blue:    #0d6efd !default;
-// $indigo:  #6610f2 !default;
-// $purple:  #6f42c1 !default;
-// $pink:    #d63384 !default;
-// $red:     #dc3545 !default;
-// $orange:  #fd7e14 !default;
-// $yellow:  #ffc107 !default;
-// $green:   #198754 !default;
-// $teal:    #20c997 !default;
-// $cyan:    #0dcaf0 !default;
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
 // // scss-docs-end color-variables
 
 // // scss-docs-start colors-map
@@ -597,15 +597,15 @@
 // // scss-docs-end aspect-ratios
 // // stylelint-enable function-disallowed-list
 
-// // Typography
-// //
-// // Font, line-height, and color for body text, headings, and more.
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
 
 // // scss-docs-start font-variables
 // // stylelint-disable value-keyword-case
-$font-family-sans-serif:      Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 // $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-heading: Nunito, Inter, Helvetica, Arial, sans-serif !default;
+$font-family-heading: "Nunito", "Inter", Helvetica, Arial, sans-serif !default;
 // // stylelint-enable value-keyword-case
 // $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
 // $font-family-code:            var(--#{$prefix}font-monospace) !default;
