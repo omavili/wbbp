@@ -25,7 +25,7 @@
 // @import "bootstrap/scss/navbar"; // Requires nav
 @import "bootstrap/scss/card";
 // @import "bootstrap/scss/breadcrumb";
-@import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/accordion";
 // @import "bootstrap/scss/pagination";
 // @import "bootstrap/scss/badge";
 // @import "bootstrap/scss/alert";
@@ -58,16 +58,16 @@
 // Base
 // @use 'base/normalize';
 //@use 'base/space';
-//@use 'base/layout';
+// @import 'base/layout';
 
 // App font: load your font
 //@use 'base/fonts/arial' as font;
 //@use 'base/fonts/helvetica' as font;
 //@use 'base/fonts/roboto' as font;
 
-// @use 'base/typography' with (
-//   $font-family: font.$font-family,
-// );
+@import 'base/typography';
+@import 'base/icons/icons';
+@import 'components/buttons';
 
 // Icons
 // @use 'base/mat-icons';

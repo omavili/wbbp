@@ -1,0 +1,71 @@
+/* stylelint-disable */
+// ***************** ICON FONT CONFIG ***************** //
+// Description:
+// General settings for the iconfont
+// --------------------------------------------------
+
+// To load icons font
+@import "../fonts/iconfont";
+
+@mixin icon-styles {
+	font-family: "iconfont";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+// Function to encapsulate the unicode string into the correct quotes ( Iconmoon trick)
+@function unicode($str) {
+    @return unquote("\"") + $str + unquote("\"");
+}
+
+@function icon-char($filename) {
+	$char: "";
+    {% for glyph in glyphs%}
+        @if $filename == {{ glyph.name }} {
+            $char: \{{ glyph.unicode[0].charCodeAt(0).toString(16) }};
+        }
+    {% endfor %}
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: unicode(icon-char($filename));
+	}
+}
+
+// Classes for each font icon
+{% for glyph in glyphs%}
+.icon-{{ glyph.name }} {
+	@include icon({{ glyph.name }});
+}
+{% endfor %}
+
+// means you can also call it separatly like this:
+
+// .someclass {@include icon(basket, after, false);}
+// .someclass:after {
+//  content: 'character';
+//  all styles included in stead of extended
+// }
+
+//Variable for each font icon
+{% for glyph in glyphs%}
+$icon-{{ glyph.name }}: "\{{ glyph.unicode[0].charCodeAt(0).toString(16) }}";
+{% endfor %}
+
+/* stylelint-enable */
