@@ -4,6 +4,7 @@
   "description": "webpack bootstrap boilerplate",
   "main": "index.js",
   "scripts": {
+    "compile:icons": "node ./bin/IconFont.js",
     "start": "webpack serve --mode=development",
     "watch": "webpack watch --mode=development",
     "build": "webpack --mode=production --progress",
@@ -42,6 +43,7 @@
     "prettier": "^3.0.0",
     "sass": "^1.64.1",
     "sass-loader": "^13.3.2",
+    "webfont": "^11.2.26",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",
@@ -49,6 +51,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.1"
+    "bootstrap": "^5.3.1",
+    "jquery": "^3.7.1"
   }
 }

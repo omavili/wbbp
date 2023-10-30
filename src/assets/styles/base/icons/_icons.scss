@@ -1,0 +1,101 @@
+/* stylelint-disable */
+// ***************** ICON FONT CONFIG ***************** //
+// Description:
+// General settings for the iconfont
+// --------------------------------------------------
+
+// To load icons font
+@import "../fonts/iconfont";
+
+@mixin icon-styles {
+	font-family: "iconfont";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+// Function to encapsulate the unicode string into the correct quotes ( Iconmoon trick)
+@function unicode($str) {
+    @return unquote("\"") + $str + unquote("\"");
+}
+
+@function icon-char($filename) {
+	$char: "";
+    
+        @if $filename == arrow-right {
+            $char: \ea01;
+        }
+    
+        @if $filename == chevron-right {
+            $char: \ea02;
+        }
+    
+        @if $filename == close {
+            $char: \ea03;
+        }
+    
+        @if $filename == menu {
+            $char: \ea04;
+        }
+    
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: unicode(icon-char($filename));
+	}
+}
+
+// Classes for each font icon
+
+.icon-arrow-right {
+	@include icon(arrow-right);
+}
+
+.icon-chevron-right {
+	@include icon(chevron-right);
+}
+
+.icon-close {
+	@include icon(close);
+}
+
+.icon-menu {
+	@include icon(menu);
+}
+
+
+// means you can also call it separatly like this:
+
+// .someclass {@include icon(basket, after, false);}
+// .someclass:after {
+//  content: 'character';
+//  all styles included in stead of extended
+// }
+
+//Variable for each font icon
+
+$icon-arrow-right: "\ea01";
+
+$icon-chevron-right: "\ea02";
+
+$icon-close: "\ea03";
+
+$icon-menu: "\ea04";
+
+
+/* stylelint-enable */

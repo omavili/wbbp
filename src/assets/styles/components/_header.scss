@@ -1,0 +1,266 @@
+.header {
+  $parent: &;
+
+  box-shadow: $box-shadow;
+
+  &__promo,
+  &__slogan {
+    text-align: center;
+
+    p {
+      margin: 0;
+      line-height: 2.5rem;
+
+      @include media-breakpoint-up(xl) {
+        font-size: $font-size-base-mobile;
+      }
+    }
+  }
+
+  &__promo {
+    background-color: $cyan;
+    color: $white;
+
+    p {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  &__slogan {
+    display: none;
+    background-color: $gray-200;
+  }
+
+  &__inner-wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 5rem;
+    align-items: center;
+
+    @include media-breakpoint-up(xl) {
+      flex-wrap: nowrap;
+      min-height: 7.5rem;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    width: 5.5rem;
+    height: 3.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    top: .625rem;
+
+    @include media-breakpoint-up(xl) {
+      width: 8rem;
+      height: 4.375rem;
+      top: 0.9375rem;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__navigation-wrap {
+    @include media-breakpoint-up(xl) {
+      position: relative;
+      order: 1;
+      flex-grow: 1;
+    }
+
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(xl) {
+      flex-direction: row;
+    }
+
+    @include media-breakpoint-down(xl) {
+      flex-grow: 1;
+      padding-top: 1.25rem;
+    }
+
+    &__link {
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+      text-decoration: none;
+
+      @include icon(chevron-right, after);
+
+      &::after {
+        color: $gray-300;
+        padding-right: $btn-padding-x-sm;
+      }
+
+      &:hover,
+      &.active {
+        &,
+        &::after {
+          color: $primary;
+        }
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin-right: 1.875rem;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      @include media-breakpoint-down(xl) {
+        padding: .8125rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &__space {
+      @include media-breakpoint-up(xl) {
+        flex: 1;
+      }
+    }
+
+    &__divider {
+      display: none;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      background-image: linear-gradient(to right, $gray-300 50%, transparent 50%);
+      background-size: 1rem .125rem;
+      background-repeat: repeat-x;
+      background-position: 0 center;
+
+      &::before {
+        content: '';
+      }
+
+      @include media-breakpoint-down(xl) {
+        display: block;
+      }
+    }
+
+    &__greeting {
+      padding: .8125rem 0;
+
+      @include media-breakpoint-up(xl) {
+        &,
+        & ~ .navigation__link {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__subscribe {
+    display: none;
+
+    @include media-breakpoint-up(xl) {
+      display: inline-flex;
+      order: 2;
+    }
+
+    &--mobile {
+      display: block;
+      position: absolute;
+      right: calc(var(--bs-gutter-x) * 0.5);
+      top: 1.375rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: $font-weight-bold;
+      color: $primary;
+      padding: $btn-padding-y-sm $btn-padding-x-sm;
+
+      &:hover {
+        color: $body-color;
+        text-decoration: underline;
+      }
+
+      @include media-breakpoint-up(xl) {
+        display: none
+      }
+    }
+
+    // .scroll-up & {
+    //   position: fixed;
+    //   width: 100%;
+    //   top:0;
+    //   z-index: 1020;
+    // }
+  }
+
+  &__account-menu {
+    display: none;
+
+    .dropdown-menu {
+      min-width: 12rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      display: block;
+      order: 2;
+    }
+  }
+
+  &__navigation-btn {
+    position: absolute;
+    left: calc(var(--#{$prefix}gutter-x) * 0.5);
+    top: 1.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    color: $gray-900;
+    font-size: 1.5rem;
+
+    @include icon(menu);
+
+    @include media-breakpoint-up(xl) {
+      display: none
+    }
+  }
+
+  &.mobile-navigation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    overflow-y: auto;
+
+    #{$parent}__slogan {
+      display: block;
+    }
+
+    #{$parent}__promo {
+      display: none;
+    }
+
+    #{$parent}__navigation-wrap {
+      display: flex;
+      order: 3;
+      width: 100%;
+      margin-top: 5rem;
+    }
+
+    #{$parent}__navigation-btn {
+      @include icon(close);
+    }
+  }
+}
