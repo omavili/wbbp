@@ -30,20 +30,28 @@
 @function icon-char($filename) {
 	$char: "";
     
-        @if $filename == arrow-right {
+        @if $filename == chevron-right {
             $char: \ea01;
         }
     
-        @if $filename == chevron-right {
+        @if $filename == close {
             $char: \ea02;
         }
     
-        @if $filename == close {
+        @if $filename == facebook {
             $char: \ea03;
         }
     
-        @if $filename == menu {
+        @if $filename == instagram {
             $char: \ea04;
+        }
+    
+        @if $filename == menu {
+            $char: \ea05;
+        }
+    
+        @if $filename == youtube {
+            $char: \ea06;
         }
     
 	@return $char;
@@ -62,10 +70,6 @@
 
 // Classes for each font icon
 
-.icon-arrow-right {
-	@include icon(arrow-right);
-}
-
 .icon-chevron-right {
 	@include icon(chevron-right);
 }
@@ -74,8 +78,20 @@
 	@include icon(close);
 }
 
+.icon-facebook {
+	@include icon(facebook);
+}
+
+.icon-instagram {
+	@include icon(instagram);
+}
+
 .icon-menu {
 	@include icon(menu);
+}
+
+.icon-youtube {
+	@include icon(youtube);
 }
 
 
@@ -89,13 +105,17 @@
 
 //Variable for each font icon
 
-$icon-arrow-right: "\ea01";
+$icon-chevron-right: "\ea01";
 
-$icon-chevron-right: "\ea02";
+$icon-close: "\ea02";
 
-$icon-close: "\ea03";
+$icon-facebook: "\ea03";
 
-$icon-menu: "\ea04";
+$icon-instagram: "\ea04";
+
+$icon-menu: "\ea05";
+
+$icon-youtube: "\ea06";
 
 
 /* stylelint-enable */
