@@ -1,1 +1,1 @@
-console.log('>> Home');
+import '@views/components/hero-banner/hero-banner';

@@ -6,6 +6,9 @@ window['jQuery'] = window['$'] = $;
 // Import only the Bootstrap components we need
 import { Popover } from 'bootstrap';
 
+// import Swiper from 'swiper';
+// import { Navigation, Pagination } from 'swiper/modules';
+
 
 // Create an example popover
 document.querySelectorAll('[data-bs-toggle="popover"]')
@@ -20,33 +23,33 @@ $('.js-header-navigation-btn').on('click', function() {
 
 
   //
-const page = $('.page');
-const header = $('.header');
-const main = $('.main');
-const headerHeight = $('.header').outerHeight();
+// const page = $('.page');
+// const header = $('.header');
+// const main = $('.main');
+// const headerHeight = $('.header').outerHeight();
 
-main.css('top', headerHeight + 'px');
+// main.css('top', headerHeight + 'px');
 
-let lastScroll = 0;
+// let lastScroll = 0;
 
-$(window).on('scroll', function() {
-  let currentScroll = $(this).scrollTop();
+// $(window).on('scroll', function() {
+//   let currentScroll = $(this).scrollTop();
 
-  // console.log("current: ", currentScroll);
-  // console.log("last: ", lastScroll);
+//   // console.log("current: ", currentScroll);
+//   // console.log("last: ", lastScroll);
 
-  if (currentScroll - lastScroll > 0) {
-      // scrolled down -- header hide
-      page.addClass("scroll-down");
-      page.removeClass("scroll-up");
-  } else {
-      // scrolled up -- header show
-      page.addClass("scroll-up");
-      page.removeClass("scroll-down");
-  }
+//   if (currentScroll - lastScroll > 0) {
+//       // scrolled down -- header hide
+//       page.addClass("scroll-down");
+//       page.removeClass("scroll-up");
+//   } else {
+//       // scrolled up -- header show
+//       page.addClass("scroll-up");
+//       page.removeClass("scroll-down");
+//   }
 
-  lastScroll = currentScroll;
-}); 
+//   lastScroll = currentScroll;
+// }); 
 
 
 // let timeout = 0
@@ -95,3 +98,17 @@ $(window).on('scroll', function() {
 
 // // Initial check
 // handleTabletChange(mediaQuery);
+
+// const swiper = new Swiper('.swiper', {
+//   speed: 400,
+//   spaceBetween: 100,
+//   modules: [Navigation, Pagination],
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
