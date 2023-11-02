@@ -243,6 +243,7 @@
     left: 0;
     background-color: $white;
     overflow-y: auto;
+    z-index: $zindex-mobile-nav;
 
     #{$parent}__slogan {
       display: block;
