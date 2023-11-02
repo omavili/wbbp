@@ -1,3 +1,14 @@
+$title-slider-mobile-item-height: (
+    $font-size-base-mobile * 2) * 1.2;
+$title-slider-item-height: $font-size-base * 3;
+
+:root {
+    --hb-title-slider-item-h: #{$title-slider-mobile-item-height};
+
+    @include media-breakpoint-up(lg) {
+        --hb-title-slider-item-h: #{$title-slider-item-height};
+    }
+}
 
 .hero-banner {
     background-color: $gray-200;
@@ -47,12 +58,13 @@
             right: 0;
             text-align: left;
             width: 50%;
-            padding: 1rem 2rem;
+            padding: 1rem;
+            min-width: 520px;
         }
 
         @include media-breakpoint-up(xxl) {
             width: 45%;
-            padding: 1rem 4rem;
+            padding: 1rem 3rem;
         }
 
         @include media-breakpoint-down(lg) {
@@ -88,6 +100,37 @@
             margin-bottom: 0;
         }
 
+        .title-animation-wrap {
+            width: 100%;
+            height: $title-slider-item-height;
+            overflow: hidden;
+
+            @include media-breakpoint-down(lg) {
+                height: $title-slider-mobile-item-height;
+            }
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            animation: wrapMove 8s steps(2) infinite;
+
+            li {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                flex-shrink: 0;
+                width: 100%;
+                box-sizing: border-box;
+                white-space: nowrap;
+                cursor: pointer;
+                animation: itemMove 4s infinite;
+            }
+        }
+
         @include media-breakpoint-up(xxl) {
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
@@ -95,7 +138,7 @@
 
         @include media-breakpoint-down(xxl) {
             line-height: 1.25;
-        }       
+        }
     }
 
     &__badge {
@@ -114,7 +157,7 @@
         font-size: 1.5rem;
         font-weight: $font-weight-bold;
         color: $primary;
-        
+
         span {
             font-weight: $font-weight-normal;
         }
@@ -127,5 +170,28 @@
         @include media-breakpoint-up(xl) {
             margin-top: 1.25rem;
         }
+    }
+}
+
+
+@keyframes wrapMove {
+    0% {
+        transform: translate(0, 0
+        );
+}
+
+100% {
+    transform: translate(0, calc((var(--hb-title-slider-item-h) * 2) * -1));
+}
+}
+
+@keyframes itemMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20%,
+    100% {
+        transform: translate(0, calc(var(--hb-title-slider-item-h) * -1));
     }
 }

@@ -9,20 +9,17 @@ import { Popover } from 'bootstrap';
 // import Swiper from 'swiper';
 // import { Navigation, Pagination } from 'swiper/modules';
 
-
 // Create an example popover
-document.querySelectorAll('[data-bs-toggle="popover"]')
-  .forEach(popover => {
-    new Popover(popover)
-  })
-
-//Header mobile navigation mode
-$('.js-header-navigation-btn').on('click', function() {
-    $('.header').toggleClass('mobile-navigation');
+document.querySelectorAll('[data-bs-toggle="popover"]').forEach((popover) => {
+  new Popover(popover);
 });
 
+//Header mobile navigation mode
+$('.js-header-navigation-btn').on('click', function () {
+  $('.header').toggleClass('mobile-navigation');
+});
 
-  //
+//
 // const page = $('.page');
 // const header = $('.header');
 // const main = $('.main');
@@ -49,8 +46,7 @@ $('.js-header-navigation-btn').on('click', function() {
 //   }
 
 //   lastScroll = currentScroll;
-// }); 
-
+// });
 
 // let timeout = 0
 // let previousScrollY = 0
@@ -80,7 +76,6 @@ $('.js-header-navigation-btn').on('click', function() {
 // .sticky-header-rail .sticky-header-shadow {
 //   display:none;
 // }
-
 
 // // Create a condition that targets viewports at least 768px wide
 // const mediaQuery = window.matchMedia('(min-width: 768px)')

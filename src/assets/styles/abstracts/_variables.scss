@@ -378,7 +378,7 @@ $secondary: $cyan !default;
 // $enable-container-classes:    true !default;
 // $enable-cssgrid:              false !default;
 // $enable-button-pointers:      true !default;
-// $enable-rfs:                  true !default;
+$enable-rfs: false !default;
 // $enable-validation-icons:     true !default;
 // $enable-negative-margins:     false !default;
 // $enable-deprecation-messages: true !default;
@@ -415,7 +415,7 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
-) !default;
+  ) !default;
 // // scss-docs-end spacer-variables-maps
 
 // // Position
@@ -599,9 +599,26 @@ $box-shadow: 0 0 .625rem rgba($black, .15) !default;
 
 // // scss-docs-start font-variables
 // // stylelint-disable value-keyword-case
-$font-family-sans-serif:      "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif: "Inter",
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  "Noto Sans",
+  "Liberation Sans",
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji" !default;
 // $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-heading: "Nunito", "Inter", Helvetica, Arial, sans-serif !default;
+$font-family-heading: "Nunito",
+  "Inter",
+  Helvetica,
+  Arial,
+  sans-serif !default;
 // // stylelint-enable value-keyword-case
 // $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
 // $font-family-code:            var(--#{$prefix}font-monospace) !default;
@@ -628,12 +645,19 @@ $font-weight-bold: 700 !default;
 // $line-height-sm:              1.25 !default;
 // $line-height-lg:              2 !default;
 
-// $h1-font-size:                $font-size-base * 2.5 !default;
-// $h2-font-size:                $font-size-base * 2 !default;
-// $h3-font-size:                $font-size-base * 1.75 !default;
-// $h4-font-size:                $font-size-base * 1.5 !default;
-// $h5-font-size:                $font-size-base * 1.25 !default;
-// $h6-font-size:                $font-size-base !default;
+$h1-font-size: $font-size-base * 2.5 !default;
+$h1-font-size-mobile: $font-size-base-mobile * 2 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h2-font-size-mobile: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h3-font-size-mobile: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h4-font-size-mobile: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h5-font-size-mobile: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+$h6-font-size-mobile: $font-size-base !default;
+
 // // scss-docs-end font-variables
 
 // // scss-docs-start font-sizes
@@ -649,7 +673,7 @@ $font-weight-bold: 700 !default;
 
 // // scss-docs-start headings-variables
 // $headings-margin-bottom:      $spacer * .5 !default;
-$headings-font-family:        $font-family-heading !default;
+$headings-font-family: $font-family-heading !default;
 // $headings-font-style:         null !default;
 // $headings-font-weight:        500 !default;
 // $headings-line-height:        1.2 !default;
@@ -1241,7 +1265,7 @@ $zindex-mobile-nav: 1100 !default;
 // $dropdown-font-size:                $font-size-base !default;
 // $dropdown-color:                    var(--#{$prefix}body-color) !default;
 // $dropdown-bg:                       var(--#{$prefix}body-bg) !default;
-$dropdown-border-color:             $gray-300 !default;
+$dropdown-border-color: $gray-300 !default;
 // $dropdown-border-radius:            var(--#{$prefix}border-radius) !default;
 // $dropdown-border-width:             var(--#{$prefix}border-width) !default;
 // $dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width}) !default; // stylelint-disable-line function-disallowed-list
@@ -1250,15 +1274,15 @@ $dropdown-border-color:             $gray-300 !default;
 // $dropdown-box-shadow:               var(--#{$prefix}box-shadow) !default;
 
 // $dropdown-link-color:               var(--#{$prefix}body-color) !default;
-$dropdown-link-hover-color:         $primary !default;
-$dropdown-link-hover-bg:            transparent !default;
+$dropdown-link-hover-color: $primary !default;
+$dropdown-link-hover-bg: transparent !default;
 
 // $dropdown-link-active-color:        $component-active-color !default;
 // $dropdown-link-active-bg:           $component-active-bg !default;
 
 // $dropdown-link-disabled-color:      var(--#{$prefix}tertiary-color) !default;
 
-$dropdown-item-padding-y:           $spacer * 0.25 !default;
+$dropdown-item-padding-y: $spacer * 0.25 !default;
 // $dropdown-item-padding-x:           $spacer !default;
 
 // $dropdown-header-color:             $gray-600 !default;
@@ -1650,17 +1674,17 @@ $dropdown-item-padding-y:           $spacer * 0.25 !default;
 // $carousel-control-hover-opacity:     .9 !default;
 // $carousel-control-transition:        opacity .15s ease !default;
 
-$carousel-indicator-width:           30px !default;
-$carousel-indicator-height:          8px !default;
+$carousel-indicator-width: 30px !default;
+$carousel-indicator-height: 8px !default;
 // $carousel-indicator-hit-area-height: 10px !default;
 // $carousel-indicator-spacer:          3px !default;
-$carousel-indicator-opacity:         .15 !default;
-$carousel-indicator-active-bg:       $black !default;
-$carousel-indicator-active-opacity:  1 !default;
+$carousel-indicator-opacity: .15 !default;
+$carousel-indicator-active-bg: $black !default;
+$carousel-indicator-active-opacity: 1 !default;
 // $carousel-indicator-transition:      opacity .6s ease !default;
 
 // $carousel-caption-width:             70% !default;
-$carousel-caption-color:             $black !default;
+$carousel-caption-color: $black !default;
 // $carousel-caption-padding-y:         1.25rem !default;
 // $carousel-caption-spacer:            1.25rem !default;
 

@@ -9,7 +9,8 @@
 @import "bootstrap/scss/mixins"; //_grid.scss line 59 divide(100%, $count) change to divide(100, $count) to fix the abs error on build
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/root";
-@import "bootstrap/scss/reboot";
+// @import "bootstrap/scss/reboot";
+@import "abstracts/reboot"; //customized duplication of bootstrap reboot
 
 @import "bootstrap/scss/type";
 // @import "bootstrap/scss/images";
