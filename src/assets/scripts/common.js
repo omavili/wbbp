@@ -1,53 +1,65 @@
-console.log('>> Common script is loaded.');
+'use strict';
 
 import * as $ from 'jquery';
 window['jQuery'] = window['$'] = $;
-
-// Import only the Bootstrap components we need
 import { Popover } from 'bootstrap';
 
+$(window).on('load', function() {
 
-// Create an example popover
-document.querySelectorAll('[data-bs-toggle="popover"]')
-  .forEach(popover => {
-    new Popover(popover)
-  })
+  //Form Validation
+  $('.needs-validation').on('submit', function(e) {
+    if (!this.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
 
-//Header mobile navigation mode
-$('.js-header-navigation-btn').on('click', function() {
+    $(this).addClass('was-validated');
+  });
+
+  //Popovers
+  $('[data-bs-toggle="popover"]').each((popover) => {
+    new Popover(popover);
+  });
+
+  //Header mobile navigation mode
+  $('.js-header-navigation-btn').on('click', function () {
     $('.header').toggleClass('mobile-navigation');
+  });
+
 });
 
 
-  //
-const page = $('.page');
-const header = $('.header');
-const main = $('.main');
-const headerHeight = $('.header').outerHeight();
 
-main.css('top', headerHeight + 'px');
 
-let lastScroll = 0;
 
-$(window).on('scroll', function() {
-  let currentScroll = $(this).scrollTop();
+//
+// const page = $('.page');
+// const header = $('.header');
+// const main = $('.main');
+// const headerHeight = $('.header').outerHeight();
 
-  // console.log("current: ", currentScroll);
-  // console.log("last: ", lastScroll);
+// main.css('top', headerHeight + 'px');
 
-  if (currentScroll - lastScroll > 0) {
-      // scrolled down -- header hide
-      page.addClass("scroll-down");
-      page.removeClass("scroll-up");
-  } else {
-      // scrolled up -- header show
-      page.addClass("scroll-up");
-      page.removeClass("scroll-down");
-  }
+// let lastScroll = 0;
 
-  lastScroll = currentScroll;
-}); 
+// $(window).on('scroll', function() {
+//   let currentScroll = $(this).scrollTop();
 
+//   // console.log("current: ", currentScroll);
+//   // console.log("last: ", lastScroll);
+
+//   if (currentScroll - lastScroll > 0) {
+//       // scrolled down -- header hide
+//       page.addClass("scroll-down");
+//       page.removeClass("scroll-up");
+//   } else {
+//       // scrolled up -- header show
+//       page.addClass("scroll-up");
+//       page.removeClass("scroll-down");
+//   }
+
+//   lastScroll = currentScroll;
+// });
 
 // let timeout = 0
 // let previousScrollY = 0
@@ -78,7 +90,6 @@ $(window).on('scroll', function() {
 //   display:none;
 // }
 
-
 // // Create a condition that targets viewports at least 768px wide
 // const mediaQuery = window.matchMedia('(min-width: 768px)')
 
@@ -95,3 +106,17 @@ $(window).on('scroll', function() {
 
 // // Initial check
 // handleTabletChange(mediaQuery);
+
+// const swiper = new Swiper('.swiper', {
+//   speed: 400,
+//   spaceBetween: 100,
+//   modules: [Navigation, Pagination],
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });

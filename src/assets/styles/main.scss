@@ -9,7 +9,8 @@
 @import "bootstrap/scss/mixins"; //_grid.scss line 59 divide(100%, $count) change to divide(100, $count) to fix the abs error on build
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/root";
-@import "bootstrap/scss/reboot";
+// @import "bootstrap/scss/reboot";
+@import "abstracts/reboot"; //customized duplication of bootstrap reboot
 
 @import "bootstrap/scss/type";
 // @import "bootstrap/scss/images";
@@ -52,25 +53,23 @@
 // Custom styles
 //
 
-
-
-
 // Base
-// @use 'base/normalize';
-//@use 'base/space';
-// @import 'base/layout';
-
-// App font: load your font
-//@use 'base/fonts/arial' as font;
-//@use 'base/fonts/helvetica' as font;
-//@use 'base/fonts/roboto' as font;
-
 @import 'base/typography';
+@import 'base/forms';
 @import 'base/icons/icons';
-@import 'components/buttons';
+@import 'base/layout.scss';
 
-// Icons
-// @use 'base/mat-icons';
+//Components
+@import 'components/buttons';
+@import 'components/swiper';
+@import 'components/hero-banner';
 
 // Page layout: header, main, footer
-// @use 'pages/default-layout';
+@import 'pages/layout/default-layout.scss';
+@import 'pages/layout/header.scss';
+@import 'pages/layout/footer.scss';
+
+//Pages
+@import 'pages/home.scss';
+
+

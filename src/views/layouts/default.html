@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-GB" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ title }}</title>
   
-  <!-- load source favicon via Webpack alias '@images' -->
   <link href="@images/favicon.png" rel="icon" type="image/png">
 
-  <!-- load global source script via Webpack alias '@scripts' -->
+  <link href="@styles/main.scss" rel="stylesheet">
+
   <script src="@scripts/common.js" defer="defer"></script>
 
-  <!-- block for specific page styles -->
-  {% block styles %}{% endblock %}
 </head>
 <body>
   <div class="page">
@@ -21,14 +19,12 @@
 
     <!-- Main content -->
     <main class="main">
-        <!-- block for specific page content -->
         {% block content %}{% endblock %}
     </main>
 
     <!-- Footer -->
     {% include "src/views/partials/footer.html" %}
     
-  <!-- block for specific page scripts -->
   {% block scripts %}{% endblock %}
 </body>
 </html>

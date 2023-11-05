@@ -1,0 +1,197 @@
+$title-slider-mobile-item-height: (
+    $font-size-base-mobile * 2) * 1.2;
+$title-slider-item-height: $font-size-base * 3;
+
+:root {
+    --hb-title-slider-item-h: #{$title-slider-mobile-item-height};
+
+    @include media-breakpoint-up(lg) {
+        --hb-title-slider-item-h: #{$title-slider-item-height};
+    }
+}
+
+.hero-banner {
+    background-color: $gray-200;
+
+    &__wrap {
+        @include media-breakpoint-down(lg) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 1.25rem;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        overflow-x: hidden;
+        padding-bottom: 3.125rem;
+
+        .swiper-slide {
+            background-color: transparent;
+
+            @include media-breakpoint-between(sm, lg) {
+                img {
+                    object-position: bottom;
+                    width: 100vw;
+                    max-height: 75rem;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                border-radius: .75rem;
+                overflow: hidden;
+            }
+        }
+    }
+
+    &__content {
+        position: absolute;
+        width: 100%;
+        top: .75rem;
+        padding: .75rem;
+
+        @include media-breakpoint-up(lg) {
+            top: auto;
+            right: 0;
+            text-align: left;
+            width: 50%;
+            padding: 1rem;
+            min-width: 520px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            width: 45%;
+            padding: 1rem 3rem;
+        }
+
+        @include media-breakpoint-down(lg) {
+            max-width: 40rem;
+        }
+    }
+
+    &__description,
+    &__price {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-up(xxl) {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @include media-breakpoint-down(xxl) {
+            line-height: 1.25;
+        }
+    }
+
+    &__title {
+        font-weight: $font-weight-medium;
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+
+        span {
+            @extend h1;
+
+            display: block;
+            color: $primary;
+            margin-bottom: 0;
+        }
+
+        .title-animation-wrap {
+            width: 100%;
+            height: $title-slider-item-height;
+            overflow: hidden;
+
+            @include media-breakpoint-down(lg) {
+                height: $title-slider-mobile-item-height;
+            }
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            animation: wrapMove 8s steps(2) infinite;
+
+            li {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                flex-shrink: 0;
+                width: 100%;
+                box-sizing: border-box;
+                white-space: nowrap;
+                cursor: pointer;
+                animation: itemMove 4s infinite;
+            }
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @include media-breakpoint-down(xxl) {
+            line-height: 1.25;
+        }
+    }
+
+    &__badge {
+        display: inline-block;
+        background-color: $white;
+        border-radius: .25rem;
+        padding: 0 .5rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: .25rem .75rem;
+            background-color: $gray-200;
+        }
+    }
+
+    &__price {
+        font-size: 1.5rem;
+        font-weight: $font-weight-bold;
+        color: $primary;
+
+        span {
+            font-weight: $font-weight-normal;
+        }
+    }
+
+    &__addition {
+        margin-top: .625rem;
+        font-size: $font-size-sm;
+
+        @include media-breakpoint-up(xl) {
+            margin-top: 1.25rem;
+        }
+    }
+}
+
+
+@keyframes wrapMove {
+    0% {
+        transform: translate(0, 0
+        );
+}
+
+100% {
+    transform: translate(0, calc((var(--hb-title-slider-item-h) * 2) * -1));
+}
+}
+
+@keyframes itemMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20%,
+    100% {
+        transform: translate(0, calc(var(--hb-title-slider-item-h) * -1));
+    }
+}

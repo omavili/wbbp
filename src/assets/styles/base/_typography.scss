@@ -2,4 +2,8 @@ html {
     @include media-breakpoint-down(lg) {
         font-size: $font-size-base-mobile;
     }
+
+    a {
+        text-underline-position: from-font;
+    }
 }

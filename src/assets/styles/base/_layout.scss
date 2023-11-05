@@ -5,3 +5,77 @@
 a {
     transition: $link-transition;
 }
+
+.section {
+    $parent: &;
+
+    padding: 1.5rem 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 2rem 0;
+    }
+
+    &__title {
+        margin: 1.5rem 0;
+
+        @include media-breakpoint-up(lg) {
+            margin: 2rem 0;
+        }
+    }
+
+    &__headline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1.5rem 0;
+
+        #{$parent}__title {
+            text-align: left;
+            margin: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin: 2rem 0;
+
+            #{$parent}__title {
+                margin: 0;
+            }
+        }
+    }
+
+    &__headline-link {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__content {
+        margin: 1.5rem 0;
+
+        @include media-breakpoint-up(lg) {
+            margin: 2rem 0;
+        }
+    }
+
+    &__cta {
+        @include media-breakpoint-up(lg) {
+            margin-top: 2rem;
+        }
+    }
+
+    &--home {
+        text-align: center;
+    }
+}
+
+//TODO: Make component
+.divider {
+    border: none;
+    margin: 0;
+    opacity: 1;
+    height: .25rem;
+    line-height: .25rem;
+    background-image: linear-gradient(to right, $gray-200 70%, transparent 70%);
+    background-size: 1rem .25rem;
+    background-repeat: repeat-x;
+    background-position: 0 center;
+}
