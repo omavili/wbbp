@@ -4,12 +4,12 @@
   "description": "webpack bootstrap boilerplate",
   "main": "index.js",
   "scripts": {
-    "compile:icons": "node ./bin/IconFont.js",
     "start": "webpack serve --mode=development",
     "watch": "webpack watch --mode=development",
     "build": "webpack --mode=production --progress",
     "docs": "npm run build && cp -R ./dist/* ./docs",
     "preview": "npm run build && http-server dist --port 4321 -o",
+    "compile:icons": "node ./bin/IconFont.js",
     "test": "echo 'No test specified' && exit 1"
   },
   "repository": {

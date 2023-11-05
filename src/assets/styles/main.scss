@@ -49,28 +49,27 @@
 @import "bootstrap/scss/utilities/api";
 
 
-
-
 //
 // Custom styles
 //
 
-
-
-
 // Base
 @import 'base/typography';
+@import 'base/forms';
 @import 'base/icons/icons';
+@import 'base/layout.scss';
+
 //Components
 @import 'components/buttons';
 @import 'components/swiper';
-
-
-
-
-
-// Icons
-// @use 'base/mat-icons';
+@import 'components/hero-banner';
 
 // Page layout: header, main, footer
-// @use 'pages/default-layout';
+@import 'pages/layout/default-layout.scss';
+@import 'pages/layout/header.scss';
+@import 'pages/layout/footer.scss';
+
+//Pages
+@import 'pages/home.scss';
+
+

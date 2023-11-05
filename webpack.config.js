@@ -31,26 +31,21 @@ module.exports = {
       entry: {
         // define HTML templates here
         index: 'src/views/pages/home/index.html', // => dist/index.html
-        demo: {
-          import: 'src/views/pages/demo/index.html', // => dist/demo.html
-          data: {
-            // pass data into template
-            myVar: 'The string passed as the `myVar` variable from Webpack configuration.',
-          },
-        },
         about: 'src/views/pages/about/index.html', // => dist/about.html
         error404: './src/views/pages/error/404.html', // => dist/404.html
       },
 
       js: {
         // output filename of extracted JS from source script loaded in HTML via `<script>` tag
-        filename: 'assets/js/[name].[contenthash:8].js',
+        // filename: 'assets/js/[name].[contenthash:8].js',
+        filename: 'assets/js/[name].js',
         // inline: true; // inline compiled JS into HTML
       },
 
       css: {
         // output filename of extracted CSS from source style loaded in HTML via `<link>` tag
-        filename: 'assets/css/[name].[contenthash:8].css',
+        // filename: 'assets/css/[name].[contenthash:8].css',
+        filename: 'assets/css/[name].css',
         // inline: true; // inline compiled CSS into HTML
       },
 
@@ -97,7 +92,8 @@ module.exports = {
               },
             },
             generator: {
-              filename: 'assets/img/[name].[hash:8][ext]',
+              // filename: 'assets/img/[name].[hash:8][ext]',
+              filename: 'assets/img/[name].[ext]',
             },
           },
         ],
@@ -111,7 +107,7 @@ module.exports = {
 
   devServer: {
     //open: true, // open browser
-    compress: true,
+    compress: false,
 
     static: {
       directory: path.join(__dirname, './dist'),

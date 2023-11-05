@@ -1,23 +1,36 @@
-console.log('>> Common script is loaded.');
+'use strict';
 
 import * as $ from 'jquery';
 window['jQuery'] = window['$'] = $;
-
-// Import only the Bootstrap components we need
 import { Popover } from 'bootstrap';
 
-// import Swiper from 'swiper';
-// import { Navigation, Pagination } from 'swiper/modules';
+$(window).on('load', function() {
 
-// Create an example popover
-document.querySelectorAll('[data-bs-toggle="popover"]').forEach((popover) => {
-  new Popover(popover);
+  //Form Validation
+  $('.needs-validation').on('submit', function(e) {
+    if (!this.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    $(this).addClass('was-validated');
+  });
+
+  //Popovers
+  $('[data-bs-toggle="popover"]').each((popover) => {
+    new Popover(popover);
+  });
+
+  //Header mobile navigation mode
+  $('.js-header-navigation-btn').on('click', function () {
+    $('.header').toggleClass('mobile-navigation');
+  });
+
 });
 
-//Header mobile navigation mode
-$('.js-header-navigation-btn').on('click', function () {
-  $('.header').toggleClass('mobile-navigation');
-});
+
+
+
 
 //
 // const page = $('.page');

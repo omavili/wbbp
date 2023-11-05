@@ -1,64 +1,298 @@
 {% extends "src/views/layouts/default.html" %}
 
-<!-- set variables used in layout -->
 {% set title="Home" %}
 
 {% block styles %}
-<!-- load specific page style -->
-<link href="./home.scss" rel="stylesheet">
 {% endblock %}
 
 {% block scripts %}
-<!-- load specific page script -->
 <script src="./home.js"></script>
 {% endblock %}
 
 {% block content %}
-<div class="hero-banner">
-  <div class="hero-banner__wrap container">
+<!-- Home Page Content -->
 
-    <div class="hero-banner__slider js-hero-banner-slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <picture>
-            <source media="(min-width: 992px)" srcset="@images/banner/hero/hero-banner-1.png">
-            <img src="@images/banner/hero/hero-banner-1-m.png" class="" alt="..." loading="lazy">
-          </picture>
-          <div class="hero-banner__content">
-            <div class="hero-banner__title">
-              <div class="title-animation-wrap">
-                <ul>
-                  <li><span>The Playful Program</span></li>
-                  <li><span>The Educational Program</span></li>
-                  <li><span>The Playful Program</span></li>
-                </ul>
-              </div>
-              for children’s development.
-            </div>
-            <div class="hero-banner__badge">0-3 years</div>
-            <p class="hero-banner__description">Structured curriculum that includes age-appropriate activities, games, and resources designed to foster and enhance a child’s core skills.</p>
-            <div class="hero-banner__price">£27.50 <span>/ month</span></div>
-            <div class="hero-banner__cta">
-              <a class="btn btn-primary" href="#">Subscribe</a>
-            </div>
-            <div class="hero-banner__addition">Free Cancellation</div>
-          </div>
-          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </div>
-        <!-- <div class="swiper-slide">
-          <a href="/">
+  <!-- Hero Banner Slider -->
+  <div class="hero-banner">
+    <div class="hero-banner__wrap container">
+      <div class="hero-banner__slider js-hero-banner-slider">
+        <div class="swiper-wrapper">
+          <!--Banner-->
+          <div class="swiper-slide">
             <picture>
               <source media="(min-width: 992px)" srcset="@images/banner/hero/hero-banner-1.png">
-              <img src="@images/banner/hero/hero-banner-1-m.png" class="" alt="...">
+              <img src="@images/banner/hero/hero-banner-1-m.png" class="" alt="The Playful Program" loading="lazy">
             </picture>
-          </a>
-        </div> -->
+            <div class="hero-banner__content">
+              <div class="hero-banner__title">
+                <div class="title-animation-wrap">
+                  <ul>
+                    <li><span>The Playful Program</span></li>
+                    <li><span>The Educational Program</span></li>
+                    <li><span>The Playful Program</span></li>
+                  </ul>
+                </div>
+                for children’s development.
+              </div>
+              <div class="hero-banner__badge">0-3 years</div>
+              <p class="hero-banner__description">Structured curriculum that includes age-appropriate activities, games, and resources designed to foster and enhance a child’s core skills.</p>
+              <div class="hero-banner__price">£27.50 <span>/ month</span></div>
+              <div class="hero-banner__cta">
+                <a class="btn btn-primary" href="#">Subscribe</a>
+              </div>
+              <div class="hero-banner__addition">Free Cancellation</div>
+            </div>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+          </div>
+
+          <!--New Banner-->
+          <!-- <div class="swiper-slide">
+            <a href="/">
+              <picture>
+                <source media="(min-width: 992px)" srcset="@images/banner/hero/hero-banner-1.png">
+                <img src="@images/banner/hero/hero-banner-1-m.png" class="" alt="...">
+              </picture>
+            </a>
+            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+          </div> -->
+
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
-
   </div>
-</div>
 
+  <!-- Section - How it works -->
+  <section class="section section--home section-hiw">
+    <div class="section__wrap container">
+      <h2 class="section__title">How does it work?</h2>
+      <div class="section__content">
+        <div class="section-hiw__steps row">
+          <div class="section-hiw__step col-12 col-xl-4">
+            <div class="section-hiw__image">
+              <picture>
+                <img src="@images/hiw-step1.png" alt="Streamlined Online Purchase" width="144" height="144">
+              </picture>
+            </div>
+            <div class="section-hiw__content">
+              <h3 class="section-hiw__step-title">Streamlined Online Purchase</h3>
+              <p class="section-hiw__step-description">Customize your selection by entering your child’s date of birth, and select your payment plan.</p>
+            </div>
+          </div>
 
+          <div class="section-hiw__step col-12 col-xl-4">
+            <div class="section-hiw__image">
+              <picture>
+                <img src="@images/hiw-step2.png" alt="Hassle-Free Monthly Deliveries" width="144" height="144">
+              </picture>
+            </div>
+            <div class="section-hiw__content">
+              <h3 class="section-hiw__step-title">Hassle-Free Monthly Deliveries</h3>
+              <p class="section-hiw__step-description">EarlyLearny sets will be delivered to your address every month, completely free of charge.</p>
+            </div>
+          </div>
+
+          <div class="section-hiw__step col-12 col-xl-4">
+            <div class="section-hiw__image">
+              <picture>
+                <img src="@images/hiw-step3.png" alt="Enjoyable Learning" width="144" height="144">
+              </picture>
+            </div>
+            <div class="section-hiw__content">
+              <h3 class="section-hiw__step-title">Enjoyable Learning</h3>
+              <p class="section-hiw__step-description">Let your child enjoy learning with our engaging EarlyLearny sets, expertly designed for their development.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section__cta">
+          <p class="section__cta-text">Let's get started!</p>
+          <a href="/" class="btn btn-primary section__cta-btn">Subscribe Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Section - What and Why -->
+  <section class="section section--home section-wnw">
+    <div class="section__wrap container">
+      <h2 class="section__title">What is EarlyLearny and Why?</h2>
+      <div class="section__content">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <p>EarlyLearny is a monthly educational program and set of materials designed to support the holistic development of babies and toddlers, aged 9 to 36 months. Created by a team of doctors, psychologists and educators and awarded illustrators.</p>
+          </div>
+        </div>
+
+        <div class="section-wnw__slider swiper js-swiper-wnw">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="section-wnw__card">
+                <picture class="section-wnw__card-image">
+                  <img src="@images/wnw-1.png" alt="Strengthens bonds" width="255" height="255">
+                </picture>
+                <p class="section-wnw__card-text">Strengthens bonds within the family, which develops trust and self-esteem.</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="section-wnw__card">
+                <picture class="section-wnw__card-image">
+                  <img src="@images/wnw-2.png" alt="Enhances social skills" width="255" height="255">
+                </picture>
+                <p class="section-wnw__card-text">Enhances social skills, concentration, creativity, and multiple intelligences</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="section-wnw__card">
+                <picture class="section-wnw__card-image">
+                  <img src="@images/wnw-3.png" alt="Empowers parents" width="255" height="255">
+                </picture>
+                <p class="section-wnw__card-text">Empowers parents with knowledge and instructions</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="section-wnw__card">
+                <picture class="section-wnw__card-image">
+                  <img src="@images/wnw-4.png" alt="Helps build smart" width="255" height="255">
+                </picture>
+                <p class="section-wnw__card-text">Helps build smart, successful, and happy children</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Sections - Development Sets - Testimonials -->
+  <section class="section section--home section--divided">
+    <div class="section__wrap container">
+
+      <div class="row">
+        <div class="section__sub-section section-books col-12 col-xl-7">
+
+          <div class="section__headline">
+            <h2 class="section__title">Development Sets</h2>
+            <a href="sets.html" class="btn btn-link section__headline-link">Show All</a>
+          </div>
+          <div class="section__content">  
+            <div class="section-books__slider swiper js-swiper-cropped">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="section-books__card">
+                    <a href="set-detail.html" class="section-books__link">
+                      <picture class="section-books__card-image">
+                        <img src="@images/books/book.jpg" alt="..." width="320" height="240">
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="section-books__card">
+                    <a href="set-detail.html" class="section-books__link">
+                      <picture class="section-books__card-image">
+                        <img src="@images/books/book.jpg" alt="..." width="320" height="240">
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="section-books__card">
+                    <a href="set-detail.html" class="section-books__link">
+                      <picture class="section-books__card-image">
+                        <img src="@images/books/book.jpg" alt="..." width="320" height="240">
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="section__cta">
+              <a href="sets.html" class="btn btn-link section__cta-btn">Show All</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section__sub-section section-reviews col-12 col-xl-5">
+          <h2 class="section__title"><span>Testimonials</span></h2>
+          <div class="section__content">
+
+            <div class="section-reviews__slider swiper js-swiper-reviews">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="section-reviews__card">
+                    <figure>
+                      <blockquote>
+                        <p>EarlyLearny is a game-changer for early childhood education. The platform's
+                          interactive activities make learning fun and effective. My child's progress has been
+                          remarkable, thanks to the learning paths and engaging content. I highly recommend
+                          EarlyLearny to any parent looking for an exceptional educational platform for their child.</p>
+                      </blockquote>
+                      <figcaption>Richard T.</figcaption>
+                    </figure>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="section-reviews__card">
+                    <figure>
+                      <blockquote>
+                        <p>I came to appreciate the impact of EarlyLearny when my daughter Olivia began
+                          kindergarten. Her teachers were amazed by her advanced progress compared to her
+                          peers and questioned what I did differently in her development. Reflecting back, I
+                          realized that EarlyLearny played a significant role. It's been instrumental in preparing
+                          her, and I'm grateful for the head start it provided. Thank you!</p>
+                      </blockquote>
+                      <figcaption>J. Adams</figcaption>
+                    </figure>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="section-reviews__card">
+                    <figure>
+                      <blockquote>
+                        <p>After 4 months of subscribing to EarlyLearny, my son started like it and now he eagerly
+                          awaits each month's new sets. Going through the books together became a cherished
+                          and enjoyable time for us. We absolutely loved it!</p>
+                      </blockquote>
+                      <figcaption>Charlotte W.</figcaption>
+                    </figure>
+                  </div>
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            
+          </div>
+        </div>
+      
+        </div>
+      </div>
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  {% include "src/views/partials/newsletter.html" %}
+
+<!-- END - Home Page Content -->
 {% endblock %}

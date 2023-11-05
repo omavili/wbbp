@@ -10,6 +10,15 @@
     --swiper-pagination-bullet-border-radius: .5rem;
 }
 
+.swiper {
+    //pagination positioning
+    padding-bottom: 2rem;
+
+    .swiper-pagination {
+        bottom: 0;
+    }
+}
+
 .swiper-slide {
     text-align: center;
     display: flex;
