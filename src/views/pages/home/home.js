@@ -4,7 +4,6 @@ import { Pagination, Autoplay } from 'swiper/modules';
 const swiper = new Swiper('.js-hero-banner-slider', {
   speed: 400,
   spaceBetween: 12,
-  lazy: true,
   modules: [Pagination, Autoplay],
   autoplay: {
     delay: 8000,
