@@ -1,202 +1,201 @@
 .section-hiw {
-    .section__title {
-        color: $primary;
+  .section__title {
+    color: $primary;
+  }
+
+  &__steps {
+    @include media-breakpoint-up(xl) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      // background-image: url(@images/hiw-step-arrow-up.svg), url(@images/hiw-step-arrow-down.svg);
+      // background-repeat: no-repeat, no-repeat;
+      // background-position: 27% bottom, 67% top;
+    }
+  }
+
+  &__step {
+    text-align: left;
+    display: flex;
+    align-items: center;
+
+    .section-hiw__content {
+      flex-grow: 1;
+      padding-left: 1.5;
     }
 
-    &__steps {
-        @include media-breakpoint-up(xl) {
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-            // background-image: url(@images/hiw-step-arrow-up.svg), url(@images/hiw-step-arrow-down.svg);
-            // background-repeat: no-repeat, no-repeat;
-            // background-position: 27% bottom, 67% top;
-        }
+    p {
+      margin-bottom: 0;
     }
 
-    &__step {
-        text-align: left;
-        display: flex;
-        align-items: center;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 1.5rem;
+
+      &:nth-child(2) {
+        flex-direction: row-reverse;
 
         .section-hiw__content {
-            flex-grow: 1;
-            padding-left: 1.5;
+          padding-left: 0;
+          padding-right: 2rem;
         }
-
-
-        p {
-            margin-bottom: 0;
-        }
-
-        @include media-breakpoint-down(md) {
-            margin-bottom: 1.5rem;
-
-            &:nth-child(2) {
-                flex-direction: row-reverse;
-
-                .section-hiw__content {
-                    padding-left: 0;
-                    padding-right: 2rem;
-                }
-            }
-        }
-
-        @include media-breakpoint-down(xl) {
-            margin-bottom: 2rem;
-        }
+      }
     }
 
-    &__image {
-        img {
-            width: 8rem;
-            height: auto;
-        }
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 2rem;
+    }
+  }
 
-        @include media-breakpoint-up(lg) {
-            img {
-                width: 9rem;
-            }
-        }
+  &__image {
+    img {
+      width: 8rem;
+      height: auto;
     }
 
-    &__content {
-        padding-left: 1.5rem;
-
-        @include media-breakpoint-up(lg) {
-            padding-left: 2rem;
-        }
+    @include media-breakpoint-up(lg) {
+      img {
+        width: 9rem;
+      }
     }
+  }
 
-    &__step-title {
-        @extend h5;
+  &__content {
+    padding-left: 1.5rem;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 2rem;
     }
+  }
+
+  &__step-title {
+    @extend h5;
+  }
 }
 
 .section-wnw {
-    .section__title {
-        color: $cyan;
-    }
+  .section__title {
+    color: $cyan;
+  }
 
-    .section__content {
-        @include media-breakpoint-up(lg) {
-            margin-bottom: 0;
-        }
+  .section__content {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
     }
+  }
 
-    &__card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 1rem;
-    }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+  }
 
-    &__card-image {
-        img {
-            max-width: 16rem;
-        }
+  &__card-image {
+    img {
+      max-width: 16rem;
     }
+  }
 
-    &__card-text {
-        @extend h5;
-    }
+  &__card-text {
+    @extend h5;
+  }
 }
 
 .section-books {
-    .section__title {
-        color: $primary;
-    }
+  .section__title {
+    color: $primary;
+  }
 
-    .section__headline {
-        @include media-breakpoint-down(lg) {
-            justify-content: center;
-        }
+  .section__headline {
+    @include media-breakpoint-down(lg) {
+      justify-content: center;
     }
+  }
 
-    .section__headline-link {
-        @include media-breakpoint-down(lg) {
-            display: none;
-        }
+  .section__headline-link {
+    @include media-breakpoint-down(lg) {
+      display: none;
     }
+  }
 
-    .section__cta {
-        margin-top: 1.5rem;
+  .section__cta {
+    margin-top: 1.5rem;
 
-        @include media-breakpoint-up(lg) {
-            display: none;
-        }
+    @include media-breakpoint-up(lg) {
+      display: none;
     }
+  }
 
-    &__card-image {
-        img {
-            border: 2px solid $gray-200;
-            border-radius: $border-radius-lg;
-        }
+  &__card-image {
+    img {
+      border: 2px solid $gray-200;
+      border-radius: $border-radius-lg;
     }
+  }
 
-    &__slider {
-        @include media-breakpoint-down(lg) {
-            margin: 0 ($grid-gutter-width * -.5);
-            padding-left: $grid-gutter-width * .5;
-        }
+  &__slider {
+    @include media-breakpoint-down(lg) {
+      margin: 0 ($grid-gutter-width * -0.5);
+      padding-left: $grid-gutter-width * 0.5;
     }
+  }
 }
 
 .section-reviews {
-    .section__title {
-        span {
-            position: relative;
-            display: inline-flex;
-            background-color: $gray-200;
-            color: $cyan;
-            padding: .5rem 3rem;
-            border-radius: $border-radius;
+  .section__title {
+    span {
+      position: relative;
+      display: inline-flex;
+      background-color: $gray-200;
+      color: $cyan;
+      padding: 0.5rem 3rem;
+      border-radius: $border-radius;
 
-            //notch
-            &::after {
-                content: '';
-                display: block;
-                position: absolute;
-                width: 1rem;
-                height: 1rem;
-                transform-origin: center;
-                transform: rotate(45deg);
-                bottom: -.5rem;
-                left: 2rem;
-                background-color: $gray-200;
-            }
-        }
+      //notch
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        transform-origin: center;
+        transform: rotate(45deg);
+        bottom: -0.5rem;
+        left: 2rem;
+        background-color: $gray-200;
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    min-height: 16rem;
+
+    figure {
+      @include media-breakpoint-up(lg) {
+        margin: 0 auto;
+        max-width: 75%;
+        cursor: default;
+      }
     }
 
-    &__card {
-        display: flex;
-        align-items: center;
-        min-height: 16rem;            
+    figcaption {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: $font-weight-bold;
 
-        figure {
-            @include media-breakpoint-up(lg) {
-                margin: 0 auto;
-                max-width: 75%;
-                cursor: default;
-            }
-        }
-
-        figcaption {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-weight: $font-weight-bold;
-
-            &::after {
-                display: block;
-                content: '';
-                margin: .5rem 0;
-                height: 1.5rem;
-                background-image: url(@images/stars.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-                align-self: stretch;
-            }
-        }
+      &::after {
+        display: block;
+        content: '';
+        margin: 0.5rem 0;
+        height: 1.5rem;
+        background-image: url(@images/stars.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        align-self: stretch;
+      }
     }
+  }
 }
