@@ -1,5 +1,5 @@
 .section-sets {
-    padding-bottom: 0;
+  padding-bottom: 0;
 
   &__navigation {
     position: sticky;
@@ -17,10 +17,6 @@
     flex-wrap: nowrap;
   }
 
-  // .product-list__item {
-  //     padding-top: 4.75rem;
-  // }
-
   &__grid {
     margin: 1rem 0;
   }
@@ -34,6 +30,8 @@
   display: flex;
   overflow-x: auto;
   align-items: flex-start;
+
+  @include custom-scrollbar($padding: 10px 0, $axis: 'horizontal');
 
   &__title {
     position: sticky;
@@ -80,7 +78,7 @@
 
   &__list {
     margin: 0;
-    padding: 1rem 0;
+    padding: 0;
     display: flex;
     flex-wrap: nowrap;
     // white-space: nowrap;
