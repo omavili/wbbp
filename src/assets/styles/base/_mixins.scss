@@ -1,0 +1,88 @@
+//Custom scrollbar
+//Usage:
+//@include custom-scrollbar($padding: 9px 0, $axis: 'horizontal');
+//@include custom-scrollbar($padding: 30px 14px);
+@mixin custom-scrollbar($padding: 0, $axis: 'vertical', $cross-axis-scroll-reset: true) {
+	$scrollbar-width: 2px;
+	scrollbar-gutter: stable;
+
+	// FireFox
+	scrollbar-color: $black $gray;
+	scrollbar-width: thin;
+
+	$cross-axis-padding: null;
+
+	@if (length($padding) == 1) {
+		$cross-axis-padding: (2 * $padding);
+	} @else if (length($padding) == 2) {
+		@if ($axis == 'vertical') {
+			$cross-axis-padding: (2 * nth($padding, 2));
+		}
+		@else {
+			$cross-axis-padding: (2 * nth($padding, 1));
+		}
+	}
+	@else if (length($padding) == 3) {
+		@if ($axis == 'vertical') {
+			$cross-axis-padding: (2 * nth($padding, 2));
+		}
+		@else {
+			$cross-axis-padding: (nth($padding, 1) + nth($padding, 3));
+		}
+	}
+	@else if (length($padding) == 4) {
+		@if ($axis == 'vertical') {
+			$cross-axis-padding: (nth($padding, 2) + nth($padding, 4));
+		}
+		@else {
+			$cross-axis-padding: (nth($padding, 1) + nth($padding, 3));
+		}
+	}
+
+	@if ($axis == 'vertical') {
+		.no-cssscrollbar & {
+			padding-right: ($cross-axis-padding + $scrollbar-width);
+		}
+	} 
+	@else {
+		.no-cssscrollbar & {
+			padding-bottom: ($cross-axis-padding + $scrollbar-width);
+		}
+	}
+
+	@if ($axis == 'vertical') {
+		&::-webkit-scrollbar {
+			width: ($cross-axis-padding + $scrollbar-width);
+
+			@if ($cross-axis-scroll-reset == true) {
+				height: 0;
+			}
+		}
+	}
+	@else {
+		&::-webkit-scrollbar {
+			height: ($cross-axis-padding + $scrollbar-width);
+
+			@if ($cross-axis-scroll-reset == true) {
+				width: 0;
+			}
+		}
+	}
+
+	&::-webkit-scrollbar-track,
+	&::-webkit-scrollbar-thumb {
+		border-radius: 3px;
+		border-width: $padding;
+		border-color: rgba(0, 0, 0, 0);
+		border-style: solid;
+		background-clip: padding-box;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: $gray;
+	}
+
+	&::-webkit-scrollbar-thumb {
+  		background-color: $black;
+	}
+}
