@@ -4,13 +4,12 @@ import * as $ from 'jquery';
 window['jQuery'] = window['$'] = $;
 import { Popover } from 'bootstrap';
 
-$(window).on('load', function() {
-
+$(window).on('load', function () {
   //Form Validation
-  $('.needs-validation').on('submit', function(e) {
+  $('.needs-validation').on('submit', function (e) {
     if (!this.checkValidity()) {
-        e.preventDefault();
-        e.stopPropagation();
+      e.preventDefault();
+      e.stopPropagation();
     }
 
     $(this).addClass('was-validated');
@@ -25,12 +24,9 @@ $(window).on('load', function() {
   $('.js-header-navigation-btn').on('click', function () {
     $('.header').toggleClass('mobile-navigation');
   });
-
 });
 
-
-
-
+//
 
 //
 // const page = $('.page');

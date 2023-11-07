@@ -1,4 +1,3 @@
-// const options = require('./options');
 var exec = require('child_process').exec;
 
 var fontConfig = [
@@ -17,4 +16,4 @@ exec(`mkdirp src/fonts/iconfont`);
 exec('webfont ' + fontConfig.join(' '));
 
 // Command example:
-// npm run compile:icons -- --cartridge=app_custom_core
+// npm run compile:icons

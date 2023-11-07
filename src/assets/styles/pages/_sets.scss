@@ -1,0 +1,132 @@
+.section-sets {
+  padding-bottom: 0;
+
+  &__navigation {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: $white;
+
+    &.is-pinned {
+      box-shadow: $box-shadow;
+    }
+  }
+
+  &__navigation-list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__grid {
+    margin: 1rem 0;
+  }
+
+  + .section-faq {
+    padding-top: 0;
+  }
+}
+
+.months-nav {
+  display: flex;
+  overflow-x: auto;
+  align-items: flex-start;
+
+  @include custom-scrollbar($padding: 14px 0 0 0, $axis: 'horizontal');
+
+  @include media-breakpoint-up(lg) {
+    @include custom-scrollbar($padding: 10px 0 0 0, $axis: 'horizontal');
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    position: sticky;
+    left: 0;
+    top: 1rem;
+    padding-right: 1rem;
+    min-width: 7rem;
+    overflow: hidden;
+
+    span {
+      display: flex;
+      align-items: center;
+      padding: 0 0.75rem;
+      height: 2.75rem;
+      background-color: $gray-200;
+      border-radius: $border-radius;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 2.75rem;
+      height: 2.75rem;
+    }
+
+    &::before {
+      width: 0.5rem;
+      background-color: $white;
+    }
+
+    &::after {
+      transform-origin: center;
+      transform: rotate(-45deg);
+      background-color: $gray-200;
+      right: 0.5rem;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 1rem 0 0;
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include media-breakpoint-up(lg) {
+      padding: 1rem 0 .5rem;
+    }
+  }
+
+  &__list-item {
+    display: inline-flex;
+    list-style-type: none;
+    margin-left: 0.5rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    border: solid 0.0625rem $gray-300;
+    text-decoration: none;
+    font-weight: $font-weight-bold;
+
+    &:hover,
+    &.active {
+      background-color: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+  }
+}
+
+.months-nav-anchor {
+  display: block;
+  visibility: hidden;
+  transform: translateY(-6rem); //sticky months nav bar offset
+}
+
+//FAQ
+.section-faq {
+  .section__title {
+    color: $cyan;
+  }
+}

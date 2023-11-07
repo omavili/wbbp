@@ -1,0 +1,142 @@
+{% extends "src/views/layouts/default.html" %}
+
+{% set title="Sets" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+<script src="./sets.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Sets Page Content -->
+
+<section class="section section-sets">
+  <div class="section__wrap container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Sets</li>
+      </ol>
+    </nav>
+
+    <h1 class="section__title">Monthly Development Program</h1>
+    <p class="section__lead">Discover sets</p>
+
+    <div class="section__content">
+      <div class="section-sets__navigation months-nav js-sticky">
+        <div class="months-nav__title">
+          <span>Months</span>
+        </div>
+        <ul class="months-nav__list">
+          {% for i in range(9, 37)%}
+          <li class="months-nav__list-item"><a href="#month-set-{{i}}"
+              class="months-nav__link js-months-nav-link">{{i}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="section-sets__grid product-list">
+        <ul class="list-unstyled row">
+          {% for i in range(9, 37)%}
+          <li class="col-12 col-lg-6 product-list__item">
+            <span id="month-set-{{i}}" class="months-nav-anchor"></span>
+            <div class="product-tile">
+              <div class="product-tile__image product-image">
+                <a class="product-name__link" href="set-detail.html" title="">
+                  <picture>
+                    <img src="@images/sets/month-10.png" alt="Discovering My Body" width="800" height="450">
+                  </picture>
+                </a>
+              </div>
+              <div class="product-tile__info">
+                <div class="product-tile__name product-name"><a class="product-name__link" href="set-detail.html"
+                    title=""><span>{{i}}<sup>th</sup> Month</span> Discovering My Body</a></div>
+                <!-- <div class="product-tile__description product-description">Lorem ipsum dolor</div> -->
+                <a href="set-detail.html" class="btn btn-link">More</a>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-faq">
+  <div class="section__wrap container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <h3 class="section__title">Frequently Asked Questions</h3>
+        <div class="section__content">
+          <div class="accordion" id="faqs">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-q1"
+                  aria-expanded="true" aria-controls="faq-q1">
+                  What kind of activities are included in EarlyLearny?
+                </button>
+              </h2>
+              <div id="faq-q1" class="accordion-collapse collapse show" data-bs-parent="#faqs">
+                <div class="accordion-body">The program includes a variety of month-appropriate activities, games,
+                  books,
+                  and resources that are specifically designed to stimulate various developmental
+                  areas in children. These activities focus on cognitive development, speech and
+                  language, physical exercises, social skills, and emotional growth.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-q2" aria-expanded="true" aria-controls="faq-q2">
+                  Is EarlyLearny based on educational research?
+                </button>
+              </h2>
+              <div id="faq-q2" class="accordion-collapse collapse" data-bs-parent="#faqs">
+                <div class="accordion-body">Yes, EarlyLearny is crafted by a team of doctors, psychologists and
+                  educators in
+                  child development. The program's content is grounded in scientific educational
+                  research and tailored to meet developmental milestones.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-q3" aria-expanded="true" aria-controls="faq-q3">
+                  What are the Benefits of EarlyLearny?
+                </button>
+              </h2>
+              <div id="faq-q3" class="accordion-collapse collapse" data-bs-parent="#faqs">
+                <div class="accordion-body">
+                  <p>Doing the sets consecutively has tremendous benefits, but the main ones are:</p>
+                  <ul>
+                    <li>Helps the brain development (multiple intelligence) in all areas</li>
+                    <li>Strengthening bonds within the family,</li>
+                    <li>Enhancing social skills, concentration, and creativity,</li>
+                    <li>Promoting an interest in books and sensory development,</li>
+                    <li>Empowering parents with knowledge and instructions,</li>
+                    <li>Preparing children for new challenges, and thus</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="section__cta">
+            <a href="faq.html" class="btn btn-outline-info section__cta-btn">All Questions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Newsletter -->
+{% include "src/views/partials/newsletter.html" %}
+
+<!-- END - Sets Page Content -->
+{% endblock %}

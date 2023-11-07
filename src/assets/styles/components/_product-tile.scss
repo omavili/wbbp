@@ -1,0 +1,116 @@
+.product-tile {
+  $parent: &;
+  margin-bottom: 1rem;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 2rem;
+  }
+
+  &__info {
+    position: relative;
+    padding: 1.5rem 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: 2rem 0;
+    }
+
+    .btn-link {
+      transition: $transition-link;
+      position: absolute;
+      top: 2rem;
+      right: 0;
+      padding: 0.25rem 0;
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    #{$parent}__info .btn-link {
+      opacity: 1;
+    }
+  }
+
+  .section-sets & {
+    @include media-breakpoint-down(lg) {
+      .btn-link {
+        display: none;
+      }
+    }
+  }
+
+  &__description {
+    margin-top: 0.5rem;
+  }
+
+  //TODO: Tile Accordion
+  //   &.collapsed {
+  //       margin: 0;
+
+  //     .product-image {
+  //         display: none;
+  //     }
+  //     #{$parent}__info {
+  //         // border-top: solid 2px $gray-300;
+  //         border-bottom: solid 2px $gray-300;
+  //     }
+  //   }
+}
+
+.product-image {
+  position: relative;
+
+  picture {
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: $border-radius-lg;
+    border: solid 2px $gray-200;
+    background: linear-gradient(
+      180deg,
+      rgba(250, 250, 250, 1) 45%,
+      rgba(229, 229, 229, 1) 45%,
+      rgba(250, 250, 250, 1) 90%
+    );
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 2px rgba($gray-900, 0.15));
+  }
+
+  a:hover {
+    picture {
+      border-color: $gray-300;
+    }
+  }
+}
+
+.product-name {
+  @extend h4;
+  margin-bottom: 0;
+
+  @include media-breakpoint-down(lg) {
+    @include font-size($h5-font-size);
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-right: 5rem;
+  }
+
+  &__link {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+
+    span {
+      display: inline-block;
+      background-color: $gray-200;
+      padding: 0.25rem 0.75rem;
+      border-radius: $border-radius;
+    }
+  }
+}
