@@ -31,7 +31,12 @@
   overflow-x: auto;
   align-items: flex-start;
 
-  @include custom-scrollbar($padding: 10px 0, $axis: 'horizontal');
+  @include custom-scrollbar($padding: 14px 0 0 0, $axis: 'horizontal');
+
+  @include media-breakpoint-up(lg) {
+    @include custom-scrollbar($padding: 10px 0 0 0, $axis: 'horizontal');
+    margin-bottom: 2rem;
+  }
 
   &__title {
     position: sticky;
@@ -78,10 +83,13 @@
 
   &__list {
     margin: 0;
-    padding: 0;
+    padding: 1rem 0 0;
     display: flex;
     flex-wrap: nowrap;
-    // white-space: nowrap;
+
+    @include media-breakpoint-up(lg) {
+      padding: 1rem 0 .5rem;
+    }
   }
 
   &__list-item {
@@ -113,7 +121,7 @@
 .months-nav-anchor {
   display: block;
   visibility: hidden;
-  transform: translateY(-4.75rem); //sticky nav bar offset
+  transform: translateY(-6rem); //sticky months nav bar offset
 }
 
 //FAQ
