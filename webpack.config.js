@@ -31,6 +31,7 @@ module.exports = {
       entry: {
         // define HTML templates here
         index: 'src/views/pages/home/index.html', // => dist/index.html
+        sets: 'src/views/pages/sets/index.html', // => dist/sets.html
         about: 'src/views/pages/about/index.html', // => dist/about.html
         error404: './src/views/pages/error/404.html', // => dist/404.html
       },

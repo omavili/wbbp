@@ -1,81 +1,148 @@
 .page {
-    position: relative;
+  position: relative;
 }
 
 a {
-    transition: $link-transition;
+  transition: $transition-link;
 }
 
 .section {
-    $parent: &;
+  $parent: &;
 
-    padding: 1.5rem 0;
+  padding: 1.5rem 0;
+
+  @include media-breakpoint-up(lg) {
+    padding: 2rem 0;
+  }
+
+  &__title {
+    margin: 1.5rem 0;
+
+    &,
+    + #{$parent}__lead {
+      text-align: center;
+    }
+
+    &:is(h1) {
+      margin-bottom: 0.625rem;
+    }
 
     @include media-breakpoint-up(lg) {
-        padding: 2rem 0;
+      margin: 2rem 0;
+    }
+  }
+
+  &__headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+
+    #{$parent}__title {
+      text-align: left;
+      margin: 0;
     }
 
-    &__title {
-        margin: 1.5rem 0;
+    @include media-breakpoint-up(lg) {
+      margin: 2rem 0;
 
-        @include media-breakpoint-up(lg) {
-            margin: 2rem 0;
-        }
+      #{$parent}__title {
+        margin: 0;
+      }
     }
+  }
 
-    &__headline {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 1.5rem 0;
+  &__headline-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-        #{$parent}__title {
-            text-align: left;
-            margin: 0;
-        }
+  &__lead {
+    font-size: 1.15rem;
 
-        @include media-breakpoint-up(lg) {
-            margin: 2rem 0;
-
-            #{$parent}__title {
-                margin: 0;
-            }
-        }
+    @include media-breakpoint-up(lg) {
+      font-size: 1.25rem;
     }
+  }
 
-    &__headline-link {
-        padding-left: 0;
-        padding-right: 0;
+  &__content {
+    margin: 1.5rem 0;
+
+    @include media-breakpoint-up(lg) {
+      margin: 2rem 0;
     }
+  }
 
-    &__content {
-        margin: 1.5rem 0;
+  &__cta {
+    text-align: center;
+    margin: 2rem 0;
+  }
 
-        @include media-breakpoint-up(lg) {
-            margin: 2rem 0;
-        }
+  &--home {
+    text-align: center;
+
+    &#{$parent}__cta {
+      margin: 0;
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 2rem;
+        margin-bottom: 0;
+      }
     }
-
-    &__cta {
-        @include media-breakpoint-up(lg) {
-            margin-top: 2rem;
-        }
-    }
-
-    &--home {
-        text-align: center;
-    }
+  }
 }
 
 //TODO: Make component
 .divider {
-    border: none;
-    margin: 0;
-    opacity: 1;
-    height: .25rem;
-    line-height: .25rem;
-    background-image: linear-gradient(to right, $gray-200 70%, transparent 70%);
-    background-size: 1rem .25rem;
-    background-repeat: repeat-x;
-    background-position: 0 center;
+  border: none;
+  margin: 0;
+  opacity: 1;
+  height: 0.25rem;
+  line-height: 0.25rem;
+  background-image: linear-gradient(to right, $gray-200 70%, transparent 70%);
+  background-size: 1rem 0.25rem;
+  background-repeat: repeat-x;
+  background-position: 0 center;
+}
+
+//Accordion alignments
+.accordion-item {
+  border-width: $accordion-border-width 0;
+
+  .accordion-button {
+    font-size: 1.25rem;
+    gap: 1rem;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+
+    &:not(.collapsed) {
+      box-shadow: none;
+      color: $link-color;
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+  .accordion-collapse.collapsing,
+  .accordion-collapse.show {
+    .accordion-body {
+      padding-top: 0;
+    }
+  }
+}
+
+//breadcrumb
+.breadcrumb {
+  a {
+    text-decoration: none;
+    color: rgba($gray-900, 0.5);
+
+    &:hover {
+      text-decoration: underline;
+      color: $breadcrumb-active-color;
+    }
+  }
 }

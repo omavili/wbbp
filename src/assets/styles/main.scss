@@ -25,8 +25,8 @@
 // @import "bootstrap/scss/nav";
 // @import "bootstrap/scss/navbar"; // Requires nav
 @import "bootstrap/scss/card";
-// @import "bootstrap/scss/breadcrumb";
-// @import "bootstrap/scss/accordion";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/accordion";
 // @import "bootstrap/scss/pagination";
 // @import "bootstrap/scss/badge";
 // @import "bootstrap/scss/alert";
@@ -54,6 +54,7 @@
 //
 
 // Base
+@import 'base/mixins';
 @import 'base/typography';
 @import 'base/forms';
 @import 'base/icons/icons';
@@ -64,6 +65,7 @@
 @import 'components/swiper';
 @import 'components/hero-banner';
 @import 'components/newsletter';
+@import 'components/product-tile';
 
 // Page layout: header, main, footer
 @import 'pages/layout/default-layout.scss';
@@ -72,5 +74,6 @@
 
 //Pages
 @import 'pages/home.scss';
+@import 'pages/sets.scss';
 
 

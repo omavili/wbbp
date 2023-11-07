@@ -93,6 +93,7 @@ hr {
 
 h1 {
     @extend %heading;
+    color: $primary;
 
     @include font-size($h1-font-size-mobile);
 
