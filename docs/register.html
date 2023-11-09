@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign up</title>
+  
+  <link href="assets/img/favicon..png" rel="icon" type="image/png">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <script src="assets/js/common.js" defer="defer"></script>
+
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <div class="header">
+  <div class="header__promo">
+    <p>Free Shipping in UK &amp; EU</p>
+  </div>
+  <div class="header__slogan">
+    <p>Fostering Early Intelligence</p>
+  </div>
+  <div class="container header__inner-wrap">
+    <button class="header__navigation-btn js-header-navigation-btn" type="button"></button>
+    <a class="logo" href="index.html"><img class="logo__img" src="assets/img/logo..svg" alt="logo"></a>
+    <a class="header__subscribe header__subscribe--mobile" href="/checkout">Subscribe</a>
+    <div class="header__navigation-wrap">
+      <nav class="navigation">
+        <a class="navigation__link" href="what-is-earlylearny.html">What is EarlyLearny?</a>
+        <a class="navigation__link" href="how-it-works.html">How does it work?</span></a>
+        <a class="navigation__link" href="sets.html">Sets</a>
+        <span class="navigation__space"></span>
+        <a class="navigation__link" href="faq.html">FAQ</a>
+        <a class="navigation__link" href="contact.html">Contact</a>
+        <span class="navigation__divider"></span>
+        <!--Hide after login-->
+          <a class="navigation__link" href="login.html">Sign in</a>
+          <a class="navigation__link d-xl-none" href="register.html">Sign up</a>
+        <!--Show after login-->
+        <!--
+        <span class="navigation__greeting">Hello Jane</span>
+        <a class="navigation__link" href="account.html">Account Details</a>
+        <a class="navigation__link" href="subscriptions.html">Subscriptions</a>
+        <a class="navigation__link" href="shipments.html">Shipments</a>
+        <a class="navigation__link" href="payments.html">Payment Methods</a>
+        <a class="navigation__link" href="#">Admin</a>
+        <a class="navigation__link" href="#">Log out</a>
+        -->
+      </nav>
+    </div>
+    <!--Hide After login-->
+    <a class="btn btn-primary header__subscribe" href="/checkout">Subscribe</a>
+    <!--Show After login-->
+    <!--
+    <div class="header__account-menu dropdown">
+      <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="accountMenuLink" data-bs-toggle="dropdown">
+        My Account
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="accountMenuLink">
+        <li><a class="dropdown-item" href="account.html">Account Details</a></li>
+        <li><a class="dropdown-item" href="subscriptions.html">Subscriptions</a></li>
+        <li><a class="dropdown-item" href="shipments.html">Shipments</a></li>
+        <li><a class="dropdown-item" href="payments.html">Payment Methods</a></li>
+        <li><a class="dropdown-item" href="#">Admin</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Log out</a></li>
+      </ul>
+    </div>
+    -->
+  </div>
+</div>
+
+
+
+
+    <!-- Main content -->
+    <main class="main">
+        
+<!-- Page Content -->
+
+<div class="login-register">
+  <div class="login-register__wrap container">
+      <h1 class="login-register__title">Sign up</h1>
+      <p class="login-register__lead">Seems like you are new to EarlyLearny. Create an account.</p>
+      <div class="login-register__content row justify-content-center">
+        <div class="col-12 col-lg-4">
+          <form action="registersuccess.html" method="post" class="needs-validation" novalidate>
+            <div class="form-floating mb-4">
+              <select class="form-select" id="registerTitle" aria-label="Title">
+                <option value="1">Ms</option>
+                <option value="2">Mr</option>
+              </select>
+              <label for="registerTitle">Title</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input type="text" class="form-control" id="registerName" placeholder="First Name" aria-describedby="registerNameHelp" required>
+              <label for="registerName">First Name</label>
+              <div class="invalid-feedback" id="registerNameHelp">Please enter your first name</div>
+            </div>
+            <div class="form-floating mb-4">
+              <input type="text" class="form-control" id="registerSurname" placeholder="First Name" aria-describedby="registerSurnameHelp" required>
+              <label for="registerSurname">Surname</label>
+              <div class="invalid-feedback" id="registerSurnameHelp">Please enter your surname</div>
+            </div>
+            <div class="form-floating mb-4">
+              <input type="email" class="form-control" id="loginEmail" placeholder="E-mail address" aria-describedby="loginEmailHelp" required>
+              <label for="loginEmail">E-mail address</label>
+              <div class="invalid-feedback" id="loginEmailHelp">Please enter a valid e-mail</div>
+            </div>
+            <div class="form-floating mb-4">
+              <input type="password" class="form-control" id="loginPassword" placeholder="Password" aria-describedby="loginPasswordHelp" required>
+              <label for="loginPassword">Password</label>
+              <div class="invalid-feedback" id="loginPasswordHelp">Please enter a password</div>
+            </div>
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" value="" id="registerEmailApprove">
+              <label class="form-check-label" for="registerEmailApprove">
+                I agree receiving e-mails about my subscription and child's developmental stages.
+              </label>
+            </div>
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" value="" id="registerDataApprove" required>
+              <label class="form-check-label" for="registerDataApprove">
+                I have read and accept <a href="#">data protection policy.</a>
+              </label>
+              <div class="invalid-feedback" id="registerDataApproveHelp">Please check to continue</div>
+            </div>
+            <div class="login-register__submit">
+              <p>I accept the <a href="#">Terms of Use</a> by clicking the sign up.</p>
+              <button type="submit" class="btn btn-primary">Sign up</button>
+            </div>
+          </form>
+          <div class="divider">
+            <span>Or</span>
+          </div>
+          <p class="login-register__alternate">
+            Already have an account? <a href="login.html" class="btn btn-link">Sign in</a>
+          </p>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- Newsletter -->
+<div class="newsletter">
+    <div class="container">
+      <div class="newsletter__content row">
+        <div class="newsletter__headline col-12 col-xl-3">
+          <h3 class="newsletter__title">Newsletter</h3>
+          <p class="newsletter__text">Sign up for discounts, content and more!</p>
+        </div>
+        <div class="newsletter__form col-12 col-xl-9">
+          <form method="post" action="" class="needs-validation" novalidate>
+            <div class="newsletter__form-wrap row">
+              <div class="col-12 col-lg-4">
+                <label for="newsletterEmail" class="form-label">E-mail *</label>
+                <input type="email" class="form-control" id="newsletterEmail" aria-describedby="newsletterEmailHelp" required>
+                <div class="invalid-feedback" id="newsletterEmailHelp">
+                  Please enter a valid e-mail
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Child Birthdate (Optional)</label>
+                <div class="row g-3">
+                  <div class="col-4">
+                    <select class="form-select" aria-label="Month">
+                      <option selected>Month</option>
+                      <option value="1">January</option>
+                      <option value="2">February</option>
+                      <option value="3">March</option>
+                    </select>
+                  </div>
+                  <div class="col-4">
+                    <select class="form-select" aria-label="Day">
+                      <option selected>Day</option>
+                      <option value="1">01</option>
+                      <option value="2">02</option>
+                      <option value="3">03</option>
+                    </select>
+                  </div>
+                  <div class="col-4">
+                    <select class="form-select" aria-label="Year">
+                      <option selected>Year</option>
+                      <option value="1">2024</option>
+                      <option value="2">2023</option>
+                      <option value="3">2022</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-2 order-2 order-lg-1">
+                <button class="btn btn-success w-100" type="submit">Sign Up</button>
+              </div>
+              <div class="col-12 order-1 order-lg-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    I have read and agree to the <a href="privacy-policy.html">privacy policy.</a>
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before sign up
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- END - Page Content -->
+
+    </main>
+
+    <!-- Footer -->
+    <div class="footer">
+  <div class="container">
+    <div class="footer__links">
+      <div class="row">
+        <div class="col footer__link-group">
+          <h4 class="footer__title">EarlyLearny</h4>
+          <a href="what-is-earlylearny.html">What is EarlyLearny?</a>
+          <a href="how-it-works.html">How does it work?</a>
+          <a href="sets.html">Sets</a>
+          <a href="about.html">About</a>
+          <!--Hide after login-->
+          <a href="register.html">Register</a>
+          <a href="login.html">Login</a>
+          <!--Show after login-->
+          <!--
+            <a href="#">My Account</a>
+          -->
+          <a href="#">Subscribe</a>
+        </div>
+        <div class="col footer__link-group">
+          <h4 class="footer__title">Help</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        </div>
+        <div class="col-12 col-lg-4 footer__social-media">
+          <h4 class="footer__title">Social Media</h4>
+          <div class="footer__icons-wrap">
+            <a title="EarlyLearny on Instagram" href="https://www.instagram.com/early_learny/" target="_blank" rel="nofollow"><span class="icon icon-instagram" aria-hidden="true"></span></a>
+            <a title="EarlyLearny on Facebook" href="https://www.facebook.com/earlylearny" target="_blank" rel="nofollow"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+            <a title="EarlyLearny on Youtube" href="https://www.youtube.com/channel/UCb6eapwuL8nn8rQE82ebicw" target="_blank" rel="nofollow"><span class="icon icon-youtube" aria-hidden="true"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright"><a href="https://earlylearny.com">EarlyLearny.com</a> All rights reserved. &copy; 2023</p>
+      <div class="footer__payment-logos">
+        <img class="image" width="75" height="24" src="assets/img/visa..svg" alt="Visa">
+        <img class="image" width="39" height="24" src="assets/img/mastercard..svg" alt="Mastercard">
+        <img class="image" width="21" height="24" src="assets/img/paypal..svg" alt="Paypal">
+        <img class="image" width="50" height="50" src="assets/img/ssl..png" alt="SSL">
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+
+</body>
+</html>

@@ -29,7 +29,7 @@
 @import "bootstrap/scss/accordion";
 // @import "bootstrap/scss/pagination";
 // @import "bootstrap/scss/badge";
-// @import "bootstrap/scss/alert";
+@import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
 // @import "bootstrap/scss/list-group";
 @import "bootstrap/scss/close";
@@ -76,5 +76,6 @@
 @import 'pages/home.scss';
 @import 'pages/sets.scss';
 @import 'pages/set-detail.scss';
+@import 'pages/login-register.scss';
 
 

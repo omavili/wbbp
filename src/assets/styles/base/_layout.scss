@@ -59,11 +59,7 @@ a {
   }
 
   &__lead {
-    font-size: 1.15rem;
-
-    @include media-breakpoint-up(lg) {
-      font-size: 1.25rem;
-    }
+    @extend %lead;
   }
 
   &__content {
@@ -126,6 +122,19 @@ a {
   background-size: 1rem 0.25rem;
   background-repeat: repeat-x;
   background-position: 0 center;
+  text-align: center;
+
+  span {
+    text-transform: uppercase;
+    background-color: $white;
+    display: inline-block;
+    padding: 0 0.5rem;
+    font-size: $font-size-base-mobile;
+    font-weight: bold;
+    color: rgba($gray-900, 0.5);
+    line-height: 1;
+    margin-top: -50%;
+  }
 }
 
 //Accordion alignments

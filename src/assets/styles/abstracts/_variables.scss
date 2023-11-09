@@ -697,8 +697,9 @@ $display-font-family: $font-family-sans-serif !default;
 // // scss-docs-end display-headings
 
 // // scss-docs-start type-variables
-// $lead-font-size:              $font-size-base * 1.25 !default;
-// $lead-font-weight:            300 !default;
+$lead-font-size:              $font-size-base * 1.25 !default;
+$lead-font-size-mobile:       $font-size-base * 1.15 !default;
+$lead-font-weight:            400 !default;
 
 // $small-font-size:             .875em !default;
 

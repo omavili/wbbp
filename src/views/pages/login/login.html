@@ -1,0 +1,57 @@
+{% extends "src/views/layouts/default.html" %}
+
+{% set title="Sign in" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+<!-- Sets Page Content -->
+
+<div class="login-register">
+  <div class="login-register__wrap container">
+    <h1 class="login-register__title">Sign in</h1>
+    <div class="login-register__content row justify-content-center">
+      <div class="col-12 col-lg-4">
+        <form action="" method="post" class="needs-validation" novalidate>
+          <div class="form-floating mb-4">
+            <input type="email" class="form-control" id="loginEmail" placeholder="E-mail address" aria-describedby="loginEmailHelp" required>
+            <label for="loginEmail">E-mail address</label>
+            <div class="invalid-feedback" id="loginEmailHelp">Please enter a valid e-mail</div>
+          </div>
+          <div class="form-floating mb-4">
+            <input type="password" class="form-control" id="loginPassword" placeholder="Password" aria-describedby="loginPasswordHelp" required>
+            <label for="loginPassword">Password</label>
+            <div class="invalid-feedback" id="loginPasswordHelp">Please enter a password</div>
+          </div>
+          <div class="d-flex justify-content-between mb-4">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="loginRemember">
+              <label class="form-check-label" for="loginRemember">
+                Remember me
+              </label>
+            </div>
+            <a href="password.html" class="login-register__password-link">Forgot password?</a>
+          </div>
+          <div class="login-register__submit">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </div>
+        </form>
+        <div class="divider">
+          <span>Or</span>
+        </div>
+        <p class="login-register__alternate">
+          Don’t have an Account? <a href="register.html" class="btn btn-link">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Newsletter -->
+{% include "src/views/partials/newsletter.html" %}
+
+<!-- END - Sets Page Content -->
+{% endblock %}
