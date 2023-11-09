@@ -1,14 +1,19 @@
 .product-tile {
   $parent: &;
-  margin-bottom: 1rem;
+  width: 100%;
 
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 2rem;
+  .section-sets & {
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__info {
     position: relative;
     padding: 1.5rem 0;
+    text-align: left;
 
     @include media-breakpoint-up(lg) {
       padding: 2rem 0;
@@ -95,8 +100,15 @@
     @include font-size($h5-font-size);
   }
 
-  @include media-breakpoint-up(lg) {
-    margin-right: 5rem;
+  .section-sets & {
+    @include media-breakpoint-up(lg) {
+      margin-right: 5rem;
+    }
+  }
+
+  .section-recommendations & {
+    @extend h5;
+    margin-bottom: 0;
   }
 
   &__link {
@@ -105,12 +117,76 @@
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
+  }
 
-    span {
-      display: inline-block;
-      background-color: $gray-200;
-      padding: 0.25rem 0.75rem;
-      border-radius: $border-radius;
+  span {
+    display: inline-block;
+    background-color: $gray-200;
+    padding: 0.25rem 0.75rem;
+    border-radius: $border-radius;
+  }
+}
+
+.product-price {
+  @extend h4;
+  margin: 0.5rem 0;
+
+  .price {
+    color: $primary;
+  }
+
+  .price--discount {
+    color: $primary;
+
+    + .price {
+      color: $gray-900;
+      text-decoration: line-through;
     }
+  }
+
+  .per-text {
+    @extend %font-body;
+    color: rgba($gray-900, 0.5);
+    font-weight: $font-weight-light;
+  }
+}
+
+.company-text {
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+}
+
+.vat-text {
+  margin: 0.5rem 0;
+  color: rgba($gray-900, 0.5);
+  font-size: 1rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 0.875rem;
+  }
+}
+
+.product-cta {
+  margin: 1rem 0;
+}
+
+.product-icons {
+  text-align: left;
+  display: flex;
+  gap: 1rem;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: $font-weight-medium;
+  line-height: 1.25;
+
+  @include media-breakpoint-down(lg) {
+    justify-content: center;
+  }
+
+  .icon-free-shipping,
+  .icon-delivery-info {
+    display: flex;
+    gap: 0.625rem;
   }
 }
