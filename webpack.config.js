@@ -33,7 +33,7 @@ module.exports = {
         index: 'src/views/pages/home/index.html', // => dist/index.html
         sets: 'src/views/pages/sets/index.html', // => dist/sets.html
         setdetail: 'src/views/pages/set-detail/index.html', // => dist/setdetail.html
-        about: 'src/views/pages/about/index.html', // => dist/about.html
+        faq: 'src/views/pages/content/faq.html', // => dist/faq.html
         error404: './src/views/pages/error/404.html', // => dist/404.html
       },
 

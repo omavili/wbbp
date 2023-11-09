@@ -25,6 +25,7 @@ a {
 
     &:is(h1) {
       margin-bottom: 0.625rem;
+      color: $primary;
     }
 
     @include media-breakpoint-up(lg) {
@@ -89,6 +90,28 @@ a {
         margin-bottom: 0;
       }
     }
+  }
+}
+
+.section-faq {
+  .section__title {
+    color: $cyan;
+
+    &:is(h1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__group {
+    padding-bottom: 1rem;
+  }
+
+  &__group-title {
+    @extend h3;
+
+    margin: 1.5rem 0;
+    text-align: center;
+    color: $cyan;
   }
 }
 
