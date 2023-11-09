@@ -88,7 +88,7 @@
     flex-wrap: nowrap;
 
     @include media-breakpoint-up(lg) {
-      padding: 1rem 0 .5rem;
+      padding: 1rem 0 0.5rem;
     }
   }
 
@@ -122,11 +122,4 @@
   display: block;
   visibility: hidden;
   transform: translateY(-6rem); //sticky months nav bar offset
-}
-
-//FAQ
-.section-faq {
-  .section__title {
-    color: $cyan;
-  }
 }
