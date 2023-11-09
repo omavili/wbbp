@@ -1,0 +1,87 @@
+.login-register {
+  $parent: &;
+  @include media-breakpoint-up(lg) {
+    padding: 2rem 0;
+  }
+
+  &__title {
+    margin: 2rem 0 0.5rem;
+    text-align: center;
+  }
+
+  &__lead {
+    @extend %lead;
+    text-align: center;
+  }
+
+  &__content {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &__submit {
+    text-align: center;
+  }
+
+  button[type='submit'] {
+    margin: 1rem 0;
+    min-width: 13.75rem;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+  }
+
+  .divider {
+    margin: 1rem 0;
+  }
+
+  &__alternate {
+    margin: 2rem 0;
+    text-align: center;
+
+    .btn-link {
+      padding: 0;
+    }
+  }
+
+  &__password-link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--success {
+    #{$parent}__content {
+      h2,
+      h4,
+      p {
+        text-align: center;
+      }
+
+      h2 {
+        margin: 2rem 0;
+      }
+
+      h4 {
+        color: $primary;
+      }
+
+      form {
+        margin-top: 1rem;
+      }
+
+      button[type='submit'] {
+        min-width: 16.25rem;
+      }
+    }
+  }
+
+  &--password {
+    .form-success {
+      text-align: center;
+    }
+  }
+}

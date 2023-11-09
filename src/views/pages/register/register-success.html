@@ -1,0 +1,86 @@
+{% extends "src/views/layouts/default.html" %}
+
+{% set title="Welcome to EarlyLearny" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+<!-- Page Content -->
+
+<div class="login-register login-register--success">
+  <div class="login-register__wrap container">
+      <h1 class="login-register__title">Welcome to EarlyLearny!</h1>
+      <p class="login-register__lead">Your account has been created succesfully!</p>
+      <div class="login-register__content">
+        <h2>Let's Get Started!</h2>
+        <h4>Tell us about your child</h4>
+        <p>Share your child’s details to get the suggested development set.</p>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-4">
+                
+            <form action="subscribe1.html" method="post" class="needs-validation" novalidate>
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" id="subscribeChildName" placeholder="Child Name" aria-describedby="subscribeChildNameHelp" required>
+                    <label for="subscribeChildName">Child Name</label>
+                    <div class="invalid-feedback" id="subscribeChildNameHelp">Please enter child name</div>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label">Child Birthdate</label>
+                    <div class="row g-3">
+                        <div class="col-4">
+                            <div class="form-floating">
+                                <select class="form-select" id="subscribeBirthMonth" aria-label="Month" required>
+                                    <option selected></option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                </select>
+                                <label for="subscribeBirthMonth">Month</label>
+                                <div class="invalid-feedback">Required</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-floating">
+                                <select class="form-select" id="subscribeBirthDay" aria-label="Day" required>
+                                    <option selected></option>
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                </select>
+                                <label for="subscribeBirthDay">Day</label>
+                                <div class="invalid-feedback">Required</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-floating">
+                                <select class="form-select" id="subscribeBirthYear" aria-label="Year" required>
+                                    <option selected></option>
+                                    <option value="1">2024</option>
+                                    <option value="2">2023</option>
+                                    <option value="3">2022</option>
+                                </select>
+                                <label for="subscribeBirthYear">Year</label>
+                                <div class="invalid-feedback">Required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="login-register__submit">
+                    <button type="submit" class="btn btn-primary">Find Suitable Set</button>
+                </div>
+            </form>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- Newsletter -->
+{% include "src/views/partials/newsletter.html" %}
+
+<!-- END - Page Content -->
+{% endblock %}

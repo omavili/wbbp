@@ -31,10 +31,14 @@ module.exports = {
       entry: {
         // define HTML templates here
         index: 'src/views/pages/home/index.html', // => dist/index.html
-        sets: 'src/views/pages/sets/index.html', // => dist/sets.html
-        setdetail: 'src/views/pages/set-detail/index.html', // => dist/setdetail.html
-        faq: 'src/views/pages/content/faq.html', // => dist/faq.html
-        error404: './src/views/pages/error/404.html', // => dist/404.html
+        sets: 'src/views/pages/sets/index.html',
+        setdetail: 'src/views/pages/set-detail/index.html',
+        faq: 'src/views/pages/content/faq.html',
+        login: 'src/views/pages/login/login.html',
+        password: 'src/views/pages/login/password.html',
+        register: 'src/views/pages/register/register.html',
+        registersuccess: 'src/views/pages/register/register-success.html',
+        error404: './src/views/pages/error/404.html',
       },
 
       js: {
