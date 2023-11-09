@@ -1,0 +1,255 @@
+{% extends "src/views/layouts/default.html" %}
+
+{% set title="Set Detail" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+<script src="./set-detail.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Sets Page Content -->
+
+<section class="set-detail">
+  <div class="set-detail__wrap container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="sets.html">Sets</a></li>
+        <li class="breadcrumb-item active" aria-current="page">10<sup>th</sup> Month Set</li>
+      </ol>
+    </nav>
+
+    <div class="set-detail__main">
+        <h1 class="set-detail__title"><span>10<sup>th</sup> Month</span> Discovering My Body</h1>
+
+        <div class="set-detail__images">
+          <div class="set-detail__images-wrap">
+
+            <div class="set-detail__big-image swiper js-swiper-big-image">
+              <div class="swiper-wrapper">
+      
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <div class="product-image">
+                        <picture>
+                          <img src="@images/sets/month-10-big.png" alt="" width="1280" height="720" loading="lazy">
+                        </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
+  
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <div class="product-image">
+                        <picture>
+                          <img src="@images/sets/month-10.png" alt="" width="800" height="643">
+                        </picture>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <div class="product-image">
+                        <picture>
+                          <img src="@images/sets/month-10-big.png" alt="" width="1280" height="720" loading="lazy">
+                        </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <div class="product-image">
+                        <picture>
+                          <img src="@images/sets/month-10-big.png" alt="" width="1280" height="720" loading="lazy">
+                        </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
+      
+                <!-- <div class="swiper-slide">
+                  <div class="product-video">
+                    video
+                  </div>
+                </div> -->
+      
+              </div>
+            </div>
+
+            <div class="set-detail__thumbs swiper js-swiper-thumbs" thumbsSlider>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <picture class="thumbnail">
+                      <img src="@images/sets/month-10-thumb.png" alt="" width="240" height="240">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="thumbnail">
+                    <img src="@images/sets/month-10-thumb.png" alt="" width="240" height="240">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="thumbnail">
+                    <img src="@images/sets/month-10-thumb.png" alt="" width="240" height="240">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="thumbnail">
+                    <img src="@images/sets/month-10-thumb.png" alt="" width="240" height="240">
+                  </picture>
+                </div>
+
+                <!-- <div class="swiper-slide">
+                  <picture class="thumbnail thumbnail--video">
+                    <img src="@images/sets/month-10-thumb.png" alt="" width="240" height="240">
+                  </picture>
+                </div> -->
+      
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="set-detail__info">
+          <!-- <div class="company-text">BLACK FRIDAY 10% OFF</div> -->
+          <div class="product-price">
+            <span class="price price--discount">£24.75</span>
+            <span class="price">£27.50</span>
+            <span class="per-text">/ month</span>
+          </div>
+          <div class="vat-text">Prices incl. VAT</div>
+          <div class="product-cta">
+            <a href="subscribe1.html" class="btn btn-primary">Subscribe</a>
+          </div>
+          <div class="product-icons">
+            <div class="icon-free-shipping"><img src="@images/icon-free-shipping.svg" alt="Free Shipping" width="48" height="31">Free Shipping <br>in UK & EU</div>
+            <div class="icon-delivery-info"><img src="@images/icon-delivery-info.svg" alt="Delivery Info" width="36" height="32">Delivery in <br>1-3 Days (Appr.)</div>
+          </div>
+        </div>
+    </div>
+
+    <div class="set-detail__details">
+      <h3 class="product-name"><span>10<sup>th</sup> Month</span> Discovering My Body</h3>
+      <p>The theme of the 10th month concentrates on motor-skills development as babies begin to show significant improvements in this area. They can direct their own bodies, especially their hands and feet, with their own ability and becomes experts at using their new found motor skills. Discovering the motor control of using their hands and feet allows babies to become extremely creative and have many fun adventures. The theme of this activity book, “Hands and Feet”, is discussed within the lesson plans and further supports the baby's intelligence development.</p>
+      <p><strong>Materials and care:</strong> Water-based non-toxic paint and finishes</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-recommendations">
+  <div class="section__wrap container">
+    <div class="section__headline">
+      <h3 class="section__title">Upcoming Sets</h3>
+      <a href="sets.html" class="btn btn-link section__headline-link">Show All</a>
+    </div>
+    <div class="section__content">  
+      <div class="section-recommendations__slider swiper js-swiper-recommendations">
+        <div class="swiper-wrapper">
+          {% for i in range(11, 14)%}
+          <div class="swiper-slide">
+              <div class="product-tile">
+                <div class="product-tile__image product-image">
+                  <a class="product-image__link" href="setdetail.html" title="">
+                    <picture>
+                      <img src="@images/sets/month-10.png" alt="Discovering My Body" width="400" height="225">
+                    </picture>
+                  </a>
+                </div>
+                <div class="product-tile__info">
+                  <div class="product-tile__name product-name"><a class="product-name__link" href="setdetail.html"
+                      title=""><span>{{i}}<sup>th</sup> Month</span> Discovering My Body</a></div>
+                </div>
+              </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-faq">
+  <div class="section__wrap container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <h3 class="section__title">Frequently Asked Questions</h3>
+        <div class="section__content">
+          <div class="accordion" id="faqs">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-q1"
+                  aria-expanded="true" aria-controls="faq-q1">
+                  What is EarlyLearny?
+                </button>
+              </h2>
+              <div id="faq-q1" class="accordion-collapse collapse show" data-bs-parent="#faqs">
+                <div class="accordion-body">EarlyLearny is a monthly educational program and set of materials designed to
+                  support the holistic development of infants and toddlers between 9 to 36
+                  months of age. It offers age-appropriate activities and resources to promote
+                  various developmental aspects in young children.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-q2" aria-expanded="true" aria-controls="faq-q2">
+                  Why is it that important?
+                </button>
+              </h2>
+              <div id="faq-q2" class="accordion-collapse collapse" data-bs-parent="#faqs">
+                <div class="accordion-body">Development during pregnancy and the first years of life shapes the architecture
+                  of a child's growing brain. During this time, foundations are laid which will
+                  ultimately influence their education, physical and mental health, and their
+                  eventual career and lifelong wellbeing . This phase is crucial for shaping lifelong
+                  health and happiness. Investing during this age period yields an 80% higher
+                  return compared to educating them in later years. (Source: Heckman)</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq-q3" aria-expanded="true" aria-controls="faq-q3">
+                  How does EarlyLearny work?
+                </button>
+              </h2>
+              <div id="faq-q3" class="accordion-collapse collapse" data-bs-parent="#faqs">
+                <div class="accordion-body">
+                  Subscribers receive monthly/quarterly package(s) containing educational
+                  materials and activities specifically curated for the child's developmental stage.
+                  These materials aim to enhance cognitive, speech and language, physical, social,
+                  and emotional growth.
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="section__cta">
+            <a href="faq.html" class="btn btn-outline-info section__cta-btn">All Questions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Newsletter -->
+{% include "src/views/partials/newsletter.html" %}
+
+<!-- END - Sets Page Content -->
+{% endblock %}

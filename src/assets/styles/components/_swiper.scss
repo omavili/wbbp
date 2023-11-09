@@ -3,11 +3,13 @@
 @import 'swiper/scss/navigation';
 
 :root {
+  --swiper-theme-color: $gray-900;
   --swiper-pagination-bottom: 0.25rem;
   --swiper-pagination-color: #{$gray-900};
   --swiper-pagination-bullet-width: 0.75rem;
   --swiper-pagination-bullet-height: 0.5rem;
   --swiper-pagination-bullet-border-radius: 0.5rem;
+  --swiper-navigation-size: 2rem;
 }
 
 .swiper-pagination {
@@ -49,4 +51,17 @@
 }
 .swiper-pagination-bullet-active {
   width: 1.5rem;
+}
+
+.swiper-vertical :is(.swiper-button-next, .swiper-button-prev) {
+	left: 50%;
+	transform: rotate(90deg);
+	transform-origin: left center;
+}
+.swiper-vertical .swiper-button-prev {
+	top: calc(var(--swiper-navigation-size) / 2);
+}
+.swiper-vertical .swiper-button-next {
+	top: auto;
+	bottom: calc(var(--swiper-navigation-size) / 2);
 }
