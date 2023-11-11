@@ -1,0 +1,117 @@
+{% extends "src/views/layouts/checkout.html" %}
+
+{% set title="Step 1 - Child" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+<script src="./checkout.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Page Content -->
+<div class="checkout__content">
+    <div class="checkout__content-wrap container">
+        <div class="alert-container">
+            <div class="alert alert-danger" role="alert">Soluta delectus <a href="#" class="alert-link">commodi</a> iure?</div>
+        </div>
+
+        <div class="checkout__block">
+            <h4 class="checkout__title">The initial set to be dispatched as part of the EarlyLearny Development Program</h4>
+        </div>
+
+        <!--Sets Info-->
+        <div class="checkout__block">
+            <div class="row justify-content-center block-sets">
+                <!--Set container-->
+                <div class="col-12 col-lg-4 block-sets__item">
+                    <div class="block-set">
+                        <h4 class="block-set__title">For Raul</h4>
+                        <div class="product-tile">
+                            <div class="product-tile__slider swiper js-product-tile-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-tile__image product-image">
+                                            <picture>
+                                                <img src="@images/sets/month-10.png" alt="Discovering My Body" width="800" height="450">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-tile__image product-image">
+                                            <picture>
+                                                <img src="@images/sets/month-10.png" alt="Discovering My Body" width="800" height="450">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-tile__image product-image">
+                                            <picture>
+                                                <img src="@images/sets/month-10.png" alt="Discovering My Body" width="800" height="450">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-tile__info">
+                              <div class="product-tile__name product-name"><span>9<sup>th</sup> Month</span> Discovering My Body</div>
+                              <!-- <div class="product-tile__description product-description">Lorem ipsum dolor</div> -->
+                            </div>
+                        </div>
+                        <!-- <p>No set message</p> -->
+                    </div>
+                </div>
+                <!-- <div class="col-12 col-lg-4 block-sets__item">
+                    <div class="block-set">
+                        <h4 class="block-set__title">For Fiona</h4>
+
+                        <div class="product-tile">
+                            <div class="product-tile__slider swiper js-product-tile-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-tile__image product-image">
+                                            <picture>
+                                                <img src="@images/sets/month-10.png" alt="Discovering My Body" width="800" height="450">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-tile__image product-image">
+                                            <picture>
+                                                <img src="@images/sets/month-10.png" alt="Discovering My Body" width="800" height="450">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-tile__image product-image">
+                                            <picture>
+                                                <img src="@images/sets/month-10.png" alt="Discovering My Body" width="800" height="450">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="product-tile__info">
+                              <div class="product-tile__name product-name"><span>9<sup>th</sup> Month</span> Discovering My Body</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> -->
+                <!--END - Set container-->
+            </div>
+        </div>
+
+        <div class="checkout__block block-submit">
+            <button type="submit" class="btn btn-primary">Continue</button>
+            <button type="button" class="btn btn-link btn-back">Previous</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- END - Page Content -->
+{% endblock %}

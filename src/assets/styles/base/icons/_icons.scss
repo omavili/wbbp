@@ -30,28 +30,32 @@
 @function icon-char($filename) {
 	$char: "";
     
-        @if $filename == chevron-right {
+        @if $filename == check {
             $char: \ea01;
         }
     
-        @if $filename == close {
+        @if $filename == chevron-right {
             $char: \ea02;
         }
     
-        @if $filename == facebook {
+        @if $filename == close {
             $char: \ea03;
         }
     
-        @if $filename == instagram {
+        @if $filename == facebook {
             $char: \ea04;
         }
     
-        @if $filename == menu {
+        @if $filename == instagram {
             $char: \ea05;
         }
     
-        @if $filename == youtube {
+        @if $filename == menu {
             $char: \ea06;
+        }
+    
+        @if $filename == youtube {
+            $char: \ea07;
         }
     
 	@return $char;
@@ -69,6 +73,10 @@
 }
 
 // Classes for each font icon
+
+.icon-check {
+	@include icon(check);
+}
 
 .icon-chevron-right {
 	@include icon(chevron-right);
@@ -105,17 +113,19 @@
 
 //Variable for each font icon
 
-$icon-chevron-right: "\ea01";
+$icon-check: "\ea01";
 
-$icon-close: "\ea02";
+$icon-chevron-right: "\ea02";
 
-$icon-facebook: "\ea03";
+$icon-close: "\ea03";
 
-$icon-instagram: "\ea04";
+$icon-facebook: "\ea04";
 
-$icon-menu: "\ea05";
+$icon-instagram: "\ea05";
 
-$icon-youtube: "\ea06";
+$icon-menu: "\ea06";
+
+$icon-youtube: "\ea07";
 
 
 /* stylelint-enable */

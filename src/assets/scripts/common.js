@@ -2,7 +2,7 @@
 
 import * as $ from 'jquery';
 window['jQuery'] = window['$'] = $;
-import { Popover } from 'bootstrap';
+import { Popover, Tooltip } from 'bootstrap';
 
 $(window).on('load', function () {
   //Form Validation
@@ -15,10 +15,11 @@ $(window).on('load', function () {
     $(this).addClass('was-validated');
   });
 
+  //Tooltips
+  const tooltipList = [...$('[data-bs-toggle="tooltip"]')].map(tooltipTriggerEl => new Tooltip(tooltipTriggerEl));
+
   //Popovers
-  $('[data-bs-toggle="popover"]').each((popover) => {
-    new Popover(popover);
-  });
+  const popoverList = [...$('[data-bs-toggle="popover"]')].map(popoverTriggerEl => new Popover(popoverTriggerEl));
 
   //Header mobile navigation mode
   $('.js-header-navigation-btn').on('click', function () {

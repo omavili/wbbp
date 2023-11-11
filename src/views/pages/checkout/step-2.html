@@ -1,0 +1,83 @@
+{% extends "src/views/layouts/checkout.html" %}
+
+{% set title="Step 1 - Child" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+<script src="./checkout.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Page Content -->
+
+<div class="checkout__content">
+    <div class="checkout__content-wrap container">
+        <div class="checkout__block">
+            <h1 class="checkout__title">Choose your subscription</h1>
+        </div>
+
+        <div class="checkout__block">
+            <div class="row justify-content-center block-subscription-types">
+                <!--Subscription Type-->
+                <div class="col-12 col-lg-4 col-xl-3 block-subscription-types__item selected">
+                    <div class="block-subscription">
+                        <h5 class="block-subscription__title">Monthly</h5>
+                        <div class="block-subscription__text">Subscription</div>
+                        <div class="block-subscription__image">
+                            <img src="@images/single-box.png" alt="Monthly" width="200" height="170">
+                        </div>
+                        <div class="block-subscription__price">
+                            <div class="price">
+                                <!-- <span class="discount-price">£22.75</span> -->
+                                <span class="regular-price">£24.75</span>
+                                <span class="per-text">/ Month</span>
+                            </div>
+                        </div>
+                        <div class="block-subscription__delivery-info">
+                            Deliver 1 Set / Month
+                        </div>
+                        <div class="block-subscription__benefits">
+                            <div>Free Shipment</div>
+                        </div>
+                    </div>
+                </div>
+                <!--END - Subscription Type-->
+                <div class="col-12 col-lg-4 col-xl-3 block-subscription-types__item">
+                    <div class="block-subscription">
+                        <h5 class="block-subscription__title">Quarterly</h5>
+                        <div class="block-subscription__text">Subscription</div>
+                        <div class="block-subscription__image">
+                            <img src="@images/triple-box.png" alt="Quarterly" width="200" height="170">
+                        </div>
+                        <div class="block-subscription__price">
+                            <div class="price">
+                                <!-- <span class="discount-price">£22.75</span> -->
+                                <span class="regular-price">£24.50</span>
+                                <span class="per-text">/ Month</span>
+                            </div>
+                        </div>
+                        <div class="block-subscription__delivery-info">
+                            Deliver 3 sets Every 3 Months
+                        </div>
+                        <div class="block-subscription__benefits">
+                            <div>Free Shipment</div>
+                            <div class="text-primary">Save £36 / Year</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 block-legal">Prices incl. VAT</div>
+            </div>
+        </div>
+
+        <div class="checkout__block block-submit">
+            <button type="submit" class="btn btn-primary">Continue</button>
+            <button type="button" class="btn btn-link btn-back">Previous</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- END - Page Content -->
+{% endblock %}

@@ -9,14 +9,18 @@
 {% endblock %}
 
 {% block content %}
-<!-- Sets Page Content -->
-
+<!-- Login Page Content -->
 <div class="login-register">
   <div class="login-register__wrap container">
+    <div class="alert-container">
+      <div class="alert alert-danger" role="alert">Soluta delectus <a href="#" class="alert-link">commodi</a> iure?</div>
+      <!-- <div class="alert alert-light alert-dismissible fade show" role="alert" >Soluta delectus commodi iure?<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div> -->
+    </div>
     <h1 class="login-register__title">Sign in</h1>
     <div class="login-register__content row justify-content-center">
       <div class="col-12 col-lg-4">
         <form action="" method="post" class="needs-validation" novalidate>
+          <div class="alert alert-success mb-4" role="alert">Soluta delectus <a href="#" class="alert-link">commodi</a> iure?</div>
           <div class="form-floating mb-4">
             <input type="email" class="form-control" id="loginEmail" placeholder="E-mail address" aria-describedby="loginEmailHelp" required>
             <label for="loginEmail">E-mail address</label>

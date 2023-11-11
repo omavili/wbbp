@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  
+  <link href="@images/favicon.png" rel="icon" type="image/png">
+
+  <link href="@styles/checkout.scss" rel="stylesheet">
+
+  <script src="@scripts/common.js" defer="defer"></script>
+
+</head>
+<body>
+  <div class="page checkout">
+    <!-- Header -->
+    {% include "src/views/partials/checkout-header.html" %}
+
+    <!-- Main content -->
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    {% include "src/views/partials/checkout-footer.html" %}
+    
+  {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -178,3 +178,11 @@ a {
     }
   }
 }
+
+.alert-container {
+  margin-bottom: 2rem;
+
+  &:empty {
+   margin: 0; 
+  }
+}
