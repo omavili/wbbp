@@ -1,0 +1,82 @@
+// Required
+@use "base/fonts/inter";
+@use "base/fonts/nunito";
+@import "bootstrap/scss/functions";
+@import "abstracts/variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins"; //_grid.scss line 59 divide(100%, $count) change to divide(100, $count) to fix the abs error on build
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+// @import "bootstrap/scss/reboot";
+@import "abstracts/reboot"; //customized duplication of bootstrap reboot
+
+@import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/nav";
+// @import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+@import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas"; // Requires transitions
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
+
+//
+// Custom styles
+//
+
+// Base
+@import 'base/mixins';
+@import 'base/typography';
+@import 'base/forms';
+@import 'base/icons/icons';
+@import 'base/layout.scss';
+
+//Components
+@import 'components/buttons';
+@import 'components/swiper';
+// @import 'components/hero-banner';
+// @import 'components/newsletter';
+@import 'components/product-tile';
+
+// Page layout: header, main, footer
+@import 'pages/layout/checkout-layout.scss';
+// @import 'pages/layout/header.scss';
+// @import 'pages/layout/footer.scss';
+
+//Pages
+// @import 'pages/home.scss';
+// @import 'pages/sets.scss';
+// @import 'pages/set-detail.scss';
+// @import 'pages/login-register.scss';
+@import 'pages/checkout.scss';
+
+

@@ -38,6 +38,9 @@ module.exports = {
         password: 'src/views/pages/login/password.html',
         register: 'src/views/pages/register/register.html',
         registersuccess: 'src/views/pages/register/register-success.html',
+        checkoutstep1child: 'src/views/pages/checkout/step-1-child.html',
+        checkoutstep1set: 'src/views/pages/checkout/step-1-set.html',
+        checkoutstep2: 'src/views/pages/checkout/step-2.html',
         error404: './src/views/pages/error/404.html',
       },
 

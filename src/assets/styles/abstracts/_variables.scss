@@ -42,8 +42,8 @@ $purple:  #7578CB !default;
 // $pink:    #d63384 !default;
 $red: #f15b5b !default;
 $orange: #f47920 !default;
-// $yellow:  #ffc107 !default;
-// $green:   #198754 !default;
+$yellow:  #faa61a !default;
+$green: #72bf44 !default;
 $teal: #19b790 !default;
 $cyan: #00b1c5 !default;
 // // scss-docs-end color-variables
@@ -301,11 +301,11 @@ $min-contrast-ratio: 2 !default; //disabled
 $primary: $orange !default;
 $secondary: $cyan !default;
 $success:       $teal !default;
-// $info:          $cyan !default;
-// $warning:       $yellow !default;
-// $danger:        $red !default;
-// $light:         $gray-100 !default;
-// $dark:          $gray-900 !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-200 !default;
+$dark:          $gray-900 !default;
 // // scss-docs-end theme-color-variables
 
 // // scss-docs-start theme-colors-map
@@ -333,13 +333,13 @@ $success:       $teal !default;
 // // scss-docs-end theme-text-variables
 
 // // scss-docs-start theme-bg-subtle-variables
-// $primary-bg-subtle:       tint-color($primary, 80%) !default;
-// $secondary-bg-subtle:     tint-color($secondary, 80%) !default;
-// $success-bg-subtle:       tint-color($success, 80%) !default;
+$primary-bg-subtle:       tint-color($primary, 70%) !default;
+$secondary-bg-subtle:     tint-color($gray-900, 10%) !default;
+$success-bg-subtle:       tint-color($green, 60%) !default;
 // $info-bg-subtle:          tint-color($info, 80%) !default;
-// $warning-bg-subtle:       tint-color($warning, 80%) !default;
-// $danger-bg-subtle:        tint-color($danger, 80%) !default;
-// $light-bg-subtle:         mix($gray-100, $white) !default;
+$warning-bg-subtle:       tint-color($warning, 60%) !default;
+$danger-bg-subtle:        tint-color($danger, 60%) !default;
+$light-bg-subtle:         $gray-200 !default;
 // $dark-bg-subtle:          $gray-400 !default;
 // // scss-docs-end theme-bg-subtle-variables
 
@@ -562,10 +562,10 @@ $box-shadow: 0 0 .625rem rgba($black, .15) !default;
 // $component-active-bg:         $primary !default;
 
 // // scss-docs-start focus-ring-variables
-$focus-ring-width:      .25rem !default;
-$focus-ring-opacity:    .25 !default;
-$focus-ring-color:      rgba($teal, $focus-ring-opacity) !default;
-$focus-ring-blur:       0 !default;
+$focus-ring-width:      2px !default;
+$focus-ring-opacity:    0 !default;
+$focus-ring-color:      rgba($black, $focus-ring-opacity) !default;
+$focus-ring-blur:       2px !default;
 $focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color !default;
 // // scss-docs-end focus-ring-variables
 
@@ -632,9 +632,9 @@ $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-base-mobile: $font-size-sm !default;
 
 // $font-weight-lighter:         lighter !default;
-// $font-weight-light:           300 !default;
+$font-weight-light:           300 !default;
 // $font-weight-normal:          400 !default;
-// $font-weight-medium:          500 !default;
+$font-weight-medium:          500 !default;
 // $font-weight-semibold:        600 !default;
 $font-weight-bold: 700 !default;
 // $font-weight-bolder:          bolder !default;
@@ -935,7 +935,7 @@ $input-border-color:                    var(--#{$prefix}border-color) !default;
 // $input-border-radius-lg:                var(--#{$prefix}border-radius-lg) !default;
 
 // $input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              tint-color($cyan, 50%) !default;
+$input-focus-border-color:              tint-color($cyan, 0%) !default;
 // $input-focus-color:                     $input-color !default;
 // $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
@@ -1426,15 +1426,15 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 // $tooltip-font-size:                 $font-size-sm !default;
 // $tooltip-max-width:                 200px !default;
 // $tooltip-color:                     var(--#{$prefix}body-bg) !default;
-// $tooltip-bg:                        var(--#{$prefix}emphasis-color) !default;
-// $tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
-// $tooltip-opacity:                   .9 !default;
-// $tooltip-padding-y:                 $spacer * .25 !default;
-// $tooltip-padding-x:                 $spacer * .5 !default;
+$tooltip-bg:                        $gray-900 !default;
+$tooltip-border-radius:             .25rem !default;
+$tooltip-opacity:                   .8 !default;
+$tooltip-padding-y:                 $spacer * .5 !default;
+$tooltip-padding-x:                 $spacer * .75 !default;
 // $tooltip-margin:                    null !default; // TODO: remove this in v6
 
-// $tooltip-arrow-width:               .8rem !default;
-// $tooltip-arrow-height:              .4rem !default;
+$tooltip-arrow-width:               1rem !default;
+$tooltip-arrow-height:              .5rem !default;
 // // fusv-disable
 // $tooltip-arrow-color:               null !default; // Deprecated in Bootstrap 5.2.0 for CSS variables
 // // fusv-enable
@@ -1568,12 +1568,12 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 // // Define alert colors, border radius, and padding.
 
 // // scss-docs-start alert-variables
-// $alert-padding-y:               $spacer !default;
-// $alert-padding-x:               $spacer !default;
+$alert-padding-y:               .75rem !default;
+$alert-padding-x:               1rem !default;
 // $alert-margin-bottom:           1rem !default;
 // $alert-border-radius:           var(--#{$prefix}border-radius) !default;
-// $alert-link-font-weight:        $font-weight-bold !default;
-// $alert-border-width:            var(--#{$prefix}border-width) !default;
+$alert-link-font-weight:        $font-weight-medium !default;
+$alert-border-width:            0 !default;
 // $alert-dismissible-padding-r:   $alert-padding-x * 3 !default; // 3x covers width of x plus default padding on either side
 // // scss-docs-end alert-variables
 

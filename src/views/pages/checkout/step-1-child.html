@@ -1,0 +1,169 @@
+{% extends "src/views/layouts/checkout.html" %}
+
+{% set title="Step 1 - Child" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+<script src="./checkout.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Page Content -->
+
+<div class="checkout__content">
+    <div class="checkout__content-wrap container">
+        <div class="checkout__block">
+            <h1 class="checkout__title">Tell us about your child</h1>
+            <p class="checkout__lead">Share your child's details to get the suggested development set.</p>
+        </div>
+
+        <!--Child Info-->
+        <div class="checkout__block">
+            <div class="row justify-content-center block-children">
+                <!--Children container-->
+                <div class="col-12 col-lg-6 block-children__item">
+                    <div class="block-child">
+                        <div class="form-floating mb-4 block-child__name">
+                            <input type="text" class="form-control" id="subscribeChildName" placeholder="Child Name" aria-describedby="subscribeChildNameHelp" required>
+                            <label for="subscribeChildName">Child Name</label>
+                            <div class="invalid-feedback" id="subscribeChildNameHelp">Please enter child name</div>
+                        </div>
+                        <div class="block-child__birthdate">
+                            <label class="form-label">Child Birthdate</label>
+                            <div class="row g-3">
+                                <div class="col-5">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="subscribeBirthMonth" aria-label="Month" required>
+                                            <option selected></option>
+                                            <option value="1">January</option>
+                                            <option value="2">February</option>
+                                            <option value="3">March</option>
+                                        </select>
+                                        <label for="subscribeBirthMonth">Month</label>
+                                        <div class="invalid-feedback">Required</div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="subscribeBirthDay" aria-label="Day" required>
+                                            <option selected></option>
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                        </select>
+                                        <label for="subscribeBirthDay">Day</label>
+                                        <div class="invalid-feedback">Required</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="subscribeBirthYear" aria-label="Year" required>
+                                            <option selected></option>
+                                            <option value="1">2024</option>
+                                            <option value="2">2023</option>
+                                            <option value="3">2022</option>
+                                        </select>
+                                        <label for="subscribeBirthYear">Year</label>
+                                        <div class="invalid-feedback">Required</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-children__item-actions">
+                        <button type="button" class="btn btn-link btn-add">+ Add Sibling</button>
+                        <div class="discount-info">5% Sibling discount <a href="#">more</a></div>
+                    </div>
+                </div>
+
+                <!--Add .block-children__item block for each child-->
+                <!-- <div class="col-12 col-lg-5 block-children__item">
+                    <div class="block-child">
+                        <div class="form-floating mb-4 block-child__name">
+                            <input type="text" class="form-control" id="subscribeChildName" placeholder="Child Name" aria-describedby="subscribeChildNameHelp" required>
+                            <label for="subscribeChildName">Child Name</label>
+                            <div class="invalid-feedback" id="subscribeChildNameHelp">Please enter child name</div>
+                        </div>
+                        <div class="block-child__birthdate">
+                            <label class="form-label">Child Birthdate</label>
+                            <div class="row g-3">
+                                <div class="col-5">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="subscribeBirthMonth" aria-label="Month" required>
+                                            <option selected></option>
+                                            <option value="1">January</option>
+                                            <option value="2">September</option>
+                                            <option value="3">March</option>
+                                        </select>
+                                        <label for="subscribeBirthMonth">Month</label>
+                                        <div class="invalid-feedback">Required</div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="subscribeBirthDay" aria-label="Day" required>
+                                            <option selected></option>
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                        </select>
+                                        <label for="subscribeBirthDay">Day</label>
+                                        <div class="invalid-feedback">Required</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="subscribeBirthYear" aria-label="Year" required>
+                                            <option selected></option>
+                                            <option value="1">2024</option>
+                                            <option value="2">2023</option>
+                                            <option value="3">2022</option>
+                                        </select>
+                                        <label for="subscribeBirthYear">Year</label>
+                                        <div class="invalid-feedback">Required</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-children__item-actions">
+                        <button type="button" class="btn btn-link btn-remove js-remove-child">Remove</button>
+                    </div>
+                </div> -->
+                <!--END - Children container-->
+            </div>
+        </div>
+
+        <!--User Info-->
+        <div class="checkout__block block-user">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-5">
+                    <hr class="divider" />
+                    <div class="form-floating mb-4">
+                        <input type="email" class="form-control" id="subscribeEmail" placeholder="Your E-mail address" aria-describedby="subscribeEmailHelp" required>
+                        <label for="subscribeEmail">Your E-mail address</label>
+                        <div class="invalid-feedback" id="subscribeEmailHelp">Please enter a valid e-mail</div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="subscribeEmailApprove">
+                        <label class="form-check-label" for="subscribeEmailApprove">
+                          I agree receiving e-mails about my subscription and child's developmental stages.
+                        </label>
+                        <div class="invalid-feedback">Please check to continue</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout__block block-submit">
+            <button type="submit" class="btn btn-primary">Find Suitable Set</button>
+            <!-- <button type="button" class="btn btn-link btn-back">Previous</button> -->
+        </div>
+
+    </div>
+</div>
+
+<!-- END - Page Content -->
+{% endblock %}
