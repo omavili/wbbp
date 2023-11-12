@@ -43,6 +43,10 @@ module.exports = {
         checkoutstep2: 'src/views/pages/checkout/step-2.html',
         checkoutstep3: 'src/views/pages/checkout/step-3.html',
         checkoutstep4: 'src/views/pages/checkout/step-4.html',
+        checkoutsuccess: {
+          import: 'src/views/pages/checkout/success.html',
+          data: { pageClass: 'checkout--success' }, //Added to hide Header Title and Progress on Success Page
+        },
         error404: './src/views/pages/error/404.html',
       },
 
