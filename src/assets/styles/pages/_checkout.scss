@@ -296,3 +296,161 @@
   margin-top: 2rem;
 }
 
+.order-summary {
+  padding: 1rem;
+  background-color: $gray-100;
+  border-radius: $border-radius-lg;
+  border: 2px solid $gray-300;
+  text-align: center;
+
+  &__item {
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    a {
+      font-size: $font-size-base-mobile;
+    }
+
+    .discount {
+      color: $primary;
+    }
+
+    &.coupon {
+      .label {
+        display: inline-block;
+        padding: 0 .25rem;
+        margin-left: -.25rem;
+        background-color: $white;
+        border: 1px dashed rgba($gray-900, .5);
+        border-radius: .25rem;
+      }
+    }
+  }
+
+  hr {
+    margin: 1.25rem 0;
+    border-color: $gray-300;
+    opacity: 1;
+  }
+
+  &__item-title {
+    .label {
+      font-weight: $font-weight-bold;
+
+      span {
+        font-weight: $font-weight-normal;
+      }
+    }
+
+    .help-text {
+      font-size: $font-size-base-mobile;
+    }
+  }
+
+  &__item-value {
+    text-align: right;
+
+    .total & {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__coupon-form {
+    border-top: 2px solid $gray-300;
+    margin: 1.5rem -1rem 0;
+    padding: 1.5rem 1rem .5rem;
+    text-align: left;
+  }
+}
+
+.shipping-address,
+.billing-address {
+  .btn-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.payment-type {
+  $parent: &;
+  transition: border-color 0.2s ease-in-out;
+  margin-bottom: 1.25rem;
+  border: 2px solid $gray-300;
+  border-radius: $border-radius-lg;
+
+  &__title {
+    position: relative;
+    padding-left: 0;
+    margin: 0;
+
+    .form-check-input {
+      position: absolute;
+      left: 1rem;
+      margin: 0;
+      top: calc(50% - .6rem);
+
+      @include media-breakpoint-up(lg) {
+        left: 1.25rem;
+      }
+
+      &:checked {
+        background-color: $gray-900;
+        border-color: $gray-900;
+      }
+    }
+
+    .form-check-label {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem 0 3rem;
+      margin: 0;
+      min-height: 4rem;
+      cursor: pointer;
+
+      @include media-breakpoint-up(lg) {
+        padding: 0 1.25rem 0 3rem;
+      }
+
+      span:first-of-type {
+        @extend h5;
+
+        margin: 0;
+      }
+
+      .google-pay & {
+        img {
+          margin-top: .25rem;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+    padding: 0 1rem 1.5rem;
+
+    @include media-breakpoint-up(lg) {
+      padding: .5rem 1.25rem 1.5rem;
+    }
+  }
+
+  &.selected {
+    border-color: rgba($gray-900, .5);
+    box-shadow: $box-shadow;
+
+    #{$parent}__content {
+      display: block;
+    }
+  }
+}
+
+.billing-address {
+  &__title {
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+  }
+}

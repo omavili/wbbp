@@ -821,8 +821,8 @@ $input-btn-padding-x: 1.875rem !default;
 // $input-btn-focus-blur:          $focus-ring-blur !default;
 $input-btn-focus-box-shadow:    $focus-ring-box-shadow !default;
 
-// $input-btn-padding-y-sm:      .25rem !default;
-// $input-btn-padding-x-sm:      .5rem !default;
+$input-btn-padding-y-sm:      .5rem !default;
+$input-btn-padding-x-sm:      .75rem !default;
 // $input-btn-font-size-sm:      $font-size-sm !default;
 
 // $input-btn-padding-y-lg:      .5rem !default;
@@ -1424,11 +1424,11 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 
 // // scss-docs-start tooltip-variables
 // $tooltip-font-size:                 $font-size-sm !default;
-// $tooltip-max-width:                 200px !default;
+$tooltip-max-width:                 18.75rem !default;
 // $tooltip-color:                     var(--#{$prefix}body-bg) !default;
 $tooltip-bg:                        $gray-900 !default;
 $tooltip-border-radius:             .25rem !default;
-$tooltip-opacity:                   .8 !default;
+$tooltip-opacity:                   .9 !default;
 $tooltip-padding-y:                 $spacer * .5 !default;
 $tooltip-padding-x:                 $spacer * .75 !default;
 // $tooltip-margin:                    null !default; // TODO: remove this in v6

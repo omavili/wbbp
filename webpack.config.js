@@ -41,6 +41,8 @@ module.exports = {
         checkoutstep1child: 'src/views/pages/checkout/step-1-child.html',
         checkoutstep1set: 'src/views/pages/checkout/step-1-set.html',
         checkoutstep2: 'src/views/pages/checkout/step-2.html',
+        checkoutstep3: 'src/views/pages/checkout/step-3.html',
+        checkoutstep4: 'src/views/pages/checkout/step-4.html',
         error404: './src/views/pages/error/404.html',
       },
 

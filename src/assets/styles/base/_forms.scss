@@ -7,3 +7,66 @@
         }
     }
 }
+
+input[type="number"] {
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.form-text {
+    text-align: right;
+    color: rgba($gray-900, .5);
+    min-width: fit-content;
+}
+
+.slash-separator {
+    position: relative;
+
+    &::before {
+        content: '/';
+        position: absolute;
+        top: 1rem;
+        left: -.2rem;
+        color: rgba($gray-900, .5);
+    }
+}
+
+.form-control-info {
+    position: relative;
+
+    .icon {
+        position: absolute;
+        right: .75rem;
+        top: calc(50% - .75rem);
+        color: rgba($gray-900, .5);
+    }
+
+    .form-control {
+        padding-right: 2rem;
+    }
+}
+
+#cvvNumber {
+    .tooltip-inner {
+            span {
+            display: block;
+            width: 220px;
+            height: 150px;
+            background-image: url(@images/cvv.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.invalid-feedback {
+    ul, ol {
+        padding-left: 1rem;
+    }
+}
