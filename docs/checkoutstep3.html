@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Step 3</title>
+  
+  <link href="assets/img/favicon..png" rel="icon" type="image/png">
+
+  <link href="assets/css/checkout.css" rel="stylesheet">
+
+  <script src="assets/js/common.js" defer="defer"></script>
+
+</head>
+<body>
+  <div class="page checkout">
+    <!-- Header -->
+    <div class="header">
+  <div class="header__top">
+    <div class="header__top-wrap container">
+      <div>Fostering Early Intelligence</div>
+      <div>Secured by SSL <img class="image" width="24" height="24" src="assets/img/ssl..png" alt="SSL"></div>
+    </div>
+  </div>
+  <div class="container header__inner-wrap">
+    <div class="header__title">Subscribe</div>
+    <a class="logo" href="index.html"><img class="logo__img" src="assets/img/logo..svg" alt="logo"></a>
+    <div class="checkout-progress">
+      <div id="checkoutProgressStep1" class="checkout-progress__step completed">
+        <a href="#" class="checkout-progress__step-number" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-container="#checkoutProgressStep1" data-bs-title="<p><span><strong>Raul</strong></span>10.01.2023</p><p><span><strong>Fiona</strong></span>10.01.2023</p>"><span>1</span></a>
+      </div>
+      <div id="checkoutProgressStep2" class="checkout-progress__step active">
+        <a href="#" class="checkout-progress__step-number" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-container="#checkoutProgressStep2" data-bs-title="<strong>Quarterly</strong> Subscription"><span>2</span></a>
+      </div>
+      <div id="checkoutProgressStep3" class="checkout-progress__step">
+        <a href="#" class="checkout-progress__step-number"  data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" data-bs-container="#checkoutProgressStep3" data-bs-title="<strong>Deliver to:</strong> London, UK"><span>3</span></a>
+      </div>
+      <div id="checkoutProgressStep4" class="checkout-progress__step">
+        <a href="#" class="checkout-progress__step-number"><span>4</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <!-- Main content -->
+    <main class="main">
+        
+<!-- Page Content -->
+
+<div class="checkout__content">
+    <div class="checkout__content-wrap container">
+        <div class="checkout__block">
+            <h1 class="checkout__title">Shipping Details</h1>
+            <p class="checkout__lead">Free Shipping in UK and EU</p>
+        </div>
+
+        <div class="checkout__block">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-4">
+                    <div class="shipping-address">
+                        <div class="form-floating mb-4">
+                            <select class="form-select" id="addressTitle" aria-label="Title">
+                              <option value="1">Ms</option>
+                              <option value="2">Mr</option>
+                            </select>
+                            <label for="addressTitle">Title</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="addressName" placeholder="First Name" aria-describedby="addressNameHelp" required>
+                            <label for="addressName">First Name</label>
+                            <div class="invalid-feedback" id="addressNameHelp">Please enter your first name</div>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="addressSurname" placeholder="First Name" aria-describedby="addressSurnameHelp" required>
+                            <label for="addressSurname">Surname</label>
+                            <div class="invalid-feedback" id="addressSurnameHelp">Please enter your surname</div>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <select class="form-select" id="addressCountry" aria-label="Country">
+                              <option value="1">United Kingdom</option>
+                              <option value="2">Germany</option>
+                            </select>
+                            <label for="addressCountry">Country</label>
+                        </div>
+                        <div class="row g-4 mb-4">
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="addressPostalCode" placeholder="Postal Code" aria-describedby="addressPostalCodeHelp" required>
+                                    <label for="addressPostalCode">Postal Code</label>
+                                    <div class="invalid-feedback" id="addressPostalCodeHelp">Please enter your first name</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-link" id="addressAutofill">Autofill Address</button>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="addressCity" placeholder="City, County" aria-describedby="addressCityHelp" required>
+                            <label for="addressCity">City, County</label>
+                            <div class="invalid-feedback" id="addressCityHelp">Please enter city / county</div>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <textarea class="form-control" placeholder="Address" id="addressDetail" style="height: 5rem;"></textarea>
+                            <label for="addressDetail">Address</label>
+                            <div class="invalid-feedback" id="addressDetail">Please enter address</div>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="number" class="form-control" id="addressPhoneNumber" placeholder="Phone Number" aria-describedby="addressPhoneNumberHelp" required>
+                            <label for="addressPhoneNumber">Phone Number</label>
+                            <div class="row justify-content-end">
+                                <div class="col invalid-feedback" id="addressPhoneNumberHelp">Invalid phone number</div>
+                                <div class="col form-text align-right">+44-1234123456</div>
+                            </div>
+                        </div>
+                        <!--Phone with country code-->
+                        <!-- <div class="row g-2 mb-4">
+                            <div class="col-12"><label for="addressPhoneNumber">Phone Number</label></div>
+                            <div class="col-5">
+                                <select class="form-select" id="addressPhoneCountry" aria-label="Country Code">
+                                    <option>Country Code</option>
+                                    <option value="1">+44</option>
+                                    <option value="2">+9</option>
+                                </select>
+                            </div>
+                            <div class="col-7">
+                                <input type="number" class="form-control" id="addressPhoneNumber" placeholder="Number"
+                                    aria-describedby="addressPhoneNumberHelp" required>
+                                <label for="addressPhoneNumber" class="visually-hidden"></label>
+                                <div class="d-flex justify-content-end">
+                                    <div class="invalid-feedback" id="addressPhoneNumberHelp">Invalid phone number</div>
+                                    <div class="form-text align-right">+44-1234123456</div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="order-summary">
+                        <h4 class="order-summary__title">Order Summary</h4>
+                        <img src="assets/img/triple-box..png" alt="Monthly" width="200" height="170">
+                        <!-- <img src="assets/img/single-box..png" alt="Monthly" width="200" height="170"> -->
+                        <div class="row order-summary__item child">
+                            <div class="col-12 order-summary__item-title">
+                                <div class="label">Raul's First Sets<span></span></div>
+                                <div class="help-text">
+                                    9th Month Set Discovering My Body<br>
+                                    10th Month Set Discovering My Body<br>
+                                    11th Month Set Discovering My Body
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row order-summary__item child">
+                            <div class="col-12 order-summary__item-title">
+                                <div class="label">Raul's First Sets</div>
+                                <div class="help-text">
+                                    9th Month Set Discovering My Body<br>
+                                    10th Month Set Discovering My Body<br>
+                                    11th Month Set Discovering My Body
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row order-summary__item subscription">
+                            <div class="col-8 order-summary__item-title">
+                                <div class="label">Quarterly Subscription<span></span></div>
+                                <div class="help-text">2 Child x 3 Month Set</div>
+                            </div>
+                            <!-- <div class="col-8 order-summary__item-title">
+                                <div class="label">Monthly Subscription<span></span></div>
+                                <div class="help-text">1 Child x 1 Month Set</div>
+                            </div> -->
+                            <div class="col-4 order-summary__item-value">
+                                <div>19.92 GBP</div>
+                            </div>
+                        </div>
+                        <div class="row order-summary__item">
+                            <div class="col-8 order-summary__item-title">
+                                <div class="label">Twin Discount <span>(5%)</span></div>
+                            </div>
+                            <div class="col-4 order-summary__item-value">
+                                <div class="discount">-2.00 GBP</div>
+                            </div>
+                        </div>
+                        <div class="row order-summary__item">
+                            <div class="col-8 order-summary__item-title">
+                                <div class="label">Subsription Discount<span></span></div>
+                                <div class="help-text">5% Off on Quarterly Subscription</div>
+                            </div>
+                            <div class="col-4 order-summary__item-value">
+                                <div class="discount">-5.00 GBP</div>
+                            </div>
+                        </div>
+                        <div class="row order-summary__item shipping">
+                            <div class="col-8 order-summary__item-title">
+                                <div class="label">Shipping Fee<span></span></div>
+                                <div class="help-text">Ships in 3 business days</div>
+                            </div>
+                            <div class="col-4 order-summary__item-value">
+                                <div>0 GBP</div>
+                            </div>
+                        </div>
+                        <div class="row order-summary__item coupon">
+                            <div class="col-8 order-summary__item-title">
+                                <div class="label">BlackSale20</div>
+                                <div class="help-text">Coupon code applied</div>
+                            </div>
+                            <div class="col-4 order-summary__item-value">
+                                <div class="discount">-3.98 GBP</div>
+                                <a href="#" class="js-remove-coupon">Remove</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row order-summary__item subtotal">
+                            <div class="col-8 order-summary__item-title">
+                                <div class="label">Subtotal</div>
+                            </div>
+                            <div class="col-4 order-summary__item-value">
+                                <div>16.24 GBP</div>
+                            </div>
+                        </div>
+                        <div class="row order-summary__item vat">
+                            <div class="col-8 order-summary__item-title">
+                                <div class="label">VAT <span>(20%)</span></div>
+                            </div>
+                            <div class="col-4 order-summary__item-value">
+                                <div>3.25 GBP</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row order-summary__item total">
+                            <div class="col-8 order-summary__item-title">
+                                <div class="label">Order Total</div>
+                            </div>
+                            <div class="col-4 order-summary__item-value">
+                                <div>19.49 GBP</div>
+                            </div>
+                        </div>
+                        <!--Add "d-none" class next to "order-summary__coupon-form" to hide when coupon code applied-->
+                        <div class="order-summary__coupon-form">
+                            <form class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-9">
+                                  <input type="text" class="form-control form-control-sm" placeholder="Coupon Code" aria-label="Coupon Code" required>
+                                  <div class="invalid-feedback">Coupon code is not valid</div>
+                                </div>
+                                <div class="col-3">
+                                    <button type="submit" class="btn btn-secondary btn-sm w-100">Add</button>
+                                </div>
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="checkout__block block-submit">
+            <button type="submit" class="btn btn-primary">Continue</button>
+            <button type="button" class="btn btn-link btn-back">Previous</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- END - Page Content -->
+
+    </main>
+
+    <!-- Footer -->
+    <div class="footer">
+  <div class="container footer__inner-wrap">
+    <div class="row">
+      <div class="footer__links col-12 col-lg-4">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      </div>
+      <div class="col-12 col-lg-4 footer__payment-logos">
+        <img class="image" width="75" height="24" src="assets/img/visa..svg" alt="Visa">
+        <img class="image" width="39" height="24" src="assets/img/mastercard..svg" alt="Mastercard">
+        <img class="image" width="21" height="24" src="assets/img/paypal..svg" alt="Paypal">
+        <img class="image" width="50" height="50" src="assets/img/ssl..png" alt="SSL">
+      </div>
+      <div class="col-12 col-lg-4 footer__copyright"><a href="https://earlylearny.com">EarlyLearny.com</a> All rights reserved. &copy; 2023</div>
+    </div>
+  </div>
+</div>
+    
+  
+<script src="assets/js/checkout.js"></script>
+
+</body>
+</html>

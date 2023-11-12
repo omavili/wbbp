@@ -46,16 +46,20 @@
             $char: \ea04;
         }
     
-        @if $filename == instagram {
+        @if $filename == info {
             $char: \ea05;
         }
     
-        @if $filename == menu {
+        @if $filename == instagram {
             $char: \ea06;
         }
     
-        @if $filename == youtube {
+        @if $filename == menu {
             $char: \ea07;
+        }
+    
+        @if $filename == youtube {
+            $char: \ea08;
         }
     
 	@return $char;
@@ -90,6 +94,10 @@
 	@include icon(facebook);
 }
 
+.icon-info {
+	@include icon(info);
+}
+
 .icon-instagram {
 	@include icon(instagram);
 }
@@ -121,11 +129,13 @@ $icon-close: "\ea03";
 
 $icon-facebook: "\ea04";
 
-$icon-instagram: "\ea05";
+$icon-info: "\ea05";
 
-$icon-menu: "\ea06";
+$icon-instagram: "\ea06";
 
-$icon-youtube: "\ea07";
+$icon-menu: "\ea07";
+
+$icon-youtube: "\ea08";
 
 
 /* stylelint-enable */
