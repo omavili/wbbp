@@ -47,6 +47,7 @@ module.exports = {
           import: 'src/views/pages/checkout/success.html',
           data: { pageClass: 'checkout--success' }, //Added to hide Header Title and Progress on Success Page
         },
+        accountdetails: 'src/views/pages/account/index.html',
         error404: './src/views/pages/error/404.html',
       },
 
