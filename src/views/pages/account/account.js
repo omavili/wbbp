@@ -18,5 +18,13 @@ $(window).on('load', function () {
             window.location = $(this).attr('href') || '#';
         }
     });
+
+    $('.js-same-address').on('change', function () {
+        if($(this).is(':checked')) {
+            $('.js-billing-address').addClass('d-none');
+        } else {
+            $('.js-billing-address').removeClass('d-none');
+        }
+    });
 });
   

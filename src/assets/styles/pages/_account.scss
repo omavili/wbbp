@@ -79,7 +79,8 @@
 
             &.active {
                 @include media-breakpoint-up(lg) {
-                    color: $primary;
+                    font-weight: $font-weight-bold;
+                    color: $gray-900;
                 }
             }
         }
@@ -133,5 +134,10 @@
     &__subtitle {
         @extend h4;
         margin-bottom: 1.425rem;
+    }
+
+    .btn-link {
+        padding-left: 0;
+        padding-right: 0;
     }
 }

@@ -57,7 +57,7 @@
             </div>
             <div class="col-12 col-lg-4">
               <div class="form-floating mb-4">
-                <input type="text" class="form-control" id="userSurname" placeholder="First Name" aria-describedby="userSurnameHelp" required>
+                <input type="text" class="form-control" id="userSurname" placeholder="Surname" aria-describedby="userSurnameHelp" required>
                 <label for="userSurname">Surname</label>
                 <div class="invalid-feedback" id="userSurnameHelp">Please enter your surname</div>
               </div>
@@ -85,65 +85,124 @@
                 <label class="form-check-label" for="userEmailApprove">
                   I agree receiving e-mails about my subscription and child's developmental stages.
                 </label>
-                <div class="invalid-feedback" id="ruserEmailApproveHelp">Please check to continue</div>
+                <div class="invalid-feedback" id="userEmailApproveHelp">Please check to continue</div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="account-content__block">
+        <div class="account-content__block shipping-address">
           <h2 class="account-content__subtitle">Shipping Address</h2>
           <div class="row">
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-6">
               <div class="form-floating mb-4">
-                <select class="form-select" id="userTitle" aria-label="Title">
-                  <option value="1">Ms</option>
-                  <option value="2">Mr</option>
+                <select class="form-select" id="shippingAddressCountry" aria-label="Country">
+                  <option value="1">United Kingdom</option>
+                  <option value="2">Germany</option>
                 </select>
-                <label for="userTitle">Title</label>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4">
-              <div class="form-floating mb-4">
-                <input type="text" class="form-control" id="userName" placeholder="First Name" aria-describedby="userNameHelp" required>
-                <label for="userName">First Name</label>
-                <div class="invalid-feedback" id="userNameHelp">Please enter your first name</div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4">
-              <div class="form-floating mb-4">
-                <input type="text" class="form-control" id="userSurname" placeholder="First Name" aria-describedby="userSurnameHelp" required>
-                <label for="userSurname">Surname</label>
-                <div class="invalid-feedback" id="userSurnameHelp">Please enter your surname</div>
+                <label for="shippingAddressCountry">Country</label>
               </div>
             </div>
             <div class="col-12 col-lg-6">
-              <div class="form-floating mb-4">
-                <input type="email" class="form-control" id="userEmail" placeholder="E-mail address" aria-describedby="userEmailHelp" disabled value="info@earlylearny.com">
-                <label for="userEmail">E-mail address</label>
-                <div class="invalid-feedback" id="userEmailHelp">Please enter a valid e-mail</div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="form-floating">
-                <input type="number" class="form-control" id="userPhoneNumber" placeholder="Phone Number" aria-describedby="userPhoneNumberHelp" required>
-                <label for="userPhoneNumber">Phone Number</label>
-                <div class="row justify-content-end">
-                    <div class="col invalid-feedback" id="userPhoneNumberHelp">Invalid phone number</div>
-                    <div class="col form-text align-right">+44-1234123456</div>
+              <div class="row g-4 mb-4">
+                <div class="col-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="shippingAddressPostalCode" placeholder="Postal Code" aria-describedby="addressPostalCodeHelp" required>
+                        <label for="shippingAddressPostalCode">Postal Code</label>
+                        <div class="invalid-feedback" id="shippingAddressPostalCodeHelp">Please enter your first name</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-link w-100" id="shippingAddressAutofill">Autofill Address</button>
                 </div>
               </div>
             </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="shippingAddressCity" placeholder="City, County" aria-describedby="shippingAddressCityHelp" required>
+                <label for="shippingAddressCity">City, County</label>
+                <div class="invalid-feedback" id="shippingAddressCityHelp">Please enter city / county</div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <textarea class="form-control" placeholder="Address" id="shippingAddressDetail"></textarea>
+                <label for="shippingAddressDetail">Address</label>
+                <div class="invalid-feedback" id="shippingAddressDetail">Please enter address</div>
+              </div>
+            </div>
             <div class="col-12">
-              <div class="form-check my-1">
-                <input class="form-check-input" type="checkbox" value="" id="userEmailApprove" required>
-                <label class="form-check-label" for="userEmailApprove">
-                  I agree receiving e-mails about my subscription and child's developmental stages.
+              <div class="form-check">
+                <input class="form-check-input js-same-address" type="checkbox" value="" id="sameAddress" checked>
+                <label class="form-check-label" for="sameAddress">
+                  Billing address same as shipping address
                 </label>
-                <div class="invalid-feedback" id="ruserEmailApproveHelp">Please check to continue</div>
               </div>
             </div>
           </div>
+
+        </div>
+        <div class="account-content__block d-none billing-address js-billing-address">
+          <h2 class="account-content__subtitle">Billing Address</h2>
+          <div class="row">
+            <!--Use if necessary-->
+            <!-- <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="billingAddressName" placeholder="First Name" aria-describedby="billingAddressNameHelp" required>
+                <label for="billingAddressName">First Name</label>
+                <div class="invalid-feedback" id="billingAddressNameHelp">Please enter your first name</div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="billingAddressSurname" placeholder="Surname" aria-describedby="billingAddressSurnameHelp" required>
+                <label for="billingAddressSurname">Surname</label>
+                <div class="invalid-feedback" id="billingAddressSurnameHelp">Please enter your surname</div>
+              </div>
+            </div> -->
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <select class="form-select" id="shippingAddressCountry" aria-label="Country">
+                  <option value="1">United Kingdom</option>
+                  <option value="2">Germany</option>
+                </select>
+                <label for="shippingAddressCountry">Country</label>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="row g-4 mb-4">
+                <div class="col-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="shippingAddressPostalCode" placeholder="Postal Code" aria-describedby="addressPostalCodeHelp" required>
+                        <label for="shippingAddressPostalCode">Postal Code</label>
+                        <div class="invalid-feedback" id="shippingAddressPostalCodeHelp">Please enter your first name</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-link w-100" id="shippingAddressAutofill">Autofill Address</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="shippingAddressCity" placeholder="City, County" aria-describedby="shippingAddressCityHelp" required>
+                <label for="shippingAddressCity">City, County</label>
+                <div class="invalid-feedback" id="shippingAddressCityHelp">Please enter city / county</div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <textarea class="form-control" placeholder="Address" id="shippingAddressDetail"></textarea>
+                <label for="shippingAddressDetail">Address</label>
+                <div class="invalid-feedback" id="shippingAddressDetail">Please enter address</div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+        <div class="account-content__block">
+          <button type="submit" class="btn btn-primary">Update</button>
         </div>
 
       </div>
