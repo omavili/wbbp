@@ -1,0 +1,92 @@
+{% extends "src/views/layouts/default.html" %}
+
+{% set title="Add New Card" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+<script src="./account.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Account Page Content -->
+
+<section class="section section-account">
+  <div class="section__wrap container">
+    <div class="row">
+      <!--Menu-->
+      {% include "src/views/partials/account-menu.html" %}
+      <div class="col-12 col-lg-8 account-content">
+        <div class="account-content__header">
+          <!-- <a href="javascript:void(0);" role="button" class="account-back js-account-back"><span class="icon icon-chevron-right"></span> Back</a> -->
+          <!--Use as back link on sub account page-->
+          <a href="javascript:history.go(-1);" role="button" class="account-back"><span class="icon icon-chevron-right"></span> Back</a>
+          <h1 class="account-content__title">Payment Methods</h1>
+        </div>
+        <div class="account-content__block">
+          <h2 class="account-content__subtitle">New Credit Card</h2>
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <div class="form-floating mb-4">
+                  <input type="text" class="form-control" id="creditCardNumber" placeholder="#### #### #### ####" aria-describedby="creditCardNumberHelp" required>
+                  <label for="creditCardNumber">Card Number</label>
+                  <div class="invalid-feedback" id="creditCardNumberHelp">Invalid card number</div>
+              </div>
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="registerName" placeholder="Name on Card" aria-describedby="creditCardOwnerHelp" required>
+                <label for="creditCardOwner">Name on Card</label>
+                <div class="invalid-feedback" id="creditCardOwnerHelp">Please enter card owner name surname</div>
+              </div>
+              <div class="row g-3 mb-4">
+                  <div class="col-8">
+                      <label class="mb-1" for="creditCardExpMonth">Expiration Date</label>
+                      <div class="row g-3">
+                          <div class="col-6">
+                              <select class="form-select" id="creditCardExpMonth" placeholder="Month" aria-label="Month" required>
+                                  <option>Month</option>
+                                  <option value="1">01</option>
+                                  <option value="2">02</option>
+                              </select>
+                              <div class="invalid-feedback">Select month</div>
+                          </div>
+                          <div class="col-6 slash-separator">
+                              <select class="form-select" id="creditCardExpYear" placeholder="Year" aria-label="Year" required>
+                                  <option>Year</option>
+                                  <option value="1">01</option>
+                                  <option value="2">02</option>
+                              </select>
+                              <div class="invalid-feedback">Select year</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <label class="mb-1" for="creditCardSecurityNumber">Security Code</label>
+                      <div class="form-control-info" id="cvvNumber">
+                          <input type="number" class="form-control" id="creditCardSecurityNumber" placeholder="CVV2" aria-describedby="creditCardSecurityNumberHelp" required>
+                          <span class="icon icon-info" aria-hidden="true" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-bs-container="#cvvNumber" data-bs-title="<span></span>"></span>
+                      </div>
+                      <div class="invalid-feedback" id="creditCardSecurityNumberHelp">Invalid code</div>
+                  </div>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="isDefault">
+                <label class="form-check-label" for="isDefault">
+                    Default payment method
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="account-content__block d-grid gap-2 d-md-block">
+          <button type="submit" class="btn btn-primary">Add</button>
+          <a href="accountpayments.html" role="button" class="btn btn-link px-4">Cancel</a>
+        </div>
+      </div>
+      <!--End - Accont Content-->
+    </div>
+  </div>
+</section>
+
+<!-- END - Account Page Content -->
+{% endblock %}
