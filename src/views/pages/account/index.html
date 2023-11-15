@@ -12,7 +12,7 @@
 {% block content %}
 <!-- Account Page Content -->
 
-<section class="section section-account js-account-details">
+<section class="section section-account">
   <div class="section__wrap container">
     <div class="row">
       <div class="col-12 col-lg-4 account-menu js-account-menu">
@@ -31,11 +31,12 @@
           </nav>
         </div>
       </div>
-      <div class="col-12 col-lg-8 account-content js-account-content" id="accountDetails">
+      <div class="col-12 col-lg-8 account-content" id="accountDetails">
         <div class="account-content__header">
           <a href="javascript:void(0);" role="button" class="account-back js-account-back"><span class="icon icon-chevron-right"></span> Back</a>
           <h1 class="account-content__title">Account Details</h1>
         </div>
+        <!--Personal Details-->
         <div class="account-content__block">
           <h2 class="account-content__subtitle">Personal Details</h2>
           <div class="row">
@@ -90,7 +91,7 @@
             </div>
           </div>
         </div>
-
+        <!--Shipping Address-->
         <div class="account-content__block shipping-address">
           <h2 class="account-content__subtitle">Shipping Address</h2>
           <div class="row">
@@ -142,6 +143,8 @@
           </div>
 
         </div>
+        <!--End - Shipping Address-->
+        <!--Billing Address-->
         <div class="account-content__block d-none billing-address js-billing-address">
           <h2 class="account-content__subtitle">Billing Address</h2>
           <div class="row">
@@ -162,55 +165,91 @@
             </div> -->
             <div class="col-12 col-lg-6">
               <div class="form-floating mb-4">
-                <select class="form-select" id="shippingAddressCountry" aria-label="Country">
+                <select class="form-select" id="billingAddressCountry" aria-label="Country">
                   <option value="1">United Kingdom</option>
                   <option value="2">Germany</option>
                 </select>
-                <label for="shippingAddressCountry">Country</label>
+                <label for="billingAddressCountry">Country</label>
               </div>
             </div>
             <div class="col-12 col-lg-6">
               <div class="row g-4 mb-4">
                 <div class="col-6">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="shippingAddressPostalCode" placeholder="Postal Code" aria-describedby="addressPostalCodeHelp" required>
-                        <label for="shippingAddressPostalCode">Postal Code</label>
-                        <div class="invalid-feedback" id="shippingAddressPostalCodeHelp">Please enter your first name</div>
+                        <input type="text" class="form-control" id="billingAddressPostalCode" placeholder="Postal Code" aria-describedby="addressPostalCodeHelp" required>
+                        <label for="billingAddressPostalCode">Postal Code</label>
+                        <div class="invalid-feedback" id="billingAddressPostalCodeHelp">Please enter your first name</div>
                     </div>
                 </div>
                 <div class="col-6">
-                    <button class="btn btn-link w-100" id="shippingAddressAutofill">Autofill Address</button>
+                    <button class="btn btn-link w-100" id="billingAddressAutofill">Autofill Address</button>
                 </div>
               </div>
             </div>
             <div class="col-12 col-lg-6">
-              <div class="form-floating mb-4">
-                <input type="text" class="form-control" id="shippingAddressCity" placeholder="City, County" aria-describedby="shippingAddressCityHelp" required>
-                <label for="shippingAddressCity">City, County</label>
-                <div class="invalid-feedback" id="shippingAddressCityHelp">Please enter city / county</div>
+              <div class="form-floating mb-4 mb-lg-0">
+                <input type="text" class="form-control" id="billingAddressCity" placeholder="City, County" aria-describedby="billingAddressCityHelp" required>
+                <label for="billingAddressCity">City, County</label>
+                <div class="invalid-feedback" id="billingAddressCityHelp">Please enter city / county</div>
               </div>
             </div>
             <div class="col-12 col-lg-6">
-              <div class="form-floating mb-4">
-                <textarea class="form-control" placeholder="Address" id="shippingAddressDetail"></textarea>
-                <label for="shippingAddressDetail">Address</label>
-                <div class="invalid-feedback" id="shippingAddressDetail">Please enter address</div>
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Address" id="billingAddressDetail"></textarea>
+                <label for="billingAddressDetail">Address</label>
+                <div class="invalid-feedback" id="billingAddressDetail">Please enter address</div>
               </div>
             </div>
           </div>
 
           
         </div>
-        <div class="account-content__block">
+        <!--End - Shipping Address-->
+        <div class="account-content__block d-grid gap-2 d-md-block">
+          <button type="submit" class="btn btn-primary d-block">Update</button>
+        </div>
+        <!--End - Personal Details-->
+        <hr>
+        <!--Password-->
+        <div class="account-content__block account-password">
+          <h2 class="account-content__subtitle">Account Password</h2>
+          <div class="row gx-lg-5">
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <input type="password" class="form-control" id="accountOldPassword" placeholder="Old Password" aria-describedby="accountPasswordHelp" required>
+                <label for="accountPassword">Old Password</label>
+                <div class="invalid-feedback" id="accountOldPasswordHelp">Please enter old password</div>
+              </div>
+              <div class="form-floating mb-4">
+                <input type="password" class="form-control" id="accountNewPasswordPassword" placeholder="New Password" aria-describedby="accountNewPasswordHelp" required>
+                <label for="accountNewPassword">New Password</label>
+                <div class="invalid-feedback" id="accountNewPasswordHelp">Please enter new password</div>
+              </div>
+              <div class="form-floating mb-4 mb-lg-0">
+                <input type="password" class="form-control" id="accountNewPasswordConfirmation" placeholder="New Password Confirmation" aria-describedby="accountNewPasswordConfirmationHelp" required>
+                <label for="accountNewPasswordConfirmation">New Password Confirmation</label>
+                <div class="invalid-feedback" id="accountNewPasswordConfirmationHelp">Password does not match</div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <h5 class="mb-3 text-center text-lg-start">Secure Password Instructions</h5>
+              <ul class="mb-0">
+                <li>Your password can't be too similar to your other personal information.</li>
+                <li>Your password must contain at least 8 characters.</li>
+                <li>Your password can't be a commonly used password.</li>
+                <li>Your password can't be entirely numeric.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="account-content__block d-grid gap-2 d-md-block">
           <button type="submit" class="btn btn-primary">Update</button>
         </div>
-
+        <!--End - Password-->
       </div>
-
+      <!--End - Accont Content-->
     </div>
   </div>
-
-</div>
 </section>
 
 <!-- END - Account Page Content -->

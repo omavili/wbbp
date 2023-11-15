@@ -140,4 +140,19 @@
         padding-left: 0;
         padding-right: 0;
     }
+
+    hr {
+        border-color: $gray-300;
+        opacity: 1;
+    }
+
+    button[type=submit] {
+        min-width: 12.25rem;
+    }
+}
+
+.account-password {
+    ul {
+        padding-left: 1rem;
+    }
 }
