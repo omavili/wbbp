@@ -15,22 +15,8 @@
 <section class="section section-account">
   <div class="section__wrap container">
     <div class="row">
-      <div class="col-12 col-lg-4 account-menu js-account-menu">
-        <h3 class="account-menu__title">My Account</h3>
-        <div class="account-menu__wrap">
-          <div class="account-menu__header">
-            <span>Hello Jane</span>
-            <a href="/logout">Logout</a>
-          </div>
-          <nav class="account-menu__nav js-account-nav">
-            <a href="accountdetails.html" class="active" data-target="#accountDetails"><span>Account Details</span></a>
-            <a href="accountsubscriptions.html" data-target="#accountSubscriptions"><span>Subscriptions</span></a>
-            <a href="accountshipments.html" data-target="#accountShipments"><span>Shipments</span></a>
-            <a href="accountpayments.html" data-target="#accountPayments"><span>Payment Methods</span></a>
-            <a href="/admin"><span>Admin</span></a>
-          </nav>
-        </div>
-      </div>
+      <!--Menu-->
+      {% include "src/views/partials/account-menu.html" %}
       <div class="col-12 col-lg-8 account-content" id="accountDetails">
         <div class="account-content__header">
           <a href="javascript:void(0);" role="button" class="account-back js-account-back"><span class="icon icon-chevron-right"></span> Back</a>
