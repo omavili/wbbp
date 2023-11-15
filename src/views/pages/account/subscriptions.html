@@ -1,0 +1,66 @@
+{% extends "src/views/layouts/default.html" %}
+
+{% set title="Account Payments" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+<script src="./account.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Account Page Content -->
+
+<section class="section section-account">
+  <div class="section__wrap container">
+    <div class="row">
+      <!--Menu-->
+      {% include "src/views/partials/account-menu.html" %}
+      <!--Accont Content-->
+      <div class="col-12 col-lg-8 account-content" id="accountSubscriptions">
+        <div class="account-content__header">
+          <a href="javascript:void(0);" role="button" class="account-back js-account-back"><span class="icon icon-chevron-right"></span> Back</a>
+          <h1 class="account-content__title">Subscriptions</h1>
+        </div>
+        <div class="account-content__block">
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">For Raul</h5>
+                  <p class="card-text">
+                    <span class="text-body-tertiary">Status:</span> Online<br>
+                    <span class="text-body-tertiary">Period:</span> Quarterly (Every 3 Months)<br>
+                    <span class="text-body-tertiary">Subscription Date:</span> 04 Nov 2023
+                  </p>
+                  <a href="#" class="card-link">Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title mb-3">For Fiona</h5>
+                    <p class="card-text">
+                      <span class="text-body-tertiary">Status:</span> Online<br>
+                      <span class="text-body-tertiary">Period:</span> Quarterly (Every 3 Months)<br>
+                      <span class="text-body-tertiary">Subscription Date:</span> 04 Nov 2023
+                    </p>
+                    <a href="#" class="card-link">Details</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="account-content__block d-grid gap-2 d-md-block">
+          <a href="checkoutstep1child.html" role="button" class="btn btn-primary">Start New Subscription</a>
+        </div>
+      </div>
+      <!--End - Accont Content-->
+    </div>
+  </div>
+</section>
+
+<!-- END - Account Page Content -->
+{% endblock %}

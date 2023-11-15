@@ -50,6 +50,7 @@ module.exports = {
         accountdetails: 'src/views/pages/account/index.html',
         accountpayments: 'src/views/pages/account/payment-methods.html',
         accountnewcard: 'src/views/pages/account/add-payment-method.html',
+        accountsubscriptions: 'src/views/pages/account/subscriptions.html',
         error404: './src/views/pages/error/404.html',
       },
 
