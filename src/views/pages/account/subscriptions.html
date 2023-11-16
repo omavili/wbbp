@@ -1,6 +1,6 @@
 {% extends "src/views/layouts/default.html" %}
 
-{% set title="Account Payments" %}
+{% set title="Account Subscriptions" %}
 
 {% block styles %}
 {% endblock %}
@@ -30,7 +30,7 @@
                 <div class="card-body">
                   <h5 class="card-title mb-3">For Raul</h5>
                   <p class="card-text">
-                    <span class="text-body-tertiary">Status:</span> Online<br>
+                    <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-success">Online</span><br>
                     <span class="text-body-tertiary">Period:</span> Quarterly (Every 3 Months)<br>
                     <span class="text-body-tertiary">Subscription Date:</span> 04 Nov 2023
                   </p>
@@ -43,14 +43,27 @@
                   <div class="card-body">
                     <h5 class="card-title mb-3">For Fiona</h5>
                     <p class="card-text">
-                      <span class="text-body-tertiary">Status:</span> Online<br>
-                      <span class="text-body-tertiary">Period:</span> Quarterly (Every 3 Months)<br>
+                      <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-info">Paused</span><br>
+                      <span class="text-body-tertiary">Period:</span> Monthly<br>
                       <span class="text-body-tertiary">Subscription Date:</span> 04 Nov 2023
                     </p>
                     <a href="#" class="card-link">Details</a>
                   </div>
                 </div>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title mb-3">For Mark</h5>
+                  <p class="card-text">
+                    <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-light">Completed</span><br>
+                    <span class="text-body-tertiary">Period:</span> Quarterly (Every 3 Months)<br>
+                    <span class="text-body-tertiary">Subscription Date:</span> 04 Nov 2023
+                  </p>
+                  <a href="#" class="card-link">Details</a>
+                </div>
               </div>
+            </div>
           </div>
         </div>
         <div class="account-content__block d-grid gap-2 d-md-block">

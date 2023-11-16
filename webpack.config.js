@@ -51,6 +51,7 @@ module.exports = {
         accountpayments: 'src/views/pages/account/payment-methods.html',
         accountnewcard: 'src/views/pages/account/add-payment-method.html',
         accountsubscriptions: 'src/views/pages/account/subscriptions.html',
+        accountshipments: 'src/views/pages/account/shipments.html',
         error404: './src/views/pages/error/404.html',
       },
 

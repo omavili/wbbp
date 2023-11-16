@@ -149,6 +149,19 @@
     button[type=submit] {
         min-width: 12.25rem;
     }
+
+    .card {
+        transition: border-color 0.2s ease-in-out;
+
+        &--hover:hover {
+            border-color: rgba($gray-900, .5);
+        }
+
+        &.active {
+            border-color: rgba($gray-900, .5);
+            box-shadow: $box-shadow;
+        }
+    }
 }
 
 .account-password {
