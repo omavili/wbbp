@@ -1,0 +1,118 @@
+{% extends "src/views/layouts/default.html" %}
+
+{% set title="What is EarlyLearny?s" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+<script src="./content.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Sets Page Content -->
+
+<section class="section section-page-what">
+  <div class="section__wrap">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">What is EarlyLearny?</li>
+        </ol>
+      </nav>
+
+      <h1 class="section__title">What is EarlyLearny?</h1>
+    </div>
+
+    <div class="section__content container-fluid section-page-what__lead">
+        <div class="col-12 col-lg-6 section-page-what__lead-content">
+            <p class="lead">EarlyLearny is a monthly educational program and set of materials designed to support the holistic development of babies and toddlers, aged 9 to 36 months.</p>
+            <p>It offers a structured curriculum that includes age-appropriate activities, games, and resources to promote cognitive, speech and language, physical, social, and emotional development in children during their early years.</p>
+            <p>EarlyLearny sets are created by a team of experts and delivered to subscribers on a monthly basis, making it a valuable resource for parents, caregivers, and educators who want to provide a fun and educational learning experience for young children.</p>
+        </div>
+        <div class="col-12 col-lg-5 section-page-what__lead-video">
+          <img src="@images/what-is-earlylearny.jpg" width="598" height="356" class="img-fluid">
+          <!--video-->
+        </div>
+    </div>
+
+    <div class="section__content">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 d-flex align-items-center">
+            <div>
+              <h2 class="text-center text-lg-start">What does each set provide?</h2>
+              <p>Every EarlyLearny set includes :</p>
+              <ul class="pl-3">
+                <li>An engaging interactive monthly book filled with activities for you and your child to enjoy together,</li>
+                <li>A convenient tracking table to monitor your child's progress,</li>
+                <li>All the necessary tools to complete the activities, and your child to play separately,</li>
+                <li>A special reading book designed for your child's age and development.(Please note: Story books are included for ages 9-24 months only.)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="swiper js-swiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                          <picture>
+                              <img src="@images/el-mo-11.png" alt="Home Sweet Home" width="1024" height="576">
+                          </picture>
+                  </div>
+                  <div class="swiper-slide">
+                          <picture>
+                              <img src="@images/el-mo-12.png" alt="Its my birthday" width="1024" height="576">
+                          </picture>
+                  </div>
+                  <div class="swiper-slide">
+                          <picture>
+                              <img src="@images/el-mo-16.png" alt="Exploring the kitchen" width="1024" height="576">
+                          </picture>
+                  </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section__content">
+      <div class="container">
+        <h3 class="text-center text-secondary my-5">Benefits</h3>
+        <div class="row gx-5">
+          <div class="col-12 col-lg-6">
+            <h4 class="text-primary mb-1">Holistic Development:</h4>
+            <p class="mb-4">Promote the development of intelligence, cognition, speech and language, physical skills, and social and emotional interaction in young children.</p>
+            <h4 class="text-primary mb-1">Scientific Foundation:</h4>
+            <p class="mb-4">Grounded in knowledge, science, and various educational methods, incorporating the latest research.</p>
+            <h4 class="text-primary mb-1">Engaging Content:</h4>
+            <p class="mb-4">Features beloved characters and specially designed illustrations to make learning fun and engaging for children.</p>
+            <h4 class="text-primary mb-1">Playful Learning:</h4>
+            <p class="mb-4">Emphasizes learning through play, a highly effective and enjoyable way for children to acquire skills and knowledge.</p>
+          </div>
+          <div class="col-12 col-lg-6">
+            <h4 class="text-primary mb-1">Parental Guidance:</h4>
+            <p class="mb-4">Provides clear activity descriptions, benefits, and practical usage instructions for parents, empowering them to support their child’s development.</p>
+            <h4 class="text-primary mb-1">Unique Approach:</h4>
+            <p class="mb-4">Stands out as a unique and effective tool for child development over 15 years of experience.</p>
+            <h4 class="text-primary mb-1">Long-Term Impact:</h4>
+            <p class="mb-4">Aids in building smart, successful, and happy children, strengthening family bonds, and preparing children for school and new environments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-page-what__full-banner">
+      <img src="@images/what-is-earlylearny-full.jpg" alt="What is EarlyLearny?" width="1440" height="480">
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+{% include "src/views/partials/newsletter.html" %}
+
+<!-- END - Sets Page Content -->
+{% endblock %}

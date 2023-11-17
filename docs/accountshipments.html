@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account Shipments</title>
+  
+  <link href="assets/img/favicon..png" rel="icon" type="image/png">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <script src="assets/js/common.js" defer="defer"></script>
+
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <div class="header">
+  <div class="header__promo">
+    <p>Free Shipping in UK &amp; EU</p>
+  </div>
+  <div class="header__slogan">
+    <p>Fostering Early Intelligence</p>
+  </div>
+  <div class="container header__inner-wrap">
+    <button class="header__navigation-btn js-header-navigation-btn" type="button"></button>
+    <a class="logo" href="index.html"><img class="logo__img" src="assets/img/logo..svg" alt="logo"></a>
+    <a class="header__subscribe header__subscribe--mobile" href="/checkout">Subscribe</a>
+    <div class="header__navigation-wrap">
+      <nav class="navigation">
+        <a class="navigation__link" href="whatisearlylearny.html">What is EarlyLearny?</a>
+        <a class="navigation__link" href="howitworks.html">How does it work?</span></a>
+        <a class="navigation__link" href="sets.html">Sets</a>
+        <span class="navigation__space"></span>
+        <a class="navigation__link" href="faq.html">FAQ</a>
+        <a class="navigation__link" href="contact.html">Contact</a>
+        <span class="navigation__divider"></span>
+        <!--Hide after login-->
+          <a class="navigation__link" href="login.html">Sign in</a>
+          <a class="navigation__link d-xl-none" href="register.html">Sign up</a>
+        <!--Show after login-->
+        <!--
+        <span class="navigation__greeting">Hello Jane</span>
+        <a class="navigation__link" href="account.html">Account Details</a>
+        <a class="navigation__link" href="subscriptions.html">Subscriptions</a>
+        <a class="navigation__link" href="shipments.html">Shipments</a>
+        <a class="navigation__link" href="payments.html">Payment Methods</a>
+        <a class="navigation__link" href="#">Admin</a>
+        <a class="navigation__link" href="#">Log out</a>
+        -->
+      </nav>
+    </div>
+    <!--Hide After login-->
+    <a class="btn btn-primary header__subscribe" href="/checkout">Subscribe</a>
+    <!--Show After login-->
+    <!--
+    <div class="header__account-menu dropdown">
+      <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="accountMenuLink" data-bs-toggle="dropdown">
+        My Account
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="accountMenuLink">
+        <li><a class="dropdown-item" href="account.html">Account Details</a></li>
+        <li><a class="dropdown-item" href="subscriptions.html">Subscriptions</a></li>
+        <li><a class="dropdown-item" href="shipments.html">Shipments</a></li>
+        <li><a class="dropdown-item" href="payments.html">Payment Methods</a></li>
+        <li><a class="dropdown-item" href="#">Admin</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Log out</a></li>
+      </ul>
+    </div>
+    -->
+  </div>
+</div>
+
+
+
+
+    <!-- Main content -->
+    <main class="main">
+        
+<!-- Account Page Content -->
+
+<section class="section section-account">
+  <div class="section__wrap container">
+    <div class="row">
+      <!--Menu-->
+      <div class="col-12 col-lg-4 account-menu js-account-menu">
+    <h3 class="account-menu__title">My Account</h3>
+    <div class="account-menu__wrap">
+      <div class="account-menu__header">
+        <span>Hello Jane</span>
+        <a href="/logout">Logout</a>
+      </div>
+      <nav class="account-menu__nav js-account-nav">
+        <a href="accountdetails.html" class="active" data-target="#accountDetails"><span>Account Details</span></a>
+        <a href="accountsubscriptions.html" data-target="#accountSubscriptions"><span>Subscriptions</span></a>
+        <a href="accountshipments.html" data-target="#accountShipments"><span>Shipments</span></a>
+        <a href="accountpayments.html" data-target="#accountPaymentMethods"><span>Payment Methods</span></a>
+        <a href="/admin"><span>Admin</span></a>
+      </nav>
+    </div>
+  </div>
+      <!--Accont Content-->
+      <div class="col-12 col-lg-8 account-content" id="accountShipments">
+        <div class="account-content__header">
+          <a href="javascript:void(0);" role="button" class="account-back js-account-back"><span class="icon icon-chevron-right"></span> Back</a>
+          <h1 class="account-content__title">Shipments</h1>
+        </div>
+        <div class="account-content__block">
+            <ul class="nav justify-content-center justify-content-lg-start nav-pills" id="shipmentsTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="not-delivered-tab" data-bs-toggle="tab" data-bs-target="#not-delivered-tab-pane" type="button" role="tab" aria-controls="not-delivered-tab-pane" aria-selected="true">To Be Deliver</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="delivered-tab" data-bs-toggle="tab" data-bs-target="#delivered-tab-pane" type="button" role="tab" aria-controls="delivered-tab-pane" aria-selected="false">Delivered</button>
+                </li>
+            </ul>
+        </div>
+        <div class="account-content__block">
+            <div class="tab-content" id="shipmentsTabContent">
+                <div class="tab-pane show active" id="not-delivered-tab-pane" role="tabpanel" aria-labelledby="not-delivered-tab" tabindex="0">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                        <h5 class="card-title mb-3">10<sup>th</sup>, 11<sup>th</sup>, 12<sup>th</sup> Month Sets</h5>
+                        <h6 class="card-subtitle text-primary mb-3">For Raul</h6>
+                        <p class="card-text">
+                          <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-primary">On Delivery</span><br>
+                          <span class="text-body-tertiary">Deliver In:</span> 3 Business Days (Approximately)<br>
+                          <span class="text-body-tertiary">Price:</span> £88.20
+                        </p>
+                        <!--Add row if tracking number added-->
+                        <span class="text-body-tertiary">Tracking Number:</span><a href="#" class="card-link px-2" target="_blank">236454325041</a>
+                      </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                          <h5 class="card-title mb-3">10<sup>th</sup>, 11<sup>th</sup>, 12<sup>th</sup> Month Sets</h5>
+                          <h6 class="card-subtitle text-primary mb-3">For Raul</h6>
+                          <p class="card-text">
+                            <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-info">Preparing</span><br>
+                            <span class="text-body-tertiary">Planned On:</span> 3 Business Days (Approximately)<br>
+                            <span class="text-body-tertiary">Price:</span> £88.20
+                          </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                        <h5 class="card-title mb-3">10<sup>th</sup>, 11<sup>th</sup>, 12<sup>th</sup> Month Sets</h5>
+                        <h6 class="card-subtitle text-primary mb-3">For Raul</h6>
+                        <p class="card-text">
+                          <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-danger">Payment Failed</span><br>
+                          <span class="text-body-tertiary">Planned On:</span> 01-03 Nov 2023 (Approximately)<br>
+                          <span class="text-body-tertiary">Price:</span> £88.20
+                        </p>
+                        <!--Payment Failed Action-->
+                        <a href="accountpayments.html" class="card-link">Update Payment Method</a>
+                      </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                          <h5 class="card-title mb-3">10<sup>th</sup>, 11<sup>th</sup>, 12<sup>th</sup> Month Sets</h5>
+                          <h6 class="card-subtitle text-primary mb-3">For Raul</h6>
+                          <p class="card-text">
+                            <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-light">Not Delivered</span><br>
+                            <span class="text-body-tertiary">Planned On:</span> 01-03 Nov 2023 (Approximately)<br>
+                            <span class="text-body-tertiary">Price:</span> £88.20
+                          </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                          <h5 class="card-title mb-3">10<sup>th</sup> Month Set</h5>
+                          <h6 class="card-subtitle text-primary mb-3">For Fiona</h6>
+                          <p class="card-text">
+                            <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-light">Not Delivered</span><br>
+                            <span class="text-body-tertiary">Planned On:</span> 01-03 Nov 2023 (Approximately)<br>
+                            <span class="text-body-tertiary">Price:</span> £88.20
+                          </p>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="tab-pane" id="delivered-tab-pane" role="tabpanel" aria-labelledby="delivered-tab" tabindex="0">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                          <h5 class="card-title mb-3">10<sup>th</sup>, 11<sup>th</sup>, 12<sup>th</sup> Month Sets</h5>
+                          <h6 class="card-subtitle text-primary mb-3">For Raul</h6>
+                          <p class="card-text">
+                            <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-success">Delivered</span><br>
+                            <span class="text-body-tertiary">Delivered On:</span> 03 Nov 2023<br>
+                            <span class="text-body-tertiary">Price:</span> £88.20
+                          </p>
+                          <!--Add row if tracking number added-->
+                          <span class="text-body-tertiary">Tracking Number:</span><a href="#" class="card-link px-2" target="_blank">236454325041</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!--End - Accont Content-->
+    </div>
+  </div>
+</section>
+
+<!-- END - Account Page Content -->
+
+    </main>
+
+    <!-- Footer -->
+    <div class="footer">
+  <div class="container">
+    <div class="footer__links">
+      <div class="row">
+        <div class="col footer__link-group">
+          <h4 class="footer__title">EarlyLearny</h4>
+          <a href="what-is-earlylearny.html">What is EarlyLearny?</a>
+          <a href="how-it-works.html">How does it work?</a>
+          <a href="sets.html">Sets</a>
+          <a href="about.html">About</a>
+          <!--Hide after login-->
+          <a href="register.html">Register</a>
+          <a href="login.html">Login</a>
+          <!--Show after login-->
+          <!--
+            <a href="#">My Account</a>
+          -->
+          <a href="#">Subscribe</a>
+        </div>
+        <div class="col footer__link-group">
+          <h4 class="footer__title">Help</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        </div>
+        <div class="col-12 col-lg-4 footer__social-media">
+          <h4 class="footer__title">Social Media</h4>
+          <div class="footer__icons-wrap">
+            <a title="EarlyLearny on Instagram" href="https://www.instagram.com/early_learny/" target="_blank" rel="nofollow"><span class="icon icon-instagram" aria-hidden="true"></span></a>
+            <a title="EarlyLearny on Facebook" href="https://www.facebook.com/earlylearny" target="_blank" rel="nofollow"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+            <a title="EarlyLearny on Youtube" href="https://www.youtube.com/channel/UCb6eapwuL8nn8rQE82ebicw" target="_blank" rel="nofollow"><span class="icon icon-youtube" aria-hidden="true"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright"><a href="https://earlylearny.com">EarlyLearny.com</a> All rights reserved. &copy; 2023</p>
+      <div class="footer__payment-logos">
+        <img class="image" width="75" height="24" src="assets/img/visa..svg" alt="Visa">
+        <img class="image" width="39" height="24" src="assets/img/mastercard..svg" alt="Mastercard">
+        <img class="image" width="21" height="24" src="assets/img/paypal..svg" alt="Paypal">
+        <img class="image" width="50" height="50" src="assets/img/ssl..png" alt="SSL">
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+<script src="assets/js/account.js"></script>
+
+</body>
+</html>

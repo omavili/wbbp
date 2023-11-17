@@ -1,0 +1,52 @@
+.section-page-what {
+    padding-bottom: 0;
+
+    &__lead {
+        background-color: $gray-100;
+    }
+
+    &__lead-content {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: 4rem 5rem;
+        }
+    }
+
+    &__lead-video {
+        
+        img {
+            width: 100%;
+            height: auto;
+            min-height: 20rem;
+            object-fit: cover;
+        }
+
+        @include media-breakpoint-down(lg) {
+            padding: 0;
+        }
+        // background-image: url(@images/what-is-earlylearny.jpg);
+        // background-size: cover;
+        // background-repeat: no-repeat;
+
+        @include media-breakpoint-up(lg) {
+            order: -1;
+        }
+    }
+
+    .swiper-slide {
+        img {
+            filter: drop-shadow(0 1px 2px rgba($gray-900, 0.15));
+        }
+    }
+
+    &__full-banner {
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            object-fit: cover;
+        }
+    }
+}

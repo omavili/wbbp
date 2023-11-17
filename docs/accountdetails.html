@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account Details</title>
+  
+  <link href="assets/img/favicon..png" rel="icon" type="image/png">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <script src="assets/js/common.js" defer="defer"></script>
+
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <div class="header">
+  <div class="header__promo">
+    <p>Free Shipping in UK &amp; EU</p>
+  </div>
+  <div class="header__slogan">
+    <p>Fostering Early Intelligence</p>
+  </div>
+  <div class="container header__inner-wrap">
+    <button class="header__navigation-btn js-header-navigation-btn" type="button"></button>
+    <a class="logo" href="index.html"><img class="logo__img" src="assets/img/logo..svg" alt="logo"></a>
+    <a class="header__subscribe header__subscribe--mobile" href="/checkout">Subscribe</a>
+    <div class="header__navigation-wrap">
+      <nav class="navigation">
+        <a class="navigation__link" href="whatisearlylearny.html">What is EarlyLearny?</a>
+        <a class="navigation__link" href="howitworks.html">How does it work?</span></a>
+        <a class="navigation__link" href="sets.html">Sets</a>
+        <span class="navigation__space"></span>
+        <a class="navigation__link" href="faq.html">FAQ</a>
+        <a class="navigation__link" href="contact.html">Contact</a>
+        <span class="navigation__divider"></span>
+        <!--Hide after login-->
+          <a class="navigation__link" href="login.html">Sign in</a>
+          <a class="navigation__link d-xl-none" href="register.html">Sign up</a>
+        <!--Show after login-->
+        <!--
+        <span class="navigation__greeting">Hello Jane</span>
+        <a class="navigation__link" href="account.html">Account Details</a>
+        <a class="navigation__link" href="subscriptions.html">Subscriptions</a>
+        <a class="navigation__link" href="shipments.html">Shipments</a>
+        <a class="navigation__link" href="payments.html">Payment Methods</a>
+        <a class="navigation__link" href="#">Admin</a>
+        <a class="navigation__link" href="#">Log out</a>
+        -->
+      </nav>
+    </div>
+    <!--Hide After login-->
+    <a class="btn btn-primary header__subscribe" href="/checkout">Subscribe</a>
+    <!--Show After login-->
+    <!--
+    <div class="header__account-menu dropdown">
+      <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="accountMenuLink" data-bs-toggle="dropdown">
+        My Account
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="accountMenuLink">
+        <li><a class="dropdown-item" href="account.html">Account Details</a></li>
+        <li><a class="dropdown-item" href="subscriptions.html">Subscriptions</a></li>
+        <li><a class="dropdown-item" href="shipments.html">Shipments</a></li>
+        <li><a class="dropdown-item" href="payments.html">Payment Methods</a></li>
+        <li><a class="dropdown-item" href="#">Admin</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Log out</a></li>
+      </ul>
+    </div>
+    -->
+  </div>
+</div>
+
+
+
+
+    <!-- Main content -->
+    <main class="main">
+        
+<!-- Account Page Content -->
+
+<section class="section section-account">
+  <div class="section__wrap container">
+    <div class="row">
+      <!--Menu-->
+      <div class="col-12 col-lg-4 account-menu js-account-menu">
+    <h3 class="account-menu__title">My Account</h3>
+    <div class="account-menu__wrap">
+      <div class="account-menu__header">
+        <span>Hello Jane</span>
+        <a href="/logout">Logout</a>
+      </div>
+      <nav class="account-menu__nav js-account-nav">
+        <a href="accountdetails.html" class="active" data-target="#accountDetails"><span>Account Details</span></a>
+        <a href="accountsubscriptions.html" data-target="#accountSubscriptions"><span>Subscriptions</span></a>
+        <a href="accountshipments.html" data-target="#accountShipments"><span>Shipments</span></a>
+        <a href="accountpayments.html" data-target="#accountPaymentMethods"><span>Payment Methods</span></a>
+        <a href="/admin"><span>Admin</span></a>
+      </nav>
+    </div>
+  </div>
+      <div class="col-12 col-lg-8 account-content" id="accountDetails">
+        <div class="account-content__header">
+          <a href="javascript:void(0);" role="button" class="account-back js-account-back"><span class="icon icon-chevron-right"></span> Back</a>
+          <h1 class="account-content__title">Account Details</h1>
+        </div>
+        <!--Personal Details-->
+        <div class="account-content__block">
+          <div class="alert-container">
+            <div class="alert alert-success" role="alert">Soluta delectus <a href="#" class="alert-link">commodi</a> iure?</div>
+            <!-- <div class="alert alert-light alert-dismissible fade show" role="alert" >Soluta delectus commodi iure?<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div> -->
+          </div>
+          <h2 class="account-content__subtitle">Personal Details</h2>
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <div class="form-floating mb-4">
+                <select class="form-select" id="userTitle" aria-label="Title">
+                  <option value="1">Ms</option>
+                  <option value="2">Mr</option>
+                </select>
+                <label for="userTitle">Title</label>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="userName" placeholder="First Name" aria-describedby="userNameHelp" required>
+                <label for="userName">First Name</label>
+                <div class="invalid-feedback" id="userNameHelp">Please enter your first name</div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="userSurname" placeholder="Surname" aria-describedby="userSurnameHelp" required>
+                <label for="userSurname">Surname</label>
+                <div class="invalid-feedback" id="userSurnameHelp">Please enter your surname</div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <input type="email" class="form-control" id="userEmail" placeholder="E-mail address" aria-describedby="userEmailHelp" disabled value="info@earlylearny.com">
+                <label for="userEmail">E-mail address</label>
+                <div class="invalid-feedback" id="userEmailHelp">Please enter a valid e-mail</div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-floating">
+                <input type="number" class="form-control" id="userPhoneNumber" placeholder="Phone Number" aria-describedby="userPhoneNumberHelp" required>
+                <label for="userPhoneNumber">Phone Number</label>
+                <div class="row justify-content-end">
+                    <div class="col invalid-feedback" id="userPhoneNumberHelp">Invalid phone number</div>
+                    <div class="col form-text align-right">+44-1234123456</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check my-1">
+                <input class="form-check-input" type="checkbox" value="" id="userEmailApprove" required>
+                <label class="form-check-label" for="userEmailApprove">
+                  I agree receiving e-mails about my subscription and child's developmental stages.
+                </label>
+                <div class="invalid-feedback" id="userEmailApproveHelp">Please check to continue</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Shipping Address-->
+        <div class="account-content__block shipping-address">
+          <h2 class="account-content__subtitle">Shipping Address</h2>
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <select class="form-select" id="shippingAddressCountry" aria-label="Country">
+                  <option value="1">United Kingdom</option>
+                  <option value="2">Germany</option>
+                </select>
+                <label for="shippingAddressCountry">Country</label>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="row g-4 mb-4">
+                <div class="col-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="shippingAddressPostalCode" placeholder="Postal Code" aria-describedby="addressPostalCodeHelp" required>
+                        <label for="shippingAddressPostalCode">Postal Code</label>
+                        <div class="invalid-feedback" id="shippingAddressPostalCodeHelp">Please enter your first name</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-link w-100" id="shippingAddressAutofill">Autofill Address</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="shippingAddressCity" placeholder="City, County" aria-describedby="shippingAddressCityHelp" required>
+                <label for="shippingAddressCity">City, County</label>
+                <div class="invalid-feedback" id="shippingAddressCityHelp">Please enter city / county</div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <textarea class="form-control" placeholder="Address" id="shippingAddressDetail"></textarea>
+                <label for="shippingAddressDetail">Address</label>
+                <div class="invalid-feedback" id="shippingAddressDetail">Please enter address</div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input js-same-address" type="checkbox" value="" id="sameAddress" checked>
+                <label class="form-check-label" for="sameAddress">
+                  Billing address same as shipping address
+                </label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--End - Shipping Address-->
+        <!--Billing Address-->
+        <div class="account-content__block d-none billing-address js-billing-address">
+          <h2 class="account-content__subtitle">Billing Address</h2>
+          <div class="row">
+            <!--Use if necessary-->
+            <!-- <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="billingAddressName" placeholder="First Name" aria-describedby="billingAddressNameHelp" required>
+                <label for="billingAddressName">First Name</label>
+                <div class="invalid-feedback" id="billingAddressNameHelp">Please enter your first name</div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="billingAddressSurname" placeholder="Surname" aria-describedby="billingAddressSurnameHelp" required>
+                <label for="billingAddressSurname">Surname</label>
+                <div class="invalid-feedback" id="billingAddressSurnameHelp">Please enter your surname</div>
+              </div>
+            </div> -->
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <select class="form-select" id="billingAddressCountry" aria-label="Country">
+                  <option value="1">United Kingdom</option>
+                  <option value="2">Germany</option>
+                </select>
+                <label for="billingAddressCountry">Country</label>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="row g-4 mb-4">
+                <div class="col-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="billingAddressPostalCode" placeholder="Postal Code" aria-describedby="addressPostalCodeHelp" required>
+                        <label for="billingAddressPostalCode">Postal Code</label>
+                        <div class="invalid-feedback" id="billingAddressPostalCodeHelp">Please enter your first name</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-link w-100" id="billingAddressAutofill">Autofill Address</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4 mb-lg-0">
+                <input type="text" class="form-control" id="billingAddressCity" placeholder="City, County" aria-describedby="billingAddressCityHelp" required>
+                <label for="billingAddressCity">City, County</label>
+                <div class="invalid-feedback" id="billingAddressCityHelp">Please enter city / county</div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Address" id="billingAddressDetail"></textarea>
+                <label for="billingAddressDetail">Address</label>
+                <div class="invalid-feedback" id="billingAddressDetail">Please enter address</div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+        <!--End - Shipping Address-->
+        <div class="account-content__block d-grid gap-2 d-md-block">
+          <button type="submit" class="btn btn-primary d-block">Update</button>
+        </div>
+        <!--End - Personal Details-->
+        <hr>
+        <!--Password-->
+        <div class="account-content__block account-password">
+          <h2 class="account-content__subtitle">Account Password</h2>
+          <div class="alert-container">
+            <div class="alert alert-success" role="alert">Soluta delectus <a href="#" class="alert-link">commodi</a> iure?</div>
+            <!-- <div class="alert alert-light alert-dismissible fade show" role="alert" >Soluta delectus commodi iure?<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div> -->
+          </div>
+          <div class="row gx-lg-5">
+            <div class="col-12 col-lg-6">
+              <div class="form-floating mb-4">
+                <input type="password" class="form-control" id="accountOldPassword" placeholder="Old Password" aria-describedby="accountPasswordHelp" required>
+                <label for="accountPassword">Old Password</label>
+                <div class="invalid-feedback" id="accountOldPasswordHelp">Please enter old password</div>
+              </div>
+              <div class="form-floating mb-4">
+                <input type="password" class="form-control" id="accountNewPasswordPassword" placeholder="New Password" aria-describedby="accountNewPasswordHelp" required>
+                <label for="accountNewPassword">New Password</label>
+                <div class="invalid-feedback" id="accountNewPasswordHelp">Please enter new password</div>
+              </div>
+              <div class="form-floating mb-4 mb-lg-0">
+                <input type="password" class="form-control" id="accountNewPasswordConfirmation" placeholder="New Password Confirmation" aria-describedby="accountNewPasswordConfirmationHelp" required>
+                <label for="accountNewPasswordConfirmation">New Password Confirmation</label>
+                <div class="invalid-feedback" id="accountNewPasswordConfirmationHelp">Password does not match</div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <h5 class="mb-3 text-center text-lg-start">Secure Password Instructions</h5>
+              <ul class="mb-0">
+                <li>Your password can't be too similar to your other personal information.</li>
+                <li>Your password must contain at least 8 characters.</li>
+                <li>Your password can't be a commonly used password.</li>
+                <li>Your password can't be entirely numeric.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="account-content__block d-grid gap-2 d-md-block">
+          <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+        <!--End - Password-->
+      </div>
+      <!--End - Accont Content-->
+    </div>
+  </div>
+</section>
+
+<!-- END - Account Page Content -->
+
+    </main>
+
+    <!-- Footer -->
+    <div class="footer">
+  <div class="container">
+    <div class="footer__links">
+      <div class="row">
+        <div class="col footer__link-group">
+          <h4 class="footer__title">EarlyLearny</h4>
+          <a href="what-is-earlylearny.html">What is EarlyLearny?</a>
+          <a href="how-it-works.html">How does it work?</a>
+          <a href="sets.html">Sets</a>
+          <a href="about.html">About</a>
+          <!--Hide after login-->
+          <a href="register.html">Register</a>
+          <a href="login.html">Login</a>
+          <!--Show after login-->
+          <!--
+            <a href="#">My Account</a>
+          -->
+          <a href="#">Subscribe</a>
+        </div>
+        <div class="col footer__link-group">
+          <h4 class="footer__title">Help</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        </div>
+        <div class="col-12 col-lg-4 footer__social-media">
+          <h4 class="footer__title">Social Media</h4>
+          <div class="footer__icons-wrap">
+            <a title="EarlyLearny on Instagram" href="https://www.instagram.com/early_learny/" target="_blank" rel="nofollow"><span class="icon icon-instagram" aria-hidden="true"></span></a>
+            <a title="EarlyLearny on Facebook" href="https://www.facebook.com/earlylearny" target="_blank" rel="nofollow"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+            <a title="EarlyLearny on Youtube" href="https://www.youtube.com/channel/UCb6eapwuL8nn8rQE82ebicw" target="_blank" rel="nofollow"><span class="icon icon-youtube" aria-hidden="true"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copyright"><a href="https://earlylearny.com">EarlyLearny.com</a> All rights reserved. &copy; 2023</p>
+      <div class="footer__payment-logos">
+        <img class="image" width="75" height="24" src="assets/img/visa..svg" alt="Visa">
+        <img class="image" width="39" height="24" src="assets/img/mastercard..svg" alt="Mastercard">
+        <img class="image" width="21" height="24" src="assets/img/paypal..svg" alt="Paypal">
+        <img class="image" width="50" height="50" src="assets/img/ssl..png" alt="SSL">
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+<script src="assets/js/account.js"></script>
+
+</body>
+</html>
