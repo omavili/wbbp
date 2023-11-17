@@ -48,6 +48,14 @@
 	}
 }
 
+//Reverse icon
+.icon--flip {
+	&::before,
+	&::after {
+		transform: rotate(180deg);
+	}
+}
+
 // Classes for each font icon
 {% for glyph in glyphs%}
 .icon-{{ glyph.name }} {

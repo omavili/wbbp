@@ -535,7 +535,7 @@ $border-width: 2px !default;
 //   5: 5px
 // ) !default;
 // $border-style:                solid !default;
-// $border-color:                $gray-300 !default;
+$border-color:                $gray-300 !default;
 // $border-color-translucent:    rgba($black, .175) !default;
 // // scss-docs-end border-variables
 
@@ -1180,8 +1180,8 @@ $zindex-mobile-nav: 1100 !default;
 // // Navs
 
 // // scss-docs-start nav-variables
-// $nav-link-padding-y:                .5rem !default;
-// $nav-link-padding-x:                1rem !default;
+$nav-link-padding-y:                .5rem !default;
+$nav-link-padding-x:                $input-btn-padding-x !default;
 // $nav-link-font-size:                null !default;
 // $nav-link-font-weight:              null !default;
 // $nav-link-color:                    var(--#{$prefix}link-color) !default;
@@ -1313,10 +1313,10 @@ $dropdown-item-padding-y: $spacer * 0.25 !default;
 // // Pagination
 
 // // scss-docs-start pagination-variables
-// $pagination-padding-y:              .375rem !default;
-// $pagination-padding-x:              .75rem !default;
+$pagination-padding-y:              .5rem !default;
+$pagination-padding-x:              1rem !default;
 // $pagination-padding-y-sm:           .25rem !default;
-// $pagination-padding-x-sm:           .5rem !default;
+// // $pagination-padding-x-sm:           .5rem !default;
 // $pagination-padding-y-lg:           .75rem !default;
 // $pagination-padding-x-lg:           1.5rem !default;
 
@@ -1342,8 +1342,8 @@ $dropdown-item-padding-y: $spacer * 0.25 !default;
 // $pagination-active-bg:              $component-active-bg !default;
 // $pagination-active-border-color:    $component-active-bg !default;
 
-// $pagination-disabled-color:         var(--#{$prefix}secondary-color) !default;
-// $pagination-disabled-bg:            var(--#{$prefix}secondary-bg) !default;
+$pagination-disabled-color:         $gray-300 !default;
+$pagination-disabled-bg:            $gray-100 !default;
 // $pagination-disabled-border-color:  var(--#{$prefix}border-color) !default;
 
 // $pagination-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
@@ -1369,8 +1369,8 @@ $dropdown-item-padding-y: $spacer * 0.25 !default;
 // $card-title-color:                  null !default;
 // $card-subtitle-color:               null !default;
 // $card-border-width:                 var(--#{$prefix}border-width) !default;
-// $card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
-// $card-border-radius:                var(--#{$prefix}border-radius) !default;
+$card-border-color:                 var(--#{$prefix}border-color) !default;
+$card-border-radius:                var(--#{$prefix}border-radius-lg) !default;
 // $card-box-shadow:                   null !default;
 // $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 // $card-cap-padding-y:                $card-spacer-y * .5 !default;
@@ -1513,7 +1513,7 @@ $badge-font-weight:                 $font-weight-medium !default;
 // $badge-color:                       $white !default;
 // $badge-padding-y:                   .35em !default;
 // $badge-padding-x:                   .65em !default;
-// $badge-border-radius:               var(--#{$prefix}border-radius) !default;
+$badge-border-radius:               .25rem !default;
 // // scss-docs-end badge-variables
 
 
