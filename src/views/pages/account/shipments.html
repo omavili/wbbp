@@ -1,0 +1,125 @@
+{% extends "src/views/layouts/default.html" %}
+
+{% set title="Account Shipments" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+<script src="./account.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Account Page Content -->
+
+<section class="section section-account">
+  <div class="section__wrap container">
+    <div class="row">
+      <!--Menu-->
+      {% include "src/views/partials/account-menu.html" %}
+      <!--Accont Content-->
+      <div class="col-12 col-lg-8 account-content" id="accountShipments">
+        <div class="account-content__header">
+          <a href="javascript:void(0);" role="button" class="account-back js-account-back"><span class="icon icon-chevron-right"></span> Back</a>
+          <h1 class="account-content__title">Shipments</h1>
+        </div>
+        <div class="account-content__block">
+            <ul class="nav justify-content-center justify-content-lg-start nav-pills" id="shipmentsTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="not-delivered-tab" data-bs-toggle="tab" data-bs-target="#not-delivered-tab-pane" type="button" role="tab" aria-controls="not-delivered-tab-pane" aria-selected="true">To Be Deliver</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="delivered-tab" data-bs-toggle="tab" data-bs-target="#delivered-tab-pane" type="button" role="tab" aria-controls="delivered-tab-pane" aria-selected="false">Delivered</button>
+                </li>
+            </ul>
+        </div>
+        <div class="account-content__block">
+            <div class="tab-content" id="shipmentsTabContent">
+                <div class="tab-pane show active" id="not-delivered-tab-pane" role="tabpanel" aria-labelledby="not-delivered-tab" tabindex="0">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                        <h5 class="card-title mb-3">10<sup>th</sup>, 11<sup>th</sup>, 12<sup>th</sup> Month Sets</h5>
+                        <h6 class="card-subtitle text-primary mb-3">For Raul</h6>
+                        <p class="card-text">
+                          <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-primary">On Delivery</span><br>
+                          <span class="text-body-tertiary">Deliver In:</span> 3 Business Days (Approximately)<br>
+                          <span class="text-body-tertiary">Price:</span> £88.20
+                        </p>
+                        <!--Add row if tracking number added-->
+                        <span class="text-body-tertiary">Tracking Number:</span><a href="#" class="card-link px-2" target="_blank">236454325041</a>
+                      </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                          <h5 class="card-title mb-3">10<sup>th</sup>, 11<sup>th</sup>, 12<sup>th</sup> Month Sets</h5>
+                          <h6 class="card-subtitle text-primary mb-3">For Raul</h6>
+                          <p class="card-text">
+                            <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-info">Preparing</span><br>
+                            <span class="text-body-tertiary">Planned On:</span> 3 Business Days (Approximately)<br>
+                            <span class="text-body-tertiary">Price:</span> £88.20
+                          </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                        <h5 class="card-title mb-3">10<sup>th</sup>, 11<sup>th</sup>, 12<sup>th</sup> Month Sets</h5>
+                        <h6 class="card-subtitle text-primary mb-3">For Raul</h6>
+                        <p class="card-text">
+                          <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-danger">Payment Failed</span><br>
+                          <span class="text-body-tertiary">Planned On:</span> 01-03 Nov 2023 (Approximately)<br>
+                          <span class="text-body-tertiary">Price:</span> £88.20
+                        </p>
+                        <!--Payment Failed Action-->
+                        <a href="accountpayments.html" class="card-link">Update Payment Method</a>
+                      </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                          <h5 class="card-title mb-3">10<sup>th</sup>, 11<sup>th</sup>, 12<sup>th</sup> Month Sets</h5>
+                          <h6 class="card-subtitle text-primary mb-3">For Raul</h6>
+                          <p class="card-text">
+                            <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-light">Not Delivered</span><br>
+                            <span class="text-body-tertiary">Planned On:</span> 01-03 Nov 2023 (Approximately)<br>
+                            <span class="text-body-tertiary">Price:</span> £88.20
+                          </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                          <h5 class="card-title mb-3">10<sup>th</sup> Month Set</h5>
+                          <h6 class="card-subtitle text-primary mb-3">For Fiona</h6>
+                          <p class="card-text">
+                            <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-light">Not Delivered</span><br>
+                            <span class="text-body-tertiary">Planned On:</span> 01-03 Nov 2023 (Approximately)<br>
+                            <span class="text-body-tertiary">Price:</span> £88.20
+                          </p>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="tab-pane" id="delivered-tab-pane" role="tabpanel" aria-labelledby="delivered-tab" tabindex="0">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                          <h5 class="card-title mb-3">10<sup>th</sup>, 11<sup>th</sup>, 12<sup>th</sup> Month Sets</h5>
+                          <h6 class="card-subtitle text-primary mb-3">For Raul</h6>
+                          <p class="card-text">
+                            <span class="text-body-tertiary">Status:</span> <span class="badge text-bg-success">Delivered</span><br>
+                            <span class="text-body-tertiary">Delivered On:</span> 03 Nov 2023<br>
+                            <span class="text-body-tertiary">Price:</span> £88.20
+                          </p>
+                          <!--Add row if tracking number added-->
+                          <span class="text-body-tertiary">Tracking Number:</span><a href="#" class="card-link px-2" target="_blank">236454325041</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!--End - Accont Content-->
+    </div>
+  </div>
+</section>
+
+<!-- END - Account Page Content -->
+{% endblock %}

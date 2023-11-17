@@ -1,0 +1,72 @@
+{% extends "src/views/layouts/default.html" %}
+
+{% set title="Account Payments" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+<script src="./account.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Account Page Content -->
+
+<section class="section section-account">
+  <div class="section__wrap container">
+    <div class="row">
+      <!--Menu-->
+      {% include "src/views/partials/account-menu.html" %}
+      <div class="col-12 col-lg-8 account-content" id="accountPaymentMethods">
+        <div class="account-content__header">
+          <a href="javascript:void(0);" role="button" class="account-back js-account-back"><span class="icon icon-chevron-right"></span> Back</a>
+          <h1 class="account-content__title">Payment Methods</h1>
+        </div>
+        <div class="account-content__block">
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Credit Card</h5>
+                  <p class="card-text">MASTERCARD **** **66</p>
+                  <p class="form-text text-start">Last Used: 04 Nov 2023</p>
+                  <span class="card-link text-primary">Default</span>
+                  <a href="#" class="card-link js-delete" data-id="123">Delete</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Credit Card</h5>
+                  <p class="card-text">VISA **** **66</p>
+                  <p class="form-text text-start">Last Used: 03 Nov 2023 <span class="text-danger">(Payment Failed)</span></p>
+                  <a href="#" class="card-link js-make-default" data-id="123">Make Default</a>
+                  <a href="#" class="card-link js-delete" data-id="123">Delete</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Credit Card</h5>
+                  <p class="card-text">VISA **** **66</p>
+                  <p class="form-text text-start">Last Used: Not used.</p>
+                  <span class="card-link badge text-bg-light">Expired</span>
+                  <a href="#" class="card-link js-delete" data-id="123">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="account-content__block d-grid gap-2 d-md-block">
+          <a href="accountnewcard.html" role="button" class="btn btn-primary">New Credit Card</a>
+        </div>
+      </div>
+      <!--End - Accont Content-->
+    </div>
+  </div>
+</section>
+
+<!-- END - Account Page Content -->
+{% endblock %}
