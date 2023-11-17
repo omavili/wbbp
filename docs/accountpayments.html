@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Reset My Password</title>
+  <title>Account Payments</title>
   
   <link href="assets/img/favicon..png" rel="icon" type="image/png">
 
@@ -78,110 +78,80 @@
     <!-- Main content -->
     <main class="main">
         
-<!-- Page Content -->
-<div class="login-register login-register--password">
-  <div class="login-register__wrap container">
-    <h1 class="login-register__title">Reset Your Password</h1>
-    <div class="login-register__content row justify-content-center">
-      <div class="col-12 col-lg-4">
-        <form action="" method="post" class="needs-validation" novalidate>
-          <div class="form-floating mb-4">
-            <input type="email" class="form-control" id="loginEmail" placeholder="E-mail address" aria-describedby="loginEmailHelp" required>
-            <label for="loginEmail">E-mail address</label>
-            <div class="invalid-feedback" id="loginEmailHelp">Please enter a valid e-mail</div>
-          </div>
-          <div class="login-register__submit">
-            <button type="submit" class="btn btn-primary">Reset Password</button>
-          </div>
-          <div class="divider">
-          <span>Or</span>
-          </div>
-          <p class="login-register__alternate">
-            Go back to <a href="login.html" class="btn btn-link">Sign in</a>
-          </p>
-        </form>
-        <!-- <div class="form-success">
-          <p>We've emailed you instructions for setting your password, if an account exists with the email you entered. You should receive them shortly.</p>
-          <div class="alert alert-info" role="alert">
-            If you don't receive an email, please make sure you've entered the address you registered with, and check your spam folder. 
-          </div>
-          <p class="login-register__alternate">
-            Go back to <a href="login.html" class="btn btn-link">Sign in</a>
-          </p>
-        </div> -->
+<!-- Account Page Content -->
+
+<section class="section section-account">
+  <div class="section__wrap container">
+    <div class="row">
+      <!--Menu-->
+      <div class="col-12 col-lg-4 account-menu js-account-menu">
+    <h3 class="account-menu__title">My Account</h3>
+    <div class="account-menu__wrap">
+      <div class="account-menu__header">
+        <span>Hello Jane</span>
+        <a href="/logout">Logout</a>
       </div>
+      <nav class="account-menu__nav js-account-nav">
+        <a href="accountdetails.html" class="active" data-target="#accountDetails"><span>Account Details</span></a>
+        <a href="accountsubscriptions.html" data-target="#accountSubscriptions"><span>Subscriptions</span></a>
+        <a href="accountshipments.html" data-target="#accountShipments"><span>Shipments</span></a>
+        <a href="accountpayments.html" data-target="#accountPaymentMethods"><span>Payment Methods</span></a>
+        <a href="/admin"><span>Admin</span></a>
+      </nav>
     </div>
   </div>
-</div>
-<!-- Newsletter -->
-<div class="newsletter">
-    <div class="container">
-      <div class="newsletter__content row">
-        <div class="newsletter__headline col-12 col-xl-3">
-          <h3 class="newsletter__title">Newsletter</h3>
-          <p class="newsletter__text">Sign up for discounts, content and more!</p>
+      <div class="col-12 col-lg-8 account-content" id="accountPaymentMethods">
+        <div class="account-content__header">
+          <a href="javascript:void(0);" role="button" class="account-back js-account-back"><span class="icon icon-chevron-right"></span> Back</a>
+          <h1 class="account-content__title">Payment Methods</h1>
         </div>
-        <div class="newsletter__form col-12 col-xl-9">
-          <form method="post" action="" class="needs-validation" novalidate>
-            <div class="newsletter__form-wrap row">
-              <div class="col-12 col-lg-4">
-                <label for="newsletterEmail" class="form-label">E-mail *</label>
-                <input type="email" class="form-control" id="newsletterEmail" aria-describedby="newsletterEmailHelp" required>
-                <div class="invalid-feedback" id="newsletterEmailHelp">
-                  Please enter a valid e-mail
-                </div>
-              </div>
-              <div class="col-12 col-lg-6">
-                <label class="form-label">Child Birthdate (Optional)</label>
-                <div class="row g-3">
-                  <div class="col-4">
-                    <select class="form-select" aria-label="Month">
-                      <option selected>Month</option>
-                      <option value="1">January</option>
-                      <option value="2">February</option>
-                      <option value="3">March</option>
-                    </select>
-                  </div>
-                  <div class="col-4">
-                    <select class="form-select" aria-label="Day">
-                      <option selected>Day</option>
-                      <option value="1">01</option>
-                      <option value="2">02</option>
-                      <option value="3">03</option>
-                    </select>
-                  </div>
-                  <div class="col-4">
-                    <select class="form-select" aria-label="Year">
-                      <option selected>Year</option>
-                      <option value="1">2024</option>
-                      <option value="2">2023</option>
-                      <option value="3">2022</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-lg-2 order-2 order-lg-1">
-                <button class="btn btn-success w-100" type="submit">Sign Up</button>
-              </div>
-              <div class="col-12 order-1 order-lg-2">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                  <label class="form-check-label" for="invalidCheck">
-                    I have read and agree to the <a href="privacy-policy.html">privacy policy.</a>
-                  </label>
-                  <div class="invalid-feedback">
-                    You must agree before sign up
-                  </div>
+        <div class="account-content__block">
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Credit Card</h5>
+                  <p class="card-text">MASTERCARD **** **66</p>
+                  <p class="form-text text-start">Last Used: 04 Nov 2023</p>
+                  <span class="card-link text-primary">Default</span>
+                  <a href="#" class="card-link js-delete" data-id="123">Delete</a>
                 </div>
               </div>
             </div>
-          </form>
+            <div class="col-12 col-lg-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Credit Card</h5>
+                  <p class="card-text">VISA **** **66</p>
+                  <p class="form-text text-start">Last Used: 03 Nov 2023 <span class="text-danger">(Payment Failed)</span></p>
+                  <a href="#" class="card-link js-make-default" data-id="123">Make Default</a>
+                  <a href="#" class="card-link js-delete" data-id="123">Delete</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Credit Card</h5>
+                  <p class="card-text">VISA **** **66</p>
+                  <p class="form-text text-start">Last Used: Not used.</p>
+                  <span class="card-link badge text-bg-light">Expired</span>
+                  <a href="#" class="card-link js-delete" data-id="123">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="account-content__block d-grid gap-2 d-md-block">
+          <a href="accountnewcard.html" role="button" class="btn btn-primary">New Credit Card</a>
         </div>
       </div>
+      <!--End - Accont Content-->
     </div>
   </div>
+</section>
 
-<!-- END - Page Content -->
+<!-- END - Account Page Content -->
 
     </main>
 
@@ -236,6 +206,7 @@
 </div>
     
   
+<script src="assets/js/account.js"></script>
 
 </body>
 </html>
