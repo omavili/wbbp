@@ -26,5 +26,10 @@ $(window).on('load', function () {
             $('.js-billing-address').removeClass('d-none');
         }
     });
+
+    const modalEl = document.getElementById('confirmationModal')
+    modalEl.addEventListener('show.bs.modal', event => {
+        $(modalEl).find('.js-btn-confirm').attr('href', $(event.relatedTarget).attr('href'));
+    })
 });
   
