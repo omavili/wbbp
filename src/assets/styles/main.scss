@@ -13,7 +13,7 @@
 @import "abstracts/reboot"; //customized duplication of bootstrap reboot
 
 @import "bootstrap/scss/type";
-// @import "bootstrap/scss/images";
+@import "bootstrap/scss/images";
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
 // @import "bootstrap/scss/tables";
@@ -78,5 +78,6 @@
 @import 'pages/set-detail.scss';
 @import 'pages/login-register.scss';
 @import 'pages/account.scss';
+@import 'pages/content.scss';
 
 

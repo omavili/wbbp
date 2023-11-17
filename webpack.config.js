@@ -52,6 +52,7 @@ module.exports = {
         accountnewcard: 'src/views/pages/account/add-payment-method.html',
         accountsubscriptions: 'src/views/pages/account/subscriptions.html',
         accountshipments: 'src/views/pages/account/shipments.html',
+        whatisearlylearny: 'src/views/pages/content/what-is-earlylearny.html',
         error404: './src/views/pages/error/404.html',
       },
 
