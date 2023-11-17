@@ -27,9 +27,10 @@ $(window).on('load', function () {
         }
     });
 
-    const modalEl = document.getElementById('confirmationModal')
-    modalEl.addEventListener('show.bs.modal', event => {
-        $(modalEl).find('.js-btn-confirm').attr('href', $(event.relatedTarget).attr('href'));
-    })
+    const confirmModal = $('#confirmationModal')[0];
+    if(confirmModal) {
+        confirmModal.addEventListener('shown.bs.modal', (e) => { 
+            $(confirmModal).find('.js-btn-confirm').attr('href', $(e.relatedTarget).attr('href'));
+        });
+    }
 });
-  
