@@ -26,5 +26,11 @@ $(window).on('load', function () {
             $('.js-billing-address').removeClass('d-none');
         }
     });
+
+    const confirmModal = $('#confirmationModal')[0];
+    if(confirmModal) {
+        confirmModal.addEventListener('shown.bs.modal', (e) => { 
+            $(confirmModal).find('.js-btn-confirm').attr('href', $(e.relatedTarget).attr('href'));
+        });
+    }
 });
-  
