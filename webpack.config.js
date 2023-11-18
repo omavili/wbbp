@@ -53,6 +53,8 @@ module.exports = {
         accountsubscriptions: 'src/views/pages/account/subscriptions.html',
         accountshipments: 'src/views/pages/account/shipments.html',
         whatisearlylearny: 'src/views/pages/content/what-is-earlylearny.html',
+        howitworks: 'src/views/pages/content/how-it-works.html',
+        about: 'src/views/pages/content/about.html',
         error404: './src/views/pages/error/404.html',
       },
 

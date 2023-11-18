@@ -98,3 +98,29 @@
         }
     }
 }
+
+.section-page-about {
+    img.about {
+        width: 100%;
+        height: auto;
+        max-height: 30rem;
+        object-fit: cover;
+        margin: 1rem 0 2rem;
+
+        @include media-breakpoint-up(md) {
+            width: 60%;
+        max-height: 26.5rem;
+        margin: .5rem 2rem .5rem 0;
+        }
+    }
+}
+
+.section-page-hiw {
+    img {
+        max-width: 12.5rem;
+
+        @include media-breakpoint-up(md) {
+            max-width: 100%;
+        }
+    }
+}

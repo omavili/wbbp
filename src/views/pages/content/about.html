@@ -1,0 +1,45 @@
+{% extends "src/views/layouts/default.html" %}
+
+{% set title="About" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+<!-- Content Page -->
+
+<section class="section section-page-about">
+    <div class="container section__wrap">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About Us</li>
+            </ol>
+        </nav>
+
+        <h1 class="section__title">About Us</h1>
+
+        <div class="section__content">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-9">
+                    <p>Based in London, UK, EarlyLearny's mission is to empower the parents with the tools and resources needed to foster holistic child development, nurture family bonds, and prepare children for a successful future.</p>
+                    <img src="@images/mother-her-child-18.jpg" width="1280" height="1045" alt="About" class="about float-start">
+                    <p>Since 2005, EarlyLearny Group has been actively involved in the publishing industry, collaborating with an extensive global network of educators, medical professionals, child psychologists, and highly acclaimed illustrators.</p>
+                    <p>In 2009, EarlyLearny developmental program began its outreach to parents by introducing the development sets. To date, it has successfully distributed <strong>over 1 Million</strong> development sets worldwide, engaging and supporting families in nurturing their children's early development.</p>
+                    <p>Having participated in global toy fairs, book fairs, and baby shows, consistently garnering significant attention, EarlyLearny has experienced continuous growth.</p>
+                    <p>Has offices/distributors and operations in United Kingdom, Ireland, Germany, Canada, Netherlands, UAE and in Turkey.</p>
+                    <p>We aim to broaden our global reach by expanding our product and language offerings. For any further questions or comments, please feel free to contact us at <a href="mailto:info@earlylearny.com">info@earlylearny.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+{% include "src/views/partials/newsletter.html" %}
+
+<!-- END - Content Page -->
+{% endblock %}

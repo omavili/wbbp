@@ -1,0 +1,81 @@
+{% extends "src/views/layouts/default.html" %}
+
+{% set title="How it works?" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+<!-- Content Page -->
+
+<section class="section section-page-hiw">
+  <div class="section__wrap text-center text-md-start">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">How does it work?</li>
+        </ol>
+      </nav>
+    </div>
+
+    <h1 class="section__title mb-5">How does it work?</h1>
+
+    <div class="section__content">
+        <div class="container">
+            <div class="row gx-lg-5 align-items-center">
+                <div class="col-12 col-md-3 mb-5 mb-md-0">
+                    <img src="@images/hiw-step1.png" alt="Streamlined Online Purchase" width="288" height="290" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-7">
+                    <h2 class="mb-4">Streamlined Online Purchase</h2>
+                    <p class="lead">Customize your selection by entering your child's date of birth, and select your payment plan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="divider my-5">
+    <div class="section__content">
+        <div class="container">
+            <div class="row gx-lg-5 justify-content-md-end align-items-center">
+                <div class="col-12 col-md-3 order-md-1 mb-5 mb-md-0">
+                    <img src="@images/hiw-step2.png" alt="Hassle-Free Monthly Deliveries" width="288" height="290" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-7">
+                    <h2 class="mb-4">Hassle-Free Monthly Deliveries</h2>
+                    <p class="lead">EarlyLearny sets will be delivered to your address every month, completely free of charge.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="divider my-5">
+    <div class="section__content">
+        <div class="container">
+            <div class="row gx-lg-5 align-items-center">
+                <div class="col-12 col-md-3 mb-5 mb-md-0">
+                    <img src="@images/hiw-step3.png" alt="Enjoyable Learning" width="288" height="290" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-7">
+                    <h2 class="mb-4">Enjoyable Learning</h2>
+                    <p class="lead">Let your child enjoy learning with our engaging EarlyLearny sets, expertly designed for their development.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section__content">
+        <div class="section__cta">
+            <p class="section__cta-text lead">Let's get started!</p>
+            <a href="/" class="btn btn-primary section__cta-btn">Subscribe Now</a>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+{% include "src/views/partials/newsletter.html" %}
+
+<!-- END - Content Page -->
+{% endblock %}
