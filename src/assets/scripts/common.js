@@ -3,6 +3,8 @@
 import * as $ from 'jquery';
 window['jQuery'] = window['$'] = $;
 import { Popover, Tooltip } from 'bootstrap';
+import Swiper from 'swiper';
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 
 $(window).on('load', function () {
   //Form Validation
@@ -25,6 +27,17 @@ $(window).on('load', function () {
   $('.js-header-navigation-btn').on('click', function () {
     $('.header').toggleClass('mobile-navigation');
   });
+
+  //Default Swiper
+  const swiper = new Swiper('.js-swiper', {
+    spaceBetween: 12,
+    modules: [Pagination],
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
 });
 
 //
