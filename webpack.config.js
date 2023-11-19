@@ -55,6 +55,7 @@ module.exports = {
         whatisearlylearny: 'src/views/pages/content/what-is-earlylearny.html',
         howitworks: 'src/views/pages/content/how-it-works.html',
         about: 'src/views/pages/content/about.html',
+        contact: 'src/views/pages/content/contact.html',
         error404: './src/views/pages/error/404.html',
       },
 

@@ -1520,7 +1520,7 @@ $badge-border-radius:               .25rem !default;
 // // Modals
 
 // // scss-docs-start modal-variables
-// $modal-inner-padding:               $spacer !default;
+$modal-inner-padding:               $spacer !default;
 
 // $modal-footer-margin-between:       .5rem !default;
 
@@ -1531,7 +1531,7 @@ $badge-border-radius:               .25rem !default;
 
 // $modal-content-color:               null !default;
 // $modal-content-bg:                  var(--#{$prefix}body-bg) !default;
-// $modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
+$modal-content-border-color:        $gray-300 !default;
 // $modal-content-border-width:        var(--#{$prefix}border-width) !default;
 // $modal-content-border-radius:       var(--#{$prefix}border-radius-lg) !default;
 // $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
@@ -1542,14 +1542,14 @@ $badge-border-radius:               .25rem !default;
 // $modal-backdrop-opacity:            .5 !default;
 
 // $modal-header-border-color:         var(--#{$prefix}border-color) !default;
-// $modal-header-border-width:         $modal-content-border-width !default;
-// $modal-header-padding-y:            $modal-inner-padding !default;
-// $modal-header-padding-x:            $modal-inner-padding !default;
-// $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
+$modal-header-border-width:         0 !default;
+$modal-header-padding-y:            $modal-inner-padding !default;
+$modal-header-padding-x:            $modal-inner-padding !default;
+$modal-header-padding:              $modal-header-padding-y $modal-header-padding-x 0 $modal-header-padding-x !default; // Keep this for backwards compatibility
 
 // $modal-footer-bg:                   null !default;
 // $modal-footer-border-color:         $modal-header-border-color !default;
-// $modal-footer-border-width:         $modal-header-border-width !default;
+$modal-footer-border-width:         0 !default;
 
 // $modal-sm:                          300px !default;
 // $modal-md:                          500px !default;

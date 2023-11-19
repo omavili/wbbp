@@ -1,0 +1,96 @@
+{% extends "src/views/layouts/default.html" %}
+
+{% set title="Contact" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+<!-- Content Page -->
+
+<section class="section section-page-about">
+    <div class="container section__wrap">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            </ol>
+        </nav>
+
+        <h1 class="section__title">Contact</h1>
+
+
+        <div class="section__content">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-5 order-lg-1">
+
+                    <form action="contact.html" method="post" class="needs-validation" novalidate>
+                        <p>Please fill out the form below and we will get back to you as soon as possible.</p>  
+                        <div class="form-floating mb-4">
+                          <input type="text" class="form-control" id="contactName" placeholder="Name Surname" aria-describedby="contactNameHelp" required>
+                          <label for="contactName">Name Surname</label>
+                          <div class="invalid-feedback" id="contactNameHelp">Please enter your name, surname</div>
+                        </div>
+                        <div class="form-floating mb-4">
+                          <input type="email" class="form-control" id="contactEmail" placeholder="E-mail address" aria-describedby="contactEmailHelp" required>
+                          <label for="contactEmail">E-mail address</label>
+                          <div class="invalid-feedback" id="loginEmailHelp">Please enter a valid e-mail</div>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="number" class="form-control" id="contactPhoneNumber" placeholder="Phone Number" aria-describedby="contactPhoneNumberHelp" required>
+                            <label for="contactPhoneNumber">Phone Number</label>
+                            <div class="invalid-feedback" id="contactPhoneNumberHelp">Invalid phone number</div>
+                        </div>
+                        <!--Contact reason instead of subject-->
+                        <!-- <div class="form-floating mb-4">
+                            <select class="form-select" id="contactReason" aria-label="Reason" required aria-describedby="contactReasonHelp">
+                              <option value="1">Subscription</option>
+                              <option value="2">Shipment</option>
+                              <option value="3">Payment</option>
+                            </select>
+                            <label for="contactReason">Contact Reason</label>
+                            <div class="invalid-feedback" id="contactReasonHelp">Please select a reason</div>
+                        </div> -->
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="contactSubject" placeholder="Subject" aria-describedby="contactSubjectHelp" required>
+                            <label for="contactSubject">Subject</label>
+                            <div class="invalid-feedback" id="contactSubjectHelp">Please enter subject</div>
+                          </div>
+                        <div class="form-floating mb-4">
+                            <textarea class="form-control" placeholder="Message" id="contactMessage" style="height: 7rem;" required></textarea>
+                            <label for="addressDetail">Message</label>
+                            <div class="invalid-feedback" id="addressDetail">Please enter message</div>
+                        </div>
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="registerDataApprove" required>
+                            <label class="form-check-label" for="registerDataApprove">
+                              I have read and accept <a href="#">data protection policy.</a>
+                            </label>
+                            <div class="invalid-feedback" id="registerDataApproveHelp">Please check to continue</div>
+                        </div>
+                        <div class="d-flex justify-content-center justify-content-lg-start mb-4">
+                            <button type="submit" class="btn btn-primary btn-submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <hr class="divider my-4 d-lg-none">
+                    <h5>Contact E-mail</h5>
+                    <p><a href="mailto:info@earlylearny.com">info@earlylearny.com</a></p>
+                    <br>
+                    <h5>Have a question?</h5>
+                    <p><a href="faq.html">Frequently Asked Questions</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+{% include "src/views/partials/newsletter.html" %}
+
+<!-- END - Content Page -->
+{% endblock %}

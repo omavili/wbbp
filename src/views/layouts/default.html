@@ -2,7 +2,7 @@
 <html lang="en-GB" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>{{ title }}</title>
   
   <link href="@images/favicon.png" rel="icon" type="image/png">
@@ -24,6 +24,8 @@
 
     <!-- Footer -->
     {% include "src/views/partials/footer.html" %}
+    <!-- Cookie Modal -->
+    {% include "src/views/partials/cookie.html" %}
     
   {% block scripts %}{% endblock %}
 </body>
