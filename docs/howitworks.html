@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Account Payments</title>
+  <title>How it works?</title>
   
   <link href="assets/img/favicon..png" rel="icon" type="image/png">
 
@@ -78,97 +78,140 @@
     <!-- Main content -->
     <main class="main">
         
-<!-- Account Page Content -->
+<!-- Content Page -->
 
-<section class="section section-account">
-  <div class="section__wrap container">
-    <div class="row">
-      <!--Menu-->
-      <div class="col-12 col-lg-4 account-menu js-account-menu">
-    <h3 class="account-menu__title">My Account</h3>
-    <div class="account-menu__wrap">
-      <div class="account-menu__header">
-        <span>Hello Jane</span>
-        <a href="/logout">Logout</a>
-      </div>
-      <nav class="account-menu__nav js-account-nav">
-        <a href="accountdetails.html" class="active" data-target="#accountDetails"><span>Account Details</span></a>
-        <a href="accountsubscriptions.html" data-target="#accountSubscriptions"><span>Subscriptions</span></a>
-        <a href="accountshipments.html" data-target="#accountShipments"><span>Shipments</span></a>
-        <a href="accountpayments.html" data-target="#accountPaymentMethods"><span>Payment Methods</span></a>
-        <a href="/admin"><span>Admin</span></a>
+<section class="section section-page-hiw">
+  <div class="section__wrap text-center text-md-start">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">How does it work?</li>
+        </ol>
       </nav>
     </div>
-  </div>
-      <div class="col-12 col-lg-8 account-content" id="accountPaymentMethods">
-        <div class="account-content__header">
-          <a href="javascript:void(0);" role="button" class="account-back js-account-back"><span class="icon icon-chevron-right"></span> Back</a>
-          <h1 class="account-content__title">Payment Methods</h1>
-        </div>
-        <div class="account-content__block">
-          <div class="row g-4">
-            <div class="col-12 col-lg-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Credit Card</h5>
-                  <p class="card-text">MASTERCARD **** **66</p>
-                  <p class="form-text text-start">Last Used: 04 Nov 2023</p>
-                  <span class="card-link text-primary">Default</span>
-                  <!--default payment method can't delete-->
+
+    <h1 class="section__title mb-5">How does it work?</h1>
+
+    <div class="section__content">
+        <div class="container">
+            <div class="row gx-lg-5 align-items-center">
+                <div class="col-12 col-md-3 mb-5 mb-md-0">
+                    <img src="assets/img/hiw-step1..png" alt="Streamlined Online Purchase" width="288" height="290" class="img-fluid">
                 </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Credit Card</h5>
-                  <p class="card-text">VISA **** **66</p>
-                  <p class="form-text text-start">Last Used: 03 Nov 2023 <span class="text-danger">(Payment Failed)</span></p>
-                  <a href="#" class="card-link js-make-default" data-id="123">Make Default</a>
-                  <a href="delete.html?id=2" class="card-link" data-bs-toggle="modal" data-bs-target="#confirmationModal">Delete</a>
+                <div class="col-12 col-md-7">
+                    <h2 class="mb-4">Streamlined Online Purchase</h2>
+                    <p class="lead">Customize your selection by entering your child's date of birth, and select your payment plan.</p>
                 </div>
-              </div>
             </div>
-            <div class="col-12 col-lg-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Credit Card</h5>
-                  <p class="card-text">VISA **** **66</p>
-                  <p class="form-text text-start">Last Used: Not used.</p>
-                  <span class="card-link badge text-bg-light">Expired</span>
-                  <a href="delete.html?id=3" class="card-link" data-bs-toggle="modal" data-bs-target="#confirmationModal">Delete</a>
+        </div>
+    </div>
+    <hr class="divider my-5">
+    <div class="section__content">
+        <div class="container">
+            <div class="row gx-lg-5 justify-content-md-end align-items-center">
+                <div class="col-12 col-md-3 order-md-1 mb-5 mb-md-0">
+                    <img src="assets/img/hiw-step2..png" alt="Hassle-Free Monthly Deliveries" width="288" height="290" class="img-fluid">
                 </div>
-              </div>
+                <div class="col-12 col-md-7">
+                    <h2 class="mb-4">Hassle-Free Monthly Deliveries</h2>
+                    <p class="lead">EarlyLearny sets will be delivered to your address every month, completely free of charge.</p>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="account-content__block d-grid gap-2 d-md-block">
-          <a href="accountnewcard.html" role="button" class="btn btn-primary">New Credit Card</a>
+    </div>
+    <hr class="divider my-5">
+    <div class="section__content">
+        <div class="container">
+            <div class="row gx-lg-5 align-items-center">
+                <div class="col-12 col-md-3 mb-5 mb-md-0">
+                    <img src="assets/img/hiw-step3..png" alt="Enjoyable Learning" width="288" height="290" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-7">
+                    <h2 class="mb-4">Enjoyable Learning</h2>
+                    <p class="lead">Let your child enjoy learning with our engaging EarlyLearny sets, expertly designed for their development.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <!--End - Accont Content-->
+    </div>
+    <div class="section__content">
+        <div class="section__cta">
+            <p class="section__cta-text lead">Let's get started!</p>
+            <a href="/" class="btn btn-primary section__cta-btn">Subscribe Now</a>
+        </div>
     </div>
   </div>
 </section>
-<!--Confirmation Modal-->
-<div class="modal modal-sm fade" id="confirmationModal" tabindex="-1"aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="cookieModalLabel">Confirmation</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Do you want to delete?</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-link" data-bs-dismiss="modal">Cancel</button>
-        <a href="#" role="button" class="btn btn-sm btn-primary js-btn-confirm">Delete</a>
+
+<!-- Newsletter -->
+<div class="newsletter">
+    <div class="container">
+      <div class="newsletter__content row">
+        <div class="newsletter__headline col-12 col-xl-3">
+          <h3 class="newsletter__title">Newsletter</h3>
+          <p class="newsletter__text">Sign up for discounts, content and more!</p>
+        </div>
+        <div class="newsletter__form col-12 col-xl-9">
+          <form method="post" action="" class="needs-validation" novalidate>
+            <div class="newsletter__form-wrap row">
+              <div class="col-12 col-lg-4">
+                <label for="newsletterEmail" class="form-label">E-mail *</label>
+                <input type="email" class="form-control" id="newsletterEmail" aria-describedby="newsletterEmailHelp" required>
+                <div class="invalid-feedback" id="newsletterEmailHelp">
+                  Please enter a valid e-mail
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <label class="form-label">Child Birthdate (Optional)</label>
+                <div class="row g-3">
+                  <div class="col-4">
+                    <select class="form-select" aria-label="Month">
+                      <option selected>Month</option>
+                      <option value="1">January</option>
+                      <option value="2">February</option>
+                      <option value="3">March</option>
+                    </select>
+                  </div>
+                  <div class="col-4">
+                    <select class="form-select" aria-label="Day">
+                      <option selected>Day</option>
+                      <option value="1">01</option>
+                      <option value="2">02</option>
+                      <option value="3">03</option>
+                    </select>
+                  </div>
+                  <div class="col-4">
+                    <select class="form-select" aria-label="Year">
+                      <option selected>Year</option>
+                      <option value="1">2024</option>
+                      <option value="2">2023</option>
+                      <option value="3">2022</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-2 order-2 order-lg-1">
+                <button class="btn btn-success w-100" type="submit">Sign Up</button>
+              </div>
+              <div class="col-12 order-1 order-lg-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    I have read and agree to the <a href="privacy-policy.html">privacy policy.</a>
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before sign up
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- END - Account Page Content -->
+
+<!-- END - Content Page -->
 
     </main>
 
@@ -241,7 +284,6 @@
 </div>
     
   
-<script src="assets/js/account.js"></script>
 
 </body>
 </html>

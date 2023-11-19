@@ -2,7 +2,7 @@
 <html lang="en-GB" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Sign up</title>
   
   <link href="assets/img/favicon..png" rel="icon" type="image/png">
@@ -25,7 +25,7 @@
   <div class="container header__inner-wrap">
     <button class="header__navigation-btn js-header-navigation-btn" type="button"></button>
     <a class="logo" href="index.html"><img class="logo__img" src="assets/img/logo..svg" alt="logo"></a>
-    <a class="header__subscribe header__subscribe--mobile" href="/checkout">Subscribe</a>
+    <a class="header__subscribe header__subscribe--mobile" href="checkoutstep1child.html">Subscribe</a>
     <div class="header__navigation-wrap">
       <nav class="navigation">
         <a class="navigation__link" href="whatisearlylearny.html">What is EarlyLearny?</a>
@@ -51,7 +51,7 @@
       </nav>
     </div>
     <!--Hide After login-->
-    <a class="btn btn-primary header__subscribe" href="/checkout">Subscribe</a>
+    <a class="btn btn-primary header__subscribe" href="checkoutstep1child.html">Subscribe</a>
     <!--Show After login-->
     <!--
     <div class="header__account-menu dropdown">
@@ -59,7 +59,7 @@
         My Account
       </a>
       <ul class="dropdown-menu" aria-labelledby="accountMenuLink">
-        <li><a class="dropdown-item" href="account.html">Account Details</a></li>
+        <li><a class="dropdown-item" href="accountdetails.html">Account Details</a></li>
         <li><a class="dropdown-item" href="subscriptions.html">Subscriptions</a></li>
         <li><a class="dropdown-item" href="shipments.html">Shipments</a></li>
         <li><a class="dropdown-item" href="payments.html">Payment Methods</a></li>
@@ -225,8 +225,8 @@
       <div class="row">
         <div class="col footer__link-group">
           <h4 class="footer__title">EarlyLearny</h4>
-          <a href="what-is-earlylearny.html">What is EarlyLearny?</a>
-          <a href="how-it-works.html">How does it work?</a>
+          <a href="whatisearlylearny.html">What is EarlyLearny?</a>
+          <a href="howitworks.html">How does it work?</a>
           <a href="sets.html">Sets</a>
           <a href="about.html">About</a>
           <!--Hide after login-->
@@ -236,15 +236,15 @@
           <!--
             <a href="#">My Account</a>
           -->
-          <a href="#">Subscribe</a>
+          <a href="checkoutstep1child.html">Subscribe</a>
         </div>
         <div class="col footer__link-group">
           <h4 class="footer__title">Help</h4>
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="cookie-policy.html">Cookie Policy</a>
-          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+          <a href="privacypolicy.html">Privacy Policy</a>
+          <a href="cookiepolicy.html">Cookie Policy</a>
+          <a href="termsandconditions.html">Terms &amp; Conditions</a>
         </div>
         <div class="col-12 col-lg-4 footer__social-media">
           <h4 class="footer__title">Social Media</h4>
@@ -266,6 +266,24 @@
       </div>
     </div>
   </div>
+</div>
+    <!-- Cookie Modal -->
+    <div class="modal" id="cookieModal" tabindex="-1" aria-labelledby="cookieModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="cookieModalLabel">Cookies</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod delectus excepturi alias. Iusto expedita dolor quaerat fugit repudiandae eius hic eos laborum accusantium atque rem non, assumenda, nemo voluptatum quae.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-link" data-bs-dismiss="modal">Decline</button>
+            <button type="button" class="btn btn-sm btn-primary">Accept</button>
+        </div>
+      </div>
+    </div>
 </div>
     
   

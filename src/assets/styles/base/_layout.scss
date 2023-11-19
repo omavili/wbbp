@@ -193,3 +193,39 @@ a {
     vertical-align: middle;
   }
 }
+
+#cookieModal {
+  height: auto;
+  top: auto;
+  bottom: 0;
+
+  .modal-dialog {
+    display: flex;
+    align-items: flex-end;
+    justify-items: end;
+    margin: auto ($grid-gutter-width * .5) ($grid-gutter-width * .5) auto;
+    
+    @include media-breakpoint-down(lg) {
+      margin-left:  $grid-gutter-width * .5;
+      max-width: calc(100% - $grid-gutter-width);
+    }
+  }
+}
+
+body.modal-cookie {
+  overflow: auto !important;
+}
+
+.modal-content {
+  box-shadow: $box-shadow;
+
+  .modal-body {
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .modal-footer {
+    padding-top: 0;
+  }
+}

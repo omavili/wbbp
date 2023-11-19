@@ -71,16 +71,16 @@
 <div class="modal modal-sm fade" id="confirmationModal" tabindex="-1"aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cookieModalLabel">Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
       <div class="modal-body">
-        <div class="mb-3 d-flex justify-content-between">
-          <h5>Confirmation</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div>Do you want to delete payment method?</div>
-        <div class="mt-3 d-flex justify-content-end">
-          <button type="button" class="btn btn-sm btn-link" data-bs-dismiss="modal">Cancel</button>
-          <a href="#" role="button" class="btn btn-sm btn-primary js-btn-confirm">Delete</a>
-        </div>
+        <p>Do you want to delete?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-link" data-bs-dismiss="modal">Cancel</button>
+        <a href="#" role="button" class="btn btn-sm btn-primary js-btn-confirm">Delete</a>
       </div>
     </div>
   </div>
