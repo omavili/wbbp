@@ -94,7 +94,7 @@
                                 </div>
                             </div>
                             <div class="col-6">
-                                <button class="btn btn-link" id="addressAutofill">Autofill Address</button>
+                                <button class="btn btn-link" id="addressAutofill" data-bs-toggle="modal" data-bs-target="#addressModal">Autofill Address</button>
                             </div>
                         </div>
                         <div class="form-floating mb-4">
@@ -265,7 +265,27 @@
 
     </div>
 </div>
-
+<!--Address Select Modal-->
+<div class="modal fade" id="addressModal" tabindex="-1"aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-primary" id="addressModalLabel">Please select your address</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="list-group list-group-flush">
+                <button type="button" class="list-group-item list-group-item-action px-0 d-flex"><span class="icon icon-chevron-right mx-2" aria-hidden="true"></span>10 Downing Street, London</button>
+                <button type="button" class="list-group-item list-group-item-action px-0 d-flex"><span class="icon icon-chevron-right mx-2" aria-hidden="true"></span>Prime Minister & First Lord of the Treasury, 10 Downing Street, London</button>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-link" data-bs-dismiss="modal">I will enter manually</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END - Address Select Modal -->
 <!-- END - Page Content -->
 
     </main>
