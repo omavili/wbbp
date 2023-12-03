@@ -56,6 +56,7 @@ module.exports = {
         howitworks: 'src/views/pages/content/how-it-works.html',
         about: 'src/views/pages/content/about.html',
         contact: 'src/views/pages/content/contact.html',
+        email: './src/views/emails/index.html',
         error404: './src/views/pages/error/404.html',
       },
 

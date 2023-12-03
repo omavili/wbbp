@@ -14,8 +14,8 @@
   }
 
   &__step {
-    text-align: left;
     display: flex;
+    flex-direction: column;
     align-items: center;
 
     .section-hiw__content {
@@ -30,14 +30,14 @@
     @include media-breakpoint-down(md) {
       margin-bottom: 1.5rem;
 
-      &:nth-child(2) {
-        flex-direction: row-reverse;
+      // &:nth-child(2) {
+      //   flex-direction: row-reverse;
 
-        .section-hiw__content {
-          padding-left: 0;
-          padding-right: 2rem;
-        }
-      }
+      //   .section-hiw__content {
+      //     padding-left: 0;
+      //     padding-right: 2rem;
+      //   }
+      // }
     }
 
     @include media-breakpoint-down(xl) {
@@ -46,23 +46,25 @@
   }
 
   &__image {
+    margin-bottom: 2rem;
+
     img {
-      width: 8rem;
+      width: 15rem;
       height: auto;
     }
 
-    @include media-breakpoint-up(lg) {
-      img {
-        width: 9rem;
-      }
-    }
+    // @include media-breakpoint-up(lg) {
+    //   img {
+    //     width: 15rem;
+    //   }
+    // }
   }
 
   &__content {
     padding-left: 1.5rem;
 
     @include media-breakpoint-up(lg) {
-      padding-left: 2rem;
+      padding-left: 1rem;
     }
   }
 
