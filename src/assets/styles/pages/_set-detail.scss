@@ -27,7 +27,8 @@
 
   &__images {
     .product-image img {
-      min-height: 18.28rem;
+      object-fit: contain;
+      height: 18.28rem;
     }
 
     @include media-breakpoint-up(lg) {
@@ -37,7 +38,7 @@
       width: 60%;
 
       .product-image img {
-        min-height: 28.125rem;
+        height: 28.125rem;
       }
     }
   }
