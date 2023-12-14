@@ -199,6 +199,12 @@ a {
   top: auto;
   bottom: 0;
 
+  @include media-breakpoint-up(lg) {
+    width: auto;
+    left: auto;
+    right: 0;
+  }
+
   .modal-dialog {
     display: flex;
     align-items: flex-end;

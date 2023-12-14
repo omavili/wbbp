@@ -165,12 +165,28 @@ $title-slider-item-height: $font-size-base * 3;
   }
 
   &__price {
-    font-size: 1.5rem;
-    font-weight: $font-weight-bold;
-    color: $primary;
+    .price {
+      font-size: 1.5rem;
+      font-weight: $font-weight-bold;
+      color: $primary;
 
-    span {
-      font-weight: $font-weight-normal;
+      .old-price {
+        font-weight: $font-weight-medium;
+        text-decoration: line-through;
+        color: $body-color;
+      }
+
+      .period {
+        font-weight: $font-weight-normal;
+      }
+    }
+
+    .campaign {
+      font-size: 1rem;
+
+      span {
+        font-weight: $font-weight-bold;
+      }
     }
   }
 
