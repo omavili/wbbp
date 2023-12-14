@@ -31,11 +31,13 @@ $title-slider-item-height: $font-size-base * 3;
     .swiper-slide {
       background-color: transparent;
 
-      @include media-breakpoint-between(sm, lg) {
-        img {
-          object-position: bottom;
-          width: 100vw;
-          max-height: 75rem;
+      &.hero-banner__content-wrap {
+        @include media-breakpoint-between(sm, lg) {
+          img {
+            object-position: bottom;
+            width: 100vw;
+            max-height: 75rem;
+          }
         }
       }
 
@@ -103,6 +105,10 @@ $title-slider-item-height: $font-size-base * 3;
       display: block;
       color: $primary;
       margin-bottom: 0;
+
+      @include media-breakpoint-down(lg) {
+        letter-spacing: -0.05rem; //min 375px screen width
+      }
     }
 
     .title-animation-wrap {
