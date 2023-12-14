@@ -21,9 +21,8 @@ const swiperThumbs = new Swiper('.js-swiper-thumbs', {
 });
 
 const swiperImage = new Swiper('.js-swiper-big-image', {
-  effect: 'fade',
   lazy: true,
-  allowTouchMove: false,
+  allowTouchMove: true,
   modules: [Thumbs, Zoom],
   zoom: {
     maxRatio: 2.2,
