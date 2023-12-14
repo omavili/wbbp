@@ -1,7 +1,9 @@
 .header {
   $parent: &;
 
-  box-shadow: $box-shadow;
+  position: relative;
+  z-index: 2;
+  box-shadow: $box-shadow-sm;
 
   &__promo,
   &__slogan {
