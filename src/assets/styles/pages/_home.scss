@@ -92,8 +92,11 @@
   }
 
   &__card-image {
+    margin: 1.5rem auto;
+
     img {
       max-width: 16rem;
+      border-radius: .75rem;
     }
   }
 
