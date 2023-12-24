@@ -170,6 +170,13 @@ $title-slider-item-height: $font-size-base * 3;
       font-weight: $font-weight-bold;
       color: $primary;
 
+      .list-price {
+        &,
+        + .period {
+          color: $body-color;
+        }
+      }
+
       .old-price {
         font-weight: $font-weight-medium;
         text-decoration: line-through;
