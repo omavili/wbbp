@@ -26,6 +26,10 @@
   }
 
   &__images {
+    .product-image picture {
+      background: transparent;
+    }
+
     .product-image img {
       width: 100%;
       object-fit: contain;
@@ -55,6 +59,12 @@
   &__big-image {
     border: solid 2px $gray-200;
     border-radius: $border-radius-lg;
+    background: linear-gradient(
+      180deg,
+      rgba(250, 250, 250, 1) 45%,
+      rgba(229, 229, 229, 1) 45%,
+      rgba(250, 250, 250, 1) 90%
+    );
     overflow: hidden;
 
     .swiper-slide {
