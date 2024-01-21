@@ -400,6 +400,7 @@
       left: 1rem;
       margin: 0;
       top: calc(50% - .6rem);
+      pointer-events: none;
 
       @include media-breakpoint-up(lg) {
         left: 1.25rem;
