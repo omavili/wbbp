@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="{{ lang }}" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>{{ title }}</title>
+  
+  <link href="@images/favicon.png" rel="icon" type="image/png">
+
+  <link href="@styles/main.scss" rel="stylesheet">
+
+  <script src="@scripts/common.js" defer="defer"></script>
+
+</head>
+<body>
+  <div class="page page-landing">
+
+    <!-- Main content -->
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <div class="footer">
+      <div class="d-flex flex-column align-items-center">
+            <p class="mb-3"><a href="https://earlylearny.com">EarlyLearny.com</a> All rights reserved. &copy; 2024</p>
+            <div>
+                <img class="image mx-1" width="75" height="24" src="@images/payment-logos/visa.svg" alt="Visa">
+                <img class="image mx-1" width="39" height="24" src="@images/payment-logos/mastercard.svg" alt="Mastercard">
+                <img class="image mx-1" width="21" height="24" src="@images/payment-logos/paypal.svg" alt="Paypal">
+                <img class="image mx-1" width="50" height="50" src="@images/payment-logos/ssl.png" alt="SSL">
+            </div>
+      </div>
+    </div>
+    
+  {% block scripts %}{% endblock %}
+</body>
+</html>

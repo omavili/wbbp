@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="tr-TR" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Talep Formu</title>
+  
+  <link href="assets/img/favicon..png" rel="icon" type="image/png">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <script src="assets/js/common.js" defer="defer"></script>
+
+</head>
+<body>
+  <div class="page page-landing">
+
+    <!-- Main content -->
+    <main class="main">
+        
+<!-- Content Page -->
+
+<div class="header">
+    <div class="header__promo">
+        <p>Ücretsiz Teslimat</p>
+    </div>
+    <div class="container header__inner-wrap">
+        <a class="logo" href="index.html"><img class="logo__img" src="assets/img/logo..svg" alt="logo"></a>
+    </div>
+</div>
+
+<section class="section section-page-landing">
+    <div class="container section__wrap">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h1 class="section__title">Talep Formu</h1>
+
+                <div class="section__content">
+
+                    <!--success message-->
+                    <div class="alert-container">
+                        <div class="alert alert-success" role="alert">Formunuz iletilmiştir. Sizinle en kısa sürede iletişime geçilecektir. İlginiz için teşekkür ederiz.</div>
+                    </div>
+
+                    <form action="orderformtr.html" method="post" class="needs-validation" novalidate>
+                        <p>EarlyLearny Setlerinin türkçeleştirilmiş versiyonunun size ulaştırılması için lütfen aşağıdaki formu doldurun, sizinle en kısa sürede
+                            irtibata geçeceğiz.</p>
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="subscribeName" placeholder="Name"
+                                aria-describedby="subscribeNameHelp" required>
+                            <label for="subscribeName">Ad</label>
+                            <div class="invalid-feedback" id="subscribeNameHelp">Lütfen ad giriniz</div>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="subscribeSurname" placeholder="Surname"
+                                aria-describedby="subscribeSurnameHelp" required>
+                            <label for="subscribeSurname">Soyad</label>
+                            <div class="invalid-feedback" id="subscribeSurnameHelp">Lütfen soyad giriniz</div>
+                        </div>
+                        <div class="xform-floating mb-4">
+                            <label class="form-label">Çocuk Doğum Tarihi</label>
+                            <div class="row g-3">
+                                <div class="col-3">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="subscribeBirthDay" aria-label="Gün" required>
+                                            <option selected></option>
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                        </select>
+                                        <label for="subscribeBirthDay">Gün</label>
+                                        <div class="invalid-feedback">Zorunlu</div>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="subscribeBirthMonth" aria-label="Ay" required>
+                                            <option selected></option>
+                                            <option value="1">Ocak</option>
+                                            <option value="2">Şubat</option>
+                                            <option value="3">Mart</option>
+                                        </select>
+                                        <label for="subscribeBirthMonth">Ay</label>
+                                        <div class="invalid-feedback">Zorunlu</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="subscribeBirthYear" aria-label="Yıl" required>
+                                            <option selected></option>
+                                            <option value="1">2024</option>
+                                            <option value="2">2023</option>
+                                            <option value="3">2022</option>
+                                        </select>
+                                        <label for="subscribeBirthYear">Yıl</label>
+                                        <div class="invalid-feedback">Zorunlu</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="subscribeCity"
+                                placeholder="Yaşadığınız Şehir/Ülke" aria-describedby="subscribeCityHelp" required>
+                            <label for="subscribeCity">Yaşadığınız Şehir/Ülke</label>
+                            <div class="invalid-feedback" id="subscribeCityHelp">Lütfen Şehir / Ülke giriniz</div>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="email" class="form-control" id="subscribeEmail" placeholder="E-mail address"
+                                aria-describedby="subscribeEmailHelp" required>
+                            <label for="subscribeEmail">E-mail</label>
+                            <div class="invalid-feedback" id="loginEmailHelp">Geçersiz e-posta adresi</div>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="number" class="form-control" id="subscribePhoneNumber" placeholder="Phone Number"
+                                aria-describedby="subscribePhoneNumberHelp" required>
+                            <label for="subscribePhoneNumber">Telefon</label>
+                            <div class="invalid-feedback" id="subscribePhoneNumberHelp">Geçersiz Telefon Numarası</div>
+                        </div>
+                        <div class="d-flex justify-content-center mb-4">
+                            <button type="submit" class="btn btn-primary btn-submit">Gönder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</section>
+</div>
+
+<!-- END - Content Page -->
+
+    </main>
+
+    <div class="footer">
+      <div class="d-flex flex-column align-items-center">
+            <p class="mb-3"><a href="https://earlylearny.com">EarlyLearny.com</a> All rights reserved. &copy; 2024</p>
+            <div>
+                <img class="image mx-1" width="75" height="24" src="assets/img/visa..svg" alt="Visa">
+                <img class="image mx-1" width="39" height="24" src="assets/img/mastercard..svg" alt="Mastercard">
+                <img class="image mx-1" width="21" height="24" src="assets/img/paypal..svg" alt="Paypal">
+                <img class="image mx-1" width="50" height="50" src="assets/img/ssl..png" alt="SSL">
+            </div>
+      </div>
+    </div>
+    
+  
+
+</body>
+</html>
