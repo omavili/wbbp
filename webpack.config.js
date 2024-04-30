@@ -58,6 +58,8 @@ module.exports = {
         contact: 'src/views/pages/content/contact.html',
         email: './src/views/emails/index.html',
         error404: './src/views/pages/error/404.html',
+        orderformtr: 'src/views/pages/content/order-form-tr.html',
+        orderformde: 'src/views/pages/content/order-form-de.html',
       },
 
       js: {
