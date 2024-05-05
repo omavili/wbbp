@@ -1,3 +1,5 @@
+import * as $ from 'jquery';
+window['jQuery'] = window['$'] = $;
 import Swiper from 'swiper';
 import { Pagination, Autoplay } from 'swiper/modules';
 
@@ -57,4 +59,28 @@ const reviewsSwiper = new Swiper('.js-swiper-reviews', {
     el: '.swiper-pagination',
     clickable: true,
   },
+});
+
+$(window).on('load', function() {
+
+  const videoEl = document.getElementById("elVideo");
+
+  $('.js-video-play').on('click', function (e) {
+    e.preventDefault();
+    $(this).addClass('d-none');
+    if(videoEl) {
+      console.log('play');
+      videoEl.play();
+    }
+  });
+
+  videoEl.addEventListener('ended', function(){
+    $('.js-video-subscribe').removeClass('d-none');
+  }, false);
+
+  videoEl.addEventListener('playing', function(){
+    $('.js-video-subscribe').addClass('d-none');
+  }, false);
+
+
 });
