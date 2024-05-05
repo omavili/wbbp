@@ -207,6 +207,12 @@ $title-slider-item-height: $font-size-base * 3;
   }
 }
 
+.btn {
+  .icon {
+    line-height: 1;
+  }
+}
+
 @keyframes wrapMove {
   0% {
     transform: translate(0, 0);

@@ -18,6 +18,7 @@ module.exports = {
     alias: {
       '@views': path.join(__dirname, 'src/views/'),
       '@images': path.join(__dirname, 'src/assets/images/'),
+      '@videos': path.join(__dirname, 'src/assets/videos/'),
       '@fonts': path.join(__dirname, 'src/assets/fonts/'),
       '@styles': path.join(__dirname, 'src/assets/styles/'),
       '@scripts': path.join(__dirname, 'src/assets/scripts/'),
@@ -125,6 +126,28 @@ module.exports = {
           },
         ],
       },
+
+      // videos (load from `videos` directory only)
+      {
+        test: /[\\/]videos[\\/].+(mp4|ogg)$/,
+        oneOf: [
+          // inline image using `?inline` query
+          {
+            resourceQuery: /inline/,
+            type: 'asset/inline',
+          },
+          // auto inline by image size
+          {
+            type: 'asset',
+            parser: {},
+            generator: {
+              // filename: 'assets/video/[name].[hash:8][ext]',
+              filename: 'assets/video/[name].[ext]',
+            },
+          },
+        ],
+      },
+
     ],
   },
 
